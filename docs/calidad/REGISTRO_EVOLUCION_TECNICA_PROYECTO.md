@@ -3436,3 +3436,12 @@ Sin producción, exámenes, cuentas externas, inferencias, contadores ni correos
 [Acta 006](tuberias-ia/continuacion-15-09-2026/ACTA_006_CODIGO_LIMPIO_AISLAMIENTO_PRIVACIDAD_2026_10_18.md).
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+
+## Adenda de recepción visual · 18/10/2026
+
+Recepción visual autenticada concluida: Modelos y conexiones, EET-IA, guía privada, esquema de Bases y registro de derechos. Jerarquía común y sesión conservada en el recorrido comprobado. No se enviaron formularios ni se ejecutaron conexiones o modelos.
+
+Se cierra el pendiente visual de esta entrega. Permanecen las obligaciones institucionales, Clippy no ejecutado por indisponibilidad y los límites técnicos y jurídicos del acta. No se activan producción, exámenes ni cuentas externas.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
