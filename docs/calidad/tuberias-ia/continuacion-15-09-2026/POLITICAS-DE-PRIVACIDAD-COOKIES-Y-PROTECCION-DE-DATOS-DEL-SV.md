@@ -1,12 +1,16 @@
 # Políticas de Privacidad, cookies y Protección de Datos del SV
 
-Versión SV-PRIVACIDAD-1 · 18 de octubre de 2026.
+Versión SV-PRIVACIDAD-2 · 18 de octubre de 2026.
 
 ## Identificación institucional y contacto
 
+**Responsable del tratamiento:** Juan Antonio Lloret Egea, titular de La Biblia de la IA — The Bible of AI (ISSN 2695-6411). Iniciativa de carácter no comercial y de investigación sobre el gobierno de la IA y la naturaleza y necesidad de su uso.
+
+La publicación se identifica como [La Biblia de la IA — The Bible of AI, ISSN 2695-6411](https://portal.issn.org/resource/ISSN/2695-6411). El ISSN identifica el título editorial; no acredita por sí solo personalidad jurídica ni sustituye la identificación del responsable del tratamiento. El carácter no comercial de una iniciativa no elimina las obligaciones de protección de datos.
+
 La identificación institucional se consulta en [Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español® (ITVIA)](https://www.itvia.online/instituto-tecnologico-virtual-de-la-inteligencia-artificial-para-el-espanol). La naturaleza y adscripción del servicio se describen en [Sistema Vectorial SV](https://www.itvia.online/sistema-vectorial-sv). El SV es un área especializada de ITVIA; no se presenta como una persona jurídica independiente.
 
-El canal de atención es el **Departamento de protección de datos y políticas de seguridad**, mediante el [formulario de ejercicio de derechos](https://administracion.itvia.online/privacidad/derechos). No necesita una cuenta del Gestor. El departamento atiende por cuenta del responsable de la instalación: su denominación no sustituye la identificación jurídica de dicho responsable. Esta información institucional debe completarse con la identidad y los datos de contacto jurídicamente exigibles del titular, sin atribuir la responsabilidad a una marca por mera presunción.
+El canal de atención es el **Departamento de protección de datos y políticas de seguridad**, mediante el [formulario de ejercicio de derechos](https://administracion.itvia.online/privacidad/derechos). No necesita una cuenta del Gestor. El departamento atiende por cuenta del responsable de la instalación: su denominación no sustituye la identificación jurídica de dicho responsable. La identidad del responsable se muestra al comienzo de esta política y en los avisos de recogida. Si está pendiente de configurar, no debe presentarse la identificación como completa ni atribuirla automáticamente a una persona o marca.
 
 Cada institución que instale el SV deberá identificar a su propio responsable y configurar su propio canal. Los enlaces de ITVIA identifican este servicio; no convierten a ITVIA en responsable de los tratamientos autónomos de otras instituciones.
 
@@ -32,6 +36,14 @@ Si no puede confirmar el correo o su entrega falla, la solicitud inicial sigue r
 El plazo ordinario es de un mes desde la recepción. Una ampliación de hasta dos meses adicionales requiere las circunstancias y comunicaciones del artículo 12.3 RGPD; no se aplica automáticamente. La decisión, su fundamento y la comunicación deben quedar registrados. Una aceptación del servidor de correo no demuestra lectura ni resolución.
 
 Puede solicitar información, acceso, rectificación, supresión, limitación, oposición, portabilidad o retirada del consentimiento cuando proceda, y comunicar incidencias. El ejercicio no exige aceptar publicidad ni tratamientos ajenos. Puede reclamar ante la [Agencia Española de Protección de Datos](https://www.aepd.es/) u otra autoridad competente.
+
+## Información en formularios y correos
+
+Los formularios incluyen un aviso junto a sus controles, con finalidad, responsable, política y canal de derechos. Los mensajes de acuse, confirmación, copia, permisos y solicitudes incorporan la información de privacidad antes de su envío. La versión y la huella del contenido completo quedan registradas. Un reintento conserva el mismo aviso; no se reescriben los correos históricos ya enviados.
+
+La copia de una solicitud reproduce lo que la persona aportó. No es una respuesta al derecho de acceso ni una relación de los datos que el SV conserva sobre ella. El departamento debe examinar el contenido aunque la categoría elegida sea «Información», preparar la respuesta que proceda y registrar su comunicación.
+
+El personal con la función «Departamento de protección de datos» y la administración acceden a los expedientes. La herramienta separa comprobación de identidad, localización de fuentes, preparación y envío revisado de la respuesta. Muestra el vencimiento calculado por meses naturales desde la entrada; no concede prórrogas automáticas. Las medidas sobre datos y su alcance deben quedar documentadas. La persona solicitante no necesita aceptar publicidad ni renunciar a derechos.
 
 ## Protección contra abusos y accesibilidad
 
@@ -69,13 +81,11 @@ Cloudflare puede utilizar cookies técnicas de seguridad, como cf_clearance. Su 
 
 Esta relación distingue las funciones conocidas; la institución debe verificar las cookies y comunicaciones efectivas de su despliegue y mantenerla actualizada. No se habilitan analítica publicitaria ni cookies opcionales mediante este aviso. Si se incorporan tecnologías no exentas, deben bloquearse previamente y ofrecer aceptación y rechazo con facilidad equivalente, elección granular y retirada del consentimiento. No debe exigirse aceptar todas las cookies para ejercer derechos.
 
+La [política y configuración de cookies](https://administracion.itvia.online/cookies) permite revisar la declaración específica de esta instalación y modificar las preferencias cuando existan finalidades opcionales. La cookie técnica `__Host-sv_cookies` conserva esa elección durante la sesión del navegador; su valor indica la versión y las categorías elegidas, sin un identificador de seguimiento. El comprobante técnico del formulario dura veinte minutos. Una modificación de las finalidades invalida la elección anterior. El responsable dispone de un inventario de nombres observados; la detección no atribuye por sí sola necesidad ni consentimiento.
+
 ## Normativa y revisión
 
 Referencias: [RGPD, en particular artículos 5, 6, 12–22, 25, 28, 30, 32–35 y 44 y siguientes](https://eur-lex.europa.eu/eli/reg/2016/679/oj/spa), [LOPDGDD](https://www.boe.es/eli/es/lo/2018/12/05/3/con), [artículo 22.2 LSSI](https://www.boe.es/buscar/act.php?id=BOE-A-2002-13758#a22) y [Guía de cookies de la AEPD](https://www.aepd.es/guias/guia-cookies.pdf).
 
 Las medidas informáticas son parte del cumplimiento; no sustituyen las obligaciones organizativas ni su evaluación jurídica. Cada revisión debe identificar versión, fecha, cambios y responsable de su aprobación.
 
-
----
-
-© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
