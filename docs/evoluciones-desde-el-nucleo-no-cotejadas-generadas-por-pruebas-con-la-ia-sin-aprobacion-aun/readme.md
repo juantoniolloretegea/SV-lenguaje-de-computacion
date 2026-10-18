@@ -104,3 +104,10 @@ Los componentes y documentos de terceros conservan sus licencias.
 [cierre]: https://github.com/juantoniolloretegea/SV-motor/blob/80e2ad521ab402e6cc6d9fdcab231111e633e3c8/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/openai/gpt-oss-safeguard-120b/ensayos-reiterados-adversariales-y-aprendizaje/resultados/cierre-20261004/INFORME-FINAL.md
 [qwen]: https://github.com/juantoniolloretegea/SV-motor/blob/80e2ad521ab402e6cc6d9fdcab231111e633e3c8/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/qwen/qwen3.5-122b-a10b-q8-0/evaluacion/CRITERIOS_DE_RECEPCION.md
 [pdf]: https://github.com/juantoniolloretegea/SV-motor/blob/3f12e5054523f313ce148d37f0bdaee16bcff98a/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/model-context-protocol/0.1.4-pdf-preparacion/LEAME.md
+
+
+## Precisión recibida el 18/10/2026
+
+La [precisión del Gestor, aislamiento y privacidad](PRECISION-GESTOR-AISLAMIENTO-Y-PRIVACIDAD-2026-10-18.md) actualiza N-01–N-10 y corrige la clasificación de la herramienta auxiliar de traducción. Conserva el polígono y la terna vigentes; no crea tipos de IR, instrucciones o diagnósticos del núcleo. La política posterior de sólo conexión impide nuevas entregas de contenido a proveedores, incluidos contadores. Las autorizaciones históricas se conservan como antecedentes, sin prevalecer sobre esta restricción.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

@@ -39,3 +39,10 @@ La unidad debe comprobar que:
 - toda obligación nueva es representable, verificable y tiene prueba positiva y negativa cuando corresponda;
 - las ausencias y límites quedan explícitos;
 - una decisión de diseño material actualiza el rector o su pieza sucesora y los registros RETP CSV y Markdown en el mismo cambio.
+
+
+## Código limpio y protección de datos desde el 18/10/2026
+
+Es de aplicación obligatoria al código Rust final del SV la norma [Código limpio y auditable](docs/calidad/tuberias-ia/continuacion-15-09-2026/CODIGO-LIMPIO-Y-AUDITABLE.md). Antes de modificar una frontera, persistencia, credenciales o tratamiento de datos, leer también la [política de privacidad y protección de datos](docs/calidad/tuberias-ia/continuacion-15-09-2026/POLITICAS-DE-PRIVACIDAD-COOKIES-Y-PROTECCION-DE-DATOS-DEL-SV.md). Identificar controles efectivos, pruebas y límites; no sustituirlos por declaraciones. La política vigente permite sólo conexión con proveedores de IA, sin contenido, incluidos contadores remotos. Su control de salida no sustituye la instrucción de frontera ni la tubería del núcleo. Los permisos históricos no levantan esta prohibición.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

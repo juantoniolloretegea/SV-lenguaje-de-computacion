@@ -3421,3 +3421,18 @@ El antecedente CYB16 mantiene su identidad histórica y su fundamento C02 queda 
 [Adenda científica y cotejo](https://github.com/juantoniolloretegea/SV-motor/blob/acb81a5cfc087560e89d43695d1df910596f2dcc/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/acoplamientos-con-el-sv/03-api-directa/zai/glm-5.3/cyb09-20261010/ADENDA-REVISION-C02.md).
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+
+## RETP-2026-324 · Código limpio, aislamiento y protección de datos
+
+18/10/2026 · 09:31:22 Europe/Madrid · S43 · TT-0027.
+
+Norma obligatoria, esquema común y controles de privacidad incorporados al Gestor; rechazo de contenido hacia proveedores, incluidos contadores; declaraciones jerarquizadas y libros relacionados actualizados. No se recibe el circuito de inferencia con el núcleo. Revisión visual autenticada pendiente de restablecer la sesión; las pantallas públicas están comprobadas.
+
+468 pruebas favorables, cero fallos, 4 exclusiones expresas; 14.99 segundos. Revisión adversarial de autorización, capacidad, aislamiento y registro de derechos.
+
+Sin producción, exámenes, cuentas externas, inferencias, contadores ni correos de prueba. No certifica cumplimiento jurídico integral, confinamiento de todos los componentes ni cierre de semántica o IR. Permanecen pendientes las obligaciones y decisiones institucionales delimitadas en la política.
+
+[Acta 006](tuberias-ia/continuacion-15-09-2026/ACTA_006_CODIGO_LIMPIO_AISLAMIENTO_PRIVACIDAD_2026_10_18.md).
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
