@@ -63,3 +63,12 @@ Recepción visual autenticada concluida: Modelos y conexiones, EET-IA, guía pri
 Se cierra el pendiente visual de esta entrega. Permanecen las obligaciones institucionales, Clippy no ejecutado por indisponibilidad y los límites técnicos y jurídicos del acta. No se activan producción, exámenes ni cuentas externas.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+
+## Adenda de lectura, traducción auxiliar y presentación · 18/10/2026
+
+Se actualiza la guía de lectura V.08, se incorpora una operación específica y persistente para la traducción auxiliar y se separan datos y programa del visor, con origen aislado mediante CSP. Se comprueban persistencia, autoridad, revisión, cancelación y presentación. Los libros y el diagrama distinguen lenguajes, transporte y autoridad nuclear. La recepción técnica privada conserva las pruebas y las huellas de esta entrega. Custodia: IA-en/gestion-usuarios-y-documentacion-sv, revisión 370e441501dad243a7a1016b185534959afcbd72, auditorias/20261018-lectura-traduccion-frontera.
+
+La traducción permanece fuera de los nodos expertos. Se conserva la preferencia real, las cuatro bases, las credenciales y las restricciones de contenido a proveedores. La entrada auxiliar de teclado de egui queda identificada en el DOM; no se confunde un elemento no visible con autoridad oculta. No se modifican núcleo, terna o contrato del polígono. Sin producción, exámenes, inferencias ni cuentas externas; permanecen los límites técnicos y jurídicos del acta.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
