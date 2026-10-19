@@ -299,3 +299,15 @@ Se recibe la incorporación de RETP-154, con corrección de confidencialidad de 
 [Acta 007](ACTA_007_RECEPCION_ACTO_Y_COMPROBACION_OBSERVADA_2026_10_19.md) distingue el resultado actual y las condiciones posteriores. Se conserva el orden de §9, sin habilitar producción, exámenes ni contenido a proveedores.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## Actualización RETP-2026-327 · 19/10/2026
+
+Admisión firmada y composición intraproceso comprobadas, sin constructor de pruebas. La raíz requiere reconocimiento y protección institucional; la firma no basta para acreditar legitimidad. Se conservan pendientes la instalación efectiva, la continuidad R2 y la adenda completa. S44 y TT-0028 siguen en ejecución.
+
+434 pruebas Linux; 273 nucleares Windows y optimizadas; 246 predeterminadas; cliente externo y 19 pruebas documentales; 270 WASI con tres exclusiones; nueve alteraciones detectadas. Quince diagnósticos Clippy heredados; OSV sin avisos para 36 versiones.
+
+[Acta 008](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_008_ADMISION_FIRMADA_Y_COMPOSICION_INTRAPROCESO_2026_10_19.md).
+
+Siguiente condición: Recibir protección real de configuración y reconocimiento institucional; continuar las dependencias de consolidación, adenda y R2 en el orden documentado, incluida recuperación sin restaurar facultades.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

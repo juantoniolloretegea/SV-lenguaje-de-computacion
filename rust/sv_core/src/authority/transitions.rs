@@ -13,6 +13,9 @@ use std::collections::{BTreeMap, BTreeSet};
 
 pub mod reception;
 
+#[cfg(feature = "institutional-admission")]
+pub mod institutional;
+
 use super::{
     AccumulationContract, ConstitutedAuthority, EffectDescriptor, EffectEnvelope, FormDescriptor,
     GovernedDomain, InvalidAuthorityScope,

@@ -141,6 +141,12 @@ impl<'a> PreparedExactCheck<'a> {
 }
 
 impl ObservedExactCheck<'_> {
+    // ES: Sólo el evaluador interno puede componer el resultado observado.
+    // EN: Only the internal evaluator can compose the observed result.
+    #[cfg(feature = "institutional-admission")]
+    pub(super) fn into_check(self) -> RequirementCheck {
+        self.check
+    }
     pub fn result(&self) -> CheckResult {
         self.check.result()
     }
@@ -156,6 +162,8 @@ impl ObservedExactCheck<'_> {
     pub fn belongs_to(&self, continuity: &AuthorityContinuity) -> bool {
         std::ptr::eq(self.continuity, continuity)
     }
-    // No salida de RequirementCheck/ResolvedRequirementResult sin su vínculo:
-    // aún falta cerrar la recepción profesional y todos sus verificadores.
+    // ES: No hay salida pública de resultados componibles. La composición
+    // institucional interna conserva la misma continuidad y sus verificadores.
+    // EN: No public export of composable results. Internal institutional
+    // composition retains the same continuity and its verifiers.
 }

@@ -1,0 +1,151 @@
+   Compiling sv_core v0.1.0 (repositorio\rust\sv_core)
+warning: associated function `from_core_id` is never used
+   --> sv_core\src\control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+162 | / opaque_control_ref!(
+163 | |     InformationRef,
+164 | |     "Referencia nominal a información dentro del dominio de control."
+165 | | );
+    | |_- in this macro invocation
+    |
+    = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core\src\control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+166 | / opaque_control_ref!(
+167 | |     AdmittedEvidenceRef,
+168 | |     "Referencia a evidencia cuya admisión debe proceder de una verificación gobernada."
+169 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core\src\control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+170 | / opaque_control_ref!(
+171 | |     ConstitutedFactRef,
+172 | |     "Referencia a un hecho semántico constituido; no equivale a autoridad."
+173 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core\src\control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+178 | / opaque_control_ref!(
+179 | |     EnablementRef,
+180 | |     "Referencia a una habilitación de autoridad ya existente; no amplía autoridad."
+181 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core\src\control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+210 | / opaque_control_ref!(
+211 | |     AccumulationRuleRef,
+212 | |     "Referencia a una regla gobernada de acumulación o a un predicado de traza."
+213 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: associated function `from_core_id` is never used
+   --> sv_core\src\control.rs:155:27
+    |
+141 |           impl $name {
+    |           ---------- associated function in this implementation
+...
+155 |               pub(crate) fn from_core_id(id: ControlId) -> Self {
+    |                             ^^^^^^^^^^^^
+...
+230 | / opaque_control_ref!(
+231 | |     ConflictResolutionRuleRef,
+232 | |     "Referencia a una regla previamente constituida de resolución de conflicto entre comprobaciones."
+233 | | );
+    | |_- in this macro invocation
+    |
+    = note: this warning originates in the macro `opaque_control_ref` (in Nightly builds, run with -Z macro-backtrace for more info)
+
+warning: constant `PROFILE_ID` is never used
+ --> sv_core\src\identifier_profile.rs:6:18
+  |
+6 | pub(crate) const PROFILE_ID: &str = "svp-grammar-0.2-lex-es-1";
+  |                  ^^^^^^^^^^
+
+warning: function `is_reserved_word` is never used
+  --> sv_core\src\identifier_profile.rs:22:15
+   |
+22 | pub(crate) fn is_reserved_word(word: &str) -> bool {
+   |               ^^^^^^^^^^^^^^^^
+
+warning: method `matches_descriptor` is never used
+   --> sv_core\src\requirements_reuse.rs:121:19
+    |
+ 44 | impl ReuseRule {
+    | -------------- method in this implementation
+...
+121 |     pub(crate) fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
+    |                   ^^^^^^^^^^^^^^^^^^
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+    --> sv_core\src\frontend.rs:2084:13
+     |
+2084 |     fn peek(&self) -> &Token {
+     |             ^^^^^     ^^^^^^
+     |             |         ||
+     |             |         |the same lifetime is hidden here
+     |             |         the same lifetime is elided here
+     |             the lifetime is elided here
+     |
+     = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+     = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+     |
+2084 |     fn peek(&self) -> &Token<'_> {
+     |                             ++++
+
+warning: `sv_core` (lib) generated 10 warnings (run `cargo fix --lib -p sv_core` to apply 1 suggestion)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.68s
+     Running tests\institutional_admission.rs (compilacion\nucleo-recepcion-integrada-20261019\windows-admission\debug\deps\institutional_admission-f2ccb766039e9f2b.exe)
+
+running 1 test
+test public_client_admits_and_dispatches_without_test_premise ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.05s
+

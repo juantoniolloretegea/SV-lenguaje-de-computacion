@@ -1,0 +1,338 @@
+   Compiling version_check v0.9.5
+   Compiling typenum v1.20.1
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.27
+   Compiling quote v1.0.47
+   Compiling semver v1.0.28
+   Compiling cpufeatures v0.2.17
+   Compiling cfg-if v1.0.5
+   Compiling signature v2.2.0
+   Compiling zeroize v1.9.1
+   Compiling subtle v2.6.1
+   Compiling rustc_version v0.4.1
+   Compiling ed25519 v2.2.3
+   Compiling generic-array v0.14.7
+   Compiling curve25519-dalek v4.1.3
+   Compiling syn v2.0.119
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling digest v0.10.7
+   Compiling sha2 v0.10.9
+   Compiling curve25519-dalek-derive v0.1.1
+   Compiling ed25519-dalek v2.2.0
+   Compiling sv_core v0.1.0 (repositorio\rust\sv_core)
+warning: constant `PROFILE_ID` is never used
+ --> sv_core\src\identifier_profile.rs:6:18
+  |
+6 | pub(crate) const PROFILE_ID: &str = "svp-grammar-0.2-lex-es-1";
+  |                  ^^^^^^^^^^
+  |
+  = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `matches_descriptor` is never used
+   --> sv_core\src\requirements_reuse.rs:121:19
+    |
+ 44 | impl ReuseRule {
+    | -------------- method in this implementation
+...
+121 |     pub(crate) fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
+    |                   ^^^^^^^^^^^^^^^^^^
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+    --> sv_core\src\frontend.rs:2084:13
+     |
+2084 |     fn peek(&self) -> &Token {
+     |             ^^^^^     ^^^^^^
+     |             |         ||
+     |             |         |the same lifetime is hidden here
+     |             |         the same lifetime is elided here
+     |             the lifetime is elided here
+     |
+     = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+     = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+     |
+2084 |     fn peek(&self) -> &Token<'_> {
+     |                             ++++
+
+warning: `sv_core` (lib test) generated 3 warnings (run `cargo fix --lib -p sv_core --tests` to apply 1 suggestion)
+    Finished `release` profile [optimized] target(s) in 38.20s
+     Running unittests src\lib.rs (compilacion\nucleo-recepcion-integrada-20261019\windows-admission\release\deps\sv_core-cbc023ee83e2fd63.exe)
+
+running 273 tests
+test admissibility::tests::admissibility_labels_are_exact ... ok
+test admissibility::tests::admissibility_spec_rejects_zero_parameter_id ... ok
+test admissibility::tests::admissibility_spec_rejects_missing_rule ... ok
+test admissibility::tests::valid_admissibility_spec_preserves_identity_parameter_and_rule ... ok
+test admissibility::tests::admitted_observation_does_not_itself_create_tri ... ok
+test admissibility::tests::only_ok_and_degraded_are_positively_admitted ... ok
+test admissibility::tests::technical_capture_failure_remains_outside_tri ... ok
+test admissibility::tests::admissibility_state_is_exactly_the_closed_v0_2_set ... ok
+test authority::tests::authority_rejects_effect_outside_its_context ... ok
+test authority::tests::authority_rejects_effect_outside_its_governed_domain ... ok
+test authority::tests::constituted_authority_binds_holder_context_envelope_and_domain ... ok
+test authority::tests::duplicate_members_do_not_expand_envelope_or_domain ... ok
+test authority::tests::effect_envelope_uses_the_complete_effect_scope ... ok
+test authority::tests::effect_scope_requires_complete_constituted_effect_and_domain ... ok
+test authority::tests::form_descriptor_freezes_the_constituted_dimensions ... ok
+test authority::tests::form_scope_requires_family_and_context_together ... ok
+test authority::tests::governed_domain_membership_is_decidable_before_exercise ... ok
+test authority::transitions::institutional::tests::ia06_self_accreditation_and_weak_keys_rejected ... ok
+test authority::transitions::institutional::tests::ia02_bad_issuer_signature_cannot_admit_and_does_not_consume ... ok
+test authority::transitions::institutional::tests::ia04_duplicate_admission_rejected_across_installation_objects ... ok
+test authority::transitions::institutional::tests::ia05_validity_interval_is_half_open_and_clock_failure_rejects ... ok
+test authority::transitions::institutional::tests::ia08_bad_request_signature_and_cross_mandate_replay_rejected ... ok
+test authority::transitions::institutional::tests::ia01_signed_admission_checks_and_actual_delivery ... ok
+test authority::transitions::institutional::tests::ia09_absent_and_refuted_evidence_never_dispatch ... ok
+test authority::transitions::institutional::tests::ia10_revocation_is_signed_separated_and_irreversible ... ok
+test authority::transitions::institutional::tests::ia12_adapter_failure_is_indeterminate_and_cannot_retry ... ok
+test authority::transitions::institutional::tests::ia11_repeated_dispatch_is_blocked ... ok
+test authority::transitions::institutional::tests::ia07_signed_request_cannot_select_another_scope ... ok
+test authority::transitions::institutional::tests::ia14_clock_rollback_and_monotonic_expiry_prevent_dispatch ... ok
+test authority::transitions::institutional::tests::ia16_request_limits_are_checked_before_copy_or_dispatch ... ok
+test authority::transitions::institutional::tests::ia13_expiry_during_verification_prevents_dispatch ... ok
+test authority::transitions::institutional::tests::ia03_each_signed_mandate_field_is_bound ... ok
+test authority::transitions::institutional::tests::ia18_all_six_core_checks_and_specific_check_are_produced ... ok
+test authority::transitions::institutional::tests::ia20_binary_encoding_separates_absence_empty_and_field_boundaries ... ok
+test authority::transitions::institutional::tests::ia17_diagnostics_do_not_expose_identity_content_or_keys ... ok
+test authority::transitions::institutional::tests::ia23_invalid_or_oversized_configuration_is_not_admitted ... ok
+test authority::transitions::institutional::tests::ia19_core_validity_and_non_self_checks_are_not_constants ... ok
+test authority::transitions::institutional::tests::ia22_concurrent_duplicate_admission_has_one_recipient ... ok
+test authority::transitions::institutional::tests::ia25_same_issuer_name_with_different_key_is_not_recognized ... ok
+test authority::transitions::reuse_tests::accredited_but_incomplete_coverage_never_forms_permit ... ok
+test authority::transitions::reuse_tests::adapter_error_after_dispatch_is_indeterminate_not_non_execution ... ok
+test authority::transitions::institutional::tests::ia21_adapter_panic_preserves_terminal_state_and_causal_trace ... ok
+test authority::transitions::reuse_tests::complete_governed_da_forms_a_sealed_permit ... ok
+test authority::transitions::reuse_tests::continuity_membership::pc01_cadena_propia ... ok
+test authority::transitions::institutional::tests::ia24_unauthenticated_admission_cannot_exhaust_audit_capacity ... ok
+test authority::transitions::reuse_tests::continuity_membership::pc02_permiso_cruzado_igual_contenido ... ok
+test authority::transitions::reuse_tests::continuity_membership::pc04_exhaustion_stops_before_decision_and_mediation ... ok
+test authority::transitions::reuse_tests::continuity_membership::pc03_compromiso_cruzado_igual_contenido ... ok
+test authority::transitions::reuse_tests::continuity_membership::pc07_move_preserves_membership ... ok
+test authority::transitions::reuse_tests::continuity_membership::pc08_foreign_rejection_preserves_own_operation ... ok
+test authority::transitions::reuse_tests::duplicate_reuse_binding_key_rejects_t0_atomically ... ok
+test authority::transitions::reuse_tests::continuity_membership::pc10_traced_indeterminate_effect_preserves_cause_and_blocks_retry ... ok
+test authority::transitions::reuse_tests::different_effect_cannot_cross_mediation_with_valid_permit ... ok
+test authority::transitions::institutional::tests::ia26_signed_invocation_cannot_be_changed_after_signing ... ok
+test authority::transitions::institutional::tests::ia27_unauthenticated_requests_do_not_exhaust_authenticated_capacity ... ok
+test authority::transitions::reuse_tests::empty_reuse_binding_set_rejects_t0_atomically ... ok
+test authority::transitions::reuse_tests::continuity_membership::pc09_foreign_dispatch_preserves_own_commitment ... ok
+test authority::transitions::reuse_tests::duplicate_reuse_rule_reference_across_requirements_rejects_t0_atomically ... ok
+test authority::transitions::reuse_tests::effect_outside_required_authority_scope_is_closed_before_permit ... ok
+test authority::transitions::reuse_tests::form_without_required_authority_cannot_form_permit ... ok
+test authority::transitions::reuse_tests::form_effect_mismatch_is_closed_before_permit ... ok
+test authority::transitions::reuse_tests::not_verifiable_requirements_never_form_positive_permit ... ok
+test authority::transitions::reuse_tests::idempotent_requires_new_governed_attempt_and_new_exercise_ref ... ok
+test authority::transitions::reuse_tests::governed_accumulation_contracts_remain_closed_before_adapter ... ok
+test authority::transitions::reuse_tests::r1_4_unit_one_does_not_make_authorizing_classes_productive ... ok
+test authority::transitions::reuse_tests::non_exercise_commitment_is_rejected_before_adapter_dispatch ... ok
+test authority::transitions::reuse_tests::r1_4_unit_three_does_not_make_authorizing_classes_productive ... ok
+test authority::transitions::reuse_tests::mediated_t_e_executes_once_and_records_append_only_trace ... ok
+test authority::transitions::reuse_tests::r1_4_unit_two_does_not_make_authorizing_classes_productive ... ok
+test authority::transitions::reuse_tests::r1_5_conflict_trace_preserves_each_individual_check_before_dn_resolution ... ok
+test authority::transitions::reuse_tests::r1_5_incomplete_coverage_traces_resolved_da_as_qualified_dn ... ok
+test authority::transitions::reuse_tests::r1_5_refuted_decision_is_traced_without_mediation_or_exercise ... ok
+test authority::transitions::reuse_tests::reception_tests::oc01_computes_result_and_keeps_exact_evidence ... ok
+test authority::transitions::reuse_tests::reception_tests::oc03_missing_is_not_empty_or_tri_u ... ok
+test authority::transitions::reuse_tests::reception_tests::oc02_refutes_changed_bytes_without_normalization ... ok
+test authority::transitions::reuse_tests::r1_5_traced_chain_from_t0_binds_decision_mediation_and_real_exercise ... ok
+test authority::transitions::reuse_tests::reception_tests::oc05_rejects_foreign_applicability_with_equal_content ... ok
+test authority::transitions::reuse_tests::reception_tests::oc06_equality_cannot_accredit_core_authority ... ok
+test authority::transitions::reuse_tests::reception_tests::oc04_rejects_foreign_descriptor_with_equal_content ... ok
+test authority::transitions::reuse_tests::reception_tests::oc09_debug_does_not_disclose_evidence ... ok
+test authority::transitions::reuse_tests::reception_tests::oc07_bounds_contract_reference_and_observation ... ok
+test authority::transitions::reuse_tests::reception_tests::oc10_later_input_mutation_cannot_change_retained_evidence ... ok
+test authority::transitions::reuse_tests::reception_tests::oc08_result_does_not_claim_other_continuity ... ok
+test authority::transitions::reuse_tests::reception_tests::rg02_rejects_changed_act_before_consuming_preparation ... ok
+test authority::transitions::reuse_tests::reception_tests::rg01_receives_fixed_act_and_actual_t0_plan ... ok
+test authority::transitions::reuse_tests::reception_tests::rg03_rejects_changed_declarations_and_preserves_original ... ok
+test authority::transitions::reuse_tests::reception_tests::rg05_preserves_genesis_error_without_repair ... ok
+test authority::transitions::reuse_tests::reception_tests::rg04_does_not_produce_second_continuity ... ok
+test authority::transitions::reuse_tests::reception_tests::rg07_debug_does_not_disclose_received_material ... ok
+test authority::transitions::reuse_tests::reception_tests::rg06_bounds_before_copy_and_admits_boundary ... ok
+test authority::transitions::reuse_tests::reception_tests::rg08_receipt_keeps_act_with_decision_and_execution ... ok
+test authority::transitions::reuse_tests::reception_tests::rg13_consumed_premise_is_not_reconstituted ... ok
+test authority::transitions::reuse_tests::reception_tests::rg14_caller_cannot_replace_prepared_bytes_through_buffers ... ok
+test authority::transitions::reuse_tests::reception_tests::rg09_same_act_does_not_merge_receipts_or_consume_own_permit ... ok
+test authority::transitions::reuse_tests::reception_tests::rg12_received_act_does_not_replace_required_checks ... ok
+test authority::transitions::reuse_tests::reception_tests::rg10_foreign_commitment_never_reaches_adapter ... ok
+test authority::transitions::reuse_tests::reception_tests::rg11_uncertain_effect_keeps_cause_and_cannot_be_retried ... ok
+test authority::transitions::reuse_tests::reuse_rule_is_constituted_by_t0_and_bound_to_requirement ... ok
+test authority::transitions::reuse_tests::refuted_requirements_never_form_positive_permit ... ok
+test authority::transitions::tests::applicability_mismatch_rejects_whole_genesis ... ok
+test authority::transitions::reuse_tests::reception_tests::rg15_each_received_field_has_its_own_bound ... ok
+test authority::transitions::reuse_tests::single_use_blocks_second_dispatch_after_indeterminate_attempt ... ok
+test authority::transitions::reuse_tests::valid_permit_is_consumed_into_exact_mediated_commitment ... ok
+test authority::transitions::reuse_tests::single_use_blocks_second_dispatch_after_confirmed_exercise ... ok
+test authority::transitions::tests::authority_effect_outside_context_is_rejected_without_partial_state ... ok
+test authority::transitions::tests::authority_effect_outside_domain_is_rejected_without_partial_state ... ok
+test authority::transitions::tests::authorizing_form_requires_prior_authority_reference ... ok
+test authority::transitions::tests::conflict_rule_without_applicable_decisive_verifier_rejects_t0_atomically ... ok
+test authority::transitions::tests::controlled_form_without_context_is_rejected_before_constitution ... ok
+test authority::transitions::tests::consumed_external_premise_cannot_seed_another_genesis ... ok
+test authority::transitions::tests::coverage_required_verifier_without_applicability_rejects_t0_atomically ... ok
+test authority::transitions::tests::controlled_form_without_requirements_is_rejected_atomically ... ok
+test authority::transitions::tests::coverage_rule_is_constituted_by_t0_and_bound_to_requirement ... ok
+test authority::transitions::tests::duplicate_authority_reference_is_rejected_atomically ... ok
+test authority::transitions::tests::duplicate_conflict_rule_reference_across_requirements_rejects_t0_atomically ... ok
+test authority::transitions::tests::duplicate_coverage_required_verifier_rejects_t0_atomically ... ok
+test authority::transitions::tests::duplicate_coverage_rule_reference_across_requirements_rejects_t0_atomically ... ok
+test authority::transitions::tests::duplicate_form_reference_is_rejected_atomically ... ok
+test authority::transitions::tests::empty_coverage_required_set_rejects_t0_atomically ... ok
+test authority::transitions::tests::governance_constitutive_and_recovery_remain_non_productive ... ok
+test authority::transitions::tests::information_verification_enablement_and_exercise_are_non_authorizing ... ok
+test authority::transitions::tests::missing_mandatory_core_rejects_whole_genesis ... ok
+test authority::transitions::tests::missing_required_authority_is_rejected ... ok
+test authority::transitions::tests::only_genesis_has_productive_disposition_in_r1_3_unit_2 ... ok
+test authority::transitions::tests::rejected_empty_genesis_does_not_consume_t0_or_premise ... ok
+test authority::transitions::tests::uncontrolled_genesis_remains_valid_without_requirements ... ok
+test authority::transitions::tests::second_t0_on_the_same_continuity_is_rejected ... ok
+test authority::transitions::tests::valid_t0_constitutes_initial_state_and_consumes_genesis ... ok
+test authority::transitions::institutional::tests::ia15_audit_quota_blocks_work_but_never_revocation ... ok
+test c03_tests::c03_accepts_a_coherent_declared_subset_without_exhaustivity ... ok
+test c03_tests::c03_rejects_a_gate_or_supervision_that_escapes_the_causal_closure ... ok
+test c03_tests::c03_rejects_criticalities_while_no_surface_producer_exists ... ok
+test c03_tests::c03_rejects_external_or_duplicated_evaluation_sources ... ok
+test c03_tests::c03_rejects_states_outside_architecture_or_multiple_states_for_one_node ... ok
+test control_tests::check_results_are_exactly_the_three_sec0d_results ... ok
+test control_tests::continuity_occupancy_has_distinct_uninhabited_and_inhabited_states ... ok
+test control_tests::control_id_rejects_empty_or_blank_identifiers ... ok
+test control_tests::protected_reference_categories_are_nominally_distinct ... ok
+test control_tests::technical_check_results_are_a_type_distinct_from_tri ... ok
+test control_tests::transition_classes_preserve_the_eight_contractual_labels ... ok
+test decision_trace::continuity_instance_tests::pc05_exhaustion_does_not_wrap_or_reuse ... ok
+test decision_trace::tests::decimal_successor_is_not_machine_word_bounded ... ok
+test decision_trace::tests::decision_references_are_structural_ordinals ... ok
+test equivalence::tests::json_escape_is_deterministic ... ok
+test execution::tests::decimal_successor_is_unbounded_by_machine_word_width ... ok
+test frame_tests::distinct_architecture_nodes_accept_distinct_states ... ok
+test decision_trace::continuity_instance_tests::pc06_parallel_allocation_preserves_distinct_instances ... ok
+test frame_tests::duplicate_eval_source_is_rejected ... ok
+test frame_tests::duplicate_state_reference_is_rejected ... ok
+test frame_tests::eval_source_outside_frame_is_rejected ... ok
+test frame_tests::frame_is_not_exhaustive ... ok
+test frame_tests::gate_input_outside_frame_is_rejected ... ok
+test frame_tests::multiple_states_for_same_node_are_rejected ... ok
+test frame_tests::non_empty_criticalities_are_rejected ... ok
+test frame_tests::state_outside_architecture_is_rejected ... ok
+test frame_tests::supervision_cell_target_inside_frame_is_valid ... ok
+test frame_tests::supervision_cell_target_outside_frame_is_rejected ... ok
+test frame_tests::supervision_composed_target_outside_frame_is_rejected ... ok
+test frame_tests::supervision_meta_eval_outside_frame_is_rejected ... ok
+test frame_tests::supervision_system_target_matching_architecture_is_valid ... ok
+test frame_tests::supervision_system_target_must_match_architecture ... ok
+test frame_tests::valid_frame_preserves_declared_references_and_unbounded_nat_index ... ok
+test frontend::source_profile_public_tests_2a::selector_textual_y_abi_son_cerrados_y_estables ... ok
+test frontend::profile_catalog_tests_2a::catalogos_y_aislamiento_interperfil_son_exhaustivos ... ok
+test frontend::tests::sha256_matches_known_vector ... ok
+test frontend::union_surface_index_tests_2a::indice_conjunto_preserva_identidad_y_pertenencia_de_perfil ... ok
+test frontend::tests::query_context_variants_are_materialized_as_closed_ir_variants ... ok
+test identifier_profile::tests::cubre_la_ortografia_espanola_del_perfil ... ok
+test identifier_profile::tests::excluye_formas_no_canónicas_y_otros_alfabetos ... ok
+test identifier_profile::tests::las_palabras_reservadas_no_son_identificadores ... ok
+test ir_tests::admissibility_state_order_from_ir_is_preserved ... ok
+test ir_tests::frame_ir_preserves_unbounded_index_declared_order_and_immutability ... ok
+test ir_tests::operation_type_and_result_are_derived_not_supplied ... ok
+test frontend::tests::compiles_all_current_valid_cases_from_actual_svp_text ... ok
+test ir_tests::object_type_and_level_are_derived_not_supplied ... ok
+test ir_tests::program_header_is_fixed_and_order_is_preserved ... ok
+test ir_tests::query_and_supervision_variants_keep_canonical_labels ... ok
+test ir_tests::resolve_operation_preserves_identified_target_and_instances ... ok
+test ir_tests::trajectory_append_only_is_constitutive_in_the_representation ... ok
+test ir_tests::tri_has_distinct_language_and_ir_labels ... ok
+test multisource_assembly_tests_2b::el_perfil_erroneo_no_se_rescata_por_la_otra_unidad ... ok
+test multisource_assembly_tests_2b::las_colisiones_globales_se_rechazan ... ok
+test multisource_assembly_tests_2b::una_produccion_no_puede_cruzar_la_frontera_de_archivo ... ok
+test multisource_assembly_tests_2b::admite_las_cuatro_combinaciones_de_perfil ... ok
+test multisource_assembly_tests_2b::la_identidad_de_ensamblaje_es_determinista_y_sensible_al_orden ... ok
+test multisource_assembly_tests_2b::referencia_transfronteriza_exige_el_ensamblaje_global ... ok
+test nat::tests::nat_accepts_values_beyond_u64_without_narrowing ... ok
+test nat::tests::nat_has_one_internal_decimal_representation_per_value ... ok
+test nat::tests::nat_rejects_non_decimal_material ... ok
+test requirements::tests::aggregation_rejects_duplicate_check_for_same_requirement ... ok
+test requirements::tests::aggregation_rejects_same_reference_with_different_material_binding ... ok
+test requirements::tests::aggregation_requires_complete_coverage ... ok
+test requirements::tests::applicability_must_match_requirement_context_family_and_rule ... ok
+test requirements::tests::all_accredited_aggregates_to_da ... ok
+test requirements::tests::dn_is_preserved_when_there_is_no_refutation ... ok
+test requirements::tests::nominal_da_cannot_form_an_aggregable_check_without_applicability ... ok
+test requirements::tests::refutation_precedes_not_verifiable ... ok
+test requirements::tests::requirement_set_rejects_empty_req ... ok
+test requirements::tests::requirement_set_rejects_reused_reference ... ok
+test requirements::tests::requirement_set_requires_the_non_eludible_core ... ok
+test requirements_bridge::tests::aggregation_is_independent_of_result_order ... ok
+test requirements_bridge::tests::aggregation_rejects_foreign_material_binding ... ok
+test requirements_bridge::tests::aggregation_rejects_duplicate_requirement_result ... ok
+test requirements_bridge::tests::aggregation_rejects_unexpected_requirement_result ... ok
+test requirements_bridge::tests::aggregation_requires_complete_requirement_coverage ... ok
+test requirements_bridge::tests::complete_accreditation_aggregates_to_da ... ok
+test requirements_bridge::tests::conflict_without_rule_preserves_each_individual_result ... ok
+test requirements_bridge::tests::dn_is_preserved_without_refutation ... ok
+test requirements_bridge::tests::homogeneous_single_check_is_sealed_with_descriptor_and_observation ... ok
+test requirements_bridge::tests::refutation_precedes_dn_after_resolution ... ok
+test requirements_conflict::tests::absent_decisive_verifier_leaves_conflict_at_dn ... ok
+test requirements_conflict::tests::accredited_and_not_verifiable_without_rule_remain_not_verifiable ... ok
+test requirements_conflict::tests::accredited_and_refuted_without_rule_become_not_verifiable ... ok
+test requirements_conflict::tests::conflict_result_is_independent_of_input_order ... ok
+test requirements_conflict::tests::decisive_accredited_verifier_resolves_conflict_to_da ... ok
+test requirements_conflict::tests::decisive_dn_verifier_cannot_promote_conflict ... ok
+test requirements_conflict::tests::decisive_refuted_verifier_resolves_conflict_to_dr ... ok
+test requirements_conflict::tests::empty_check_set_is_rejected ... ok
+test requirements_conflict::tests::homogeneous_accredited_checks_remain_accredited ... ok
+test requirements_conflict::tests::homogeneous_not_verifiable_checks_remain_not_verifiable ... ok
+test requirements_conflict::tests::homogeneous_refuted_checks_remain_refuted ... ok
+test requirements_conflict::tests::majority_does_not_override_constituted_decisive_verifier ... ok
+test requirements_conflict::tests::mixed_requirements_are_not_a_single_conflict ... ok
+test requirements_conflict::tests::public_governed_path_rejects_foreign_material_binding ... ok
+test requirements_conflict::tests::public_governed_path_without_rule_keeps_conflict_at_dn ... ok
+test requirements_conflict::tests::refuted_and_not_verifiable_without_rule_become_not_verifiable ... ok
+test requirements_conflict::tests::repeated_verifier_is_rejected_instead_of_weighted ... ok
+test requirements_conflict::tests::repeated_verifier_with_incompatible_results_is_rejected_on_public_path ... ok
+test requirements_coverage::tests::absence_of_rule_is_not_empty_positive_coverage ... ok
+test requirements_coverage::tests::accredited_results_without_coverage_rules_aggregate_to_dn ... ok
+test requirements_coverage::tests::all_required_participants_complete_coverage ... ok
+test requirements_coverage::tests::complete_coverage_of_all_accredited_requirements_aggregates_to_da ... ok
+test requirements_coverage::tests::coverage_rule_identity_is_part_of_the_resolved_binding ... ok
+test requirements_coverage::tests::coverage_rule_rejects_duplicate_required_verifier ... ok
+test requirements_coverage::tests::coverage_rule_rejects_empty_required_set ... ok
+test requirements_coverage::tests::extra_participant_does_not_replace_a_missing_required_one ... ok
+test requirements_coverage::tests::missing_required_participant_is_explicit ... ok
+test requirements_coverage::tests::missing_required_verifier_prevents_da ... ok
+test requirements_coverage::tests::refutation_is_not_erased_by_absent_coverage_rule ... ok
+test requirements_coverage::tests::result_from_other_requirement_is_rejected ... ok
+test requirements_coverage::tests::rule_bound_to_other_context_is_rejected_even_if_attached_for_test ... ok
+test requirements_reuse::tests::changed_context_closes_to_dn ... ok
+test requirements_reuse::tests::changed_single_binding_closes_to_dn ... ok
+test requirements_reuse::tests::exact_continuity_preserves_da ... ok
+test requirements_reuse::tests::exact_continuity_preserves_dn_without_promotion ... ok
+test requirements_reuse::tests::exact_continuity_preserves_dr ... ok
+test requirements_reuse::tests::incomplete_coverage_cannot_reappear_as_historical_da ... ok
+test requirements_reuse::tests::missing_current_rule_closes_to_dn ... ok
+test requirements_reuse::tests::other_requirement_is_structural_error ... ok
+test requirements_reuse::tests::reuse_rule_rejects_duplicate_binding_key ... ok
+test requirements_reuse::tests::reuse_rule_rejects_empty_binding_set ... ok
+test requirements_reuse::tests::same_rule_reference_with_changed_binding_is_not_reusable ... ok
+test resolution_tests::arbitrary_precision_position_cannot_overflow_into_a_valid_index ... ok
+test resolution_tests::cell_target_u_is_reviewable_and_closure_remains_u ... ok
+test resolution_tests::context_instance_must_match_res_spec_exactly ... ok
+test resolution_tests::coupled_target_uses_the_effective_updated_vector ... ok
+test resolution_tests::mechanism_instance_must_match_res_spec_exactly ... ok
+test resolution_tests::non_evaluable_target_is_rejected_with_e305 ... ok
+test resolution_tests::position_beyond_effective_vector_is_rejected ... ok
+test resolution_tests::res_spec_preserves_opaque_contract_references ... ok
+test resolution_tests::review_does_not_mutate_the_effective_state ... ok
+test resolution_tests::review_material_never_becomes_positive_closure_by_execution_alone ... ok
+test resolution_tests::target_value_must_be_a_constituted_u ... ok
+test resolution_tests::zero_position_is_rejected_as_not_one_based ... ok
+test tests::technical_invalidity_is_not_u ... ok
+test tests::tri_has_a_stable_one_byte_representation ... ok
+test tests::tri_roundtrip_is_canonical ... ok
+test tests::tri_is_exactly_ternary_at_the_public_boundary ... ok
+test tests::tri_numeric_representation_is_canonical ... ok
+test tests::tri_textual_representation_is_canonical ... ok
+test tests::version_constants_match_the_integrated_frontend_contract ... ok
+test transition_data_wellformed::tests::decimal_order_does_not_narrow_unbounded_naturals ... ok
+test wellformed::tests::decimal_order_does_not_narrow_unbounded_nat ... ok
+
+test result: ok. 273 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+

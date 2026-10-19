@@ -1,0 +1,92 @@
+[
+  {
+    "nivel": "warning",
+    "codigo": "clippy::chunks_exact_to_as_chunks",
+    "archivo": "sv_core\\examples\\..\\..\\..\\tests\\retorno_cyb\\probe.rs",
+    "mensaje": "using `chunks_exact` with a constant chunk size"
+  },
+  {
+    "nivel": "warning",
+    "codigo": "clippy::chunks_exact_to_as_chunks",
+    "archivo": "sv_core\\src\\frontend.rs",
+    "mensaje": "using `chunks_exact` with a constant chunk size"
+  },
+  {
+    "nivel": "warning",
+    "codigo": "clippy::chunks_exact_to_as_chunks",
+    "archivo": "sv_core\\tests\\..\\..\\..\\tests\\retorno_cyb\\probe.rs",
+    "mensaje": "using `chunks_exact` with a constant chunk size"
+  },
+  {
+    "nivel": "warning",
+    "codigo": "clippy::chunks_exact_to_as_chunks",
+    "archivo": "sv_native\\examples\\assembly_probe.rs",
+    "mensaje": "using `chunks_exact` with a constant chunk size"
+  },
+  {
+    "nivel": "warning",
+    "codigo": "clippy::collapsible_match",
+    "archivo": "sv_core\\src\\grammar_conformance.rs",
+    "mensaje": "this `if` can be collapsed into the outer `match`"
+  },
+  {
+    "nivel": "warning",
+    "codigo": "clippy::large_enum_variant",
+    "archivo": "sv_core\\src\\decision_trace.rs",
+    "mensaje": "large size difference between variants"
+  },
+  {
+    "nivel": "warning",
+    "codigo": "clippy::large_enum_variant",
+    "archivo": "sv_core\\src\\permission.rs",
+    "mensaje": "large size difference between variants"
+  },
+  {
+    "nivel": "warning",
+    "codigo": "clippy::needless_lifetimes",
+    "archivo": "sv_core\\src\\frontend.rs",
+    "mensaje": "the following explicit lifetimes could be elided: 'a"
+  },
+  {
+    "nivel": "warning",
+    "codigo": "dead_code",
+    "archivo": "sv_core\\examples\\..\\..\\..\\tests\\row7_gh\\probe.rs",
+    "mensaje": "function `check_witness` is never used"
+  },
+  {
+    "nivel": "warning",
+    "codigo": "dead_code",
+    "archivo": "sv_core\\src\\control.rs",
+    "mensaje": "associated function `from_core_id` is never used"
+  },
+  {
+    "nivel": "warning",
+    "codigo": "dead_code",
+    "archivo": "sv_core\\src\\identifier_profile.rs",
+    "mensaje": "constant `PROFILE_ID` is never used"
+  },
+  {
+    "nivel": "warning",
+    "codigo": "dead_code",
+    "archivo": "sv_core\\src\\identifier_profile.rs",
+    "mensaje": "function `is_reserved_word` is never used"
+  },
+  {
+    "nivel": "warning",
+    "codigo": "dead_code",
+    "archivo": "sv_core\\src\\requirements_reuse.rs",
+    "mensaje": "method `matches_descriptor` is never used"
+  },
+  {
+    "nivel": "warning",
+    "codigo": "dead_code",
+    "archivo": "sv_core\\tests\\..\\..\\..\\tests\\row7_bindings\\cases.rs",
+    "mensaje": "function `report` is never used"
+  },
+  {
+    "nivel": "warning",
+    "codigo": "mismatched_lifetime_syntaxes",
+    "archivo": "sv_core\\src\\frontend.rs",
+    "mensaje": "hiding a lifetime that's elided elsewhere is confusing"
+  }
+]

@@ -1,0 +1,191 @@
+{
+  "consultadoUTC": "2026-10-19T09:59:06.4252022Z",
+  "servicio": "https://api.osv.dev/v1/querybatch",
+  "datosEnviados": "Nombres y versiones públicos de crates.io",
+  "paquetes": [
+    {
+      "name": "base64ct",
+      "version": "1.8.3"
+    },
+    {
+      "name": "block-buffer",
+      "version": "0.10.4"
+    },
+    {
+      "name": "cfg-if",
+      "version": "1.0.5"
+    },
+    {
+      "name": "const-oid",
+      "version": "0.9.6"
+    },
+    {
+      "name": "cpufeatures",
+      "version": "0.2.17"
+    },
+    {
+      "name": "crypto-common",
+      "version": "0.1.7"
+    },
+    {
+      "name": "curve25519-dalek",
+      "version": "4.1.3"
+    },
+    {
+      "name": "curve25519-dalek-derive",
+      "version": "0.1.1"
+    },
+    {
+      "name": "der",
+      "version": "0.7.10"
+    },
+    {
+      "name": "digest",
+      "version": "0.10.7"
+    },
+    {
+      "name": "ed25519",
+      "version": "2.2.3"
+    },
+    {
+      "name": "ed25519-dalek",
+      "version": "2.2.0"
+    },
+    {
+      "name": "fiat-crypto",
+      "version": "0.2.9"
+    },
+    {
+      "name": "generic-array",
+      "version": "0.14.7"
+    },
+    {
+      "name": "getrandom",
+      "version": "0.2.17"
+    },
+    {
+      "name": "libc",
+      "version": "0.2.190"
+    },
+    {
+      "name": "pkcs8",
+      "version": "0.10.2"
+    },
+    {
+      "name": "proc-macro2",
+      "version": "1.0.107"
+    },
+    {
+      "name": "quote",
+      "version": "1.0.47"
+    },
+    {
+      "name": "rand_core",
+      "version": "0.6.4"
+    },
+    {
+      "name": "rustc_version",
+      "version": "0.4.1"
+    },
+    {
+      "name": "semver",
+      "version": "1.0.28"
+    },
+    {
+      "name": "serde",
+      "version": "1.0.229"
+    },
+    {
+      "name": "serde_core",
+      "version": "1.0.229"
+    },
+    {
+      "name": "serde_derive",
+      "version": "1.0.229"
+    },
+    {
+      "name": "sha2",
+      "version": "0.10.9"
+    },
+    {
+      "name": "signature",
+      "version": "2.2.0"
+    },
+    {
+      "name": "spki",
+      "version": "0.7.3"
+    },
+    {
+      "name": "subtle",
+      "version": "2.6.1"
+    },
+    {
+      "name": "syn",
+      "version": "2.0.119"
+    },
+    {
+      "name": "syn",
+      "version": "3.0.9"
+    },
+    {
+      "name": "typenum",
+      "version": "1.20.1"
+    },
+    {
+      "name": "unicode-ident",
+      "version": "1.0.27"
+    },
+    {
+      "name": "version_check",
+      "version": "0.9.5"
+    },
+    {
+      "name": "wasi",
+      "version": "0.11.1+wasi-snapshot-preview1"
+    },
+    {
+      "name": "zeroize",
+      "version": "1.9.1"
+    }
+  ],
+  "resultado": {
+    "results": [
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {},
+      {}
+    ]
+  }
+}

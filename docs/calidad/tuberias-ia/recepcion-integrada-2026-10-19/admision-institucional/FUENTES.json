@@ -1,0 +1,27 @@
+{
+  "revision": "e7e3478c8a2da856451ee3b08c5158ab5dbd68b9",
+  "fuentes": [
+    {
+      "path": "docs/arquitectura/CONTRATO_R1_2_TRANSICIONES_Y_GENESIS_2026_08_24.md",
+      "sha": "f5a1761327229461015576dd699a584fd2f55eb6"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/continuacion-15-09-2026/CODIGO-LIMPIO-Y-AUDITABLE.md",
+      "sha": "676bca648f95b203fa465fc7fc040740ce363bfc"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/WORKFLOW_P1_P3_BIS_v2.md",
+      "sha": "bf3f85a92e9d44be2ac92db38f6c4f1191892c7f"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/paridad-imagen-celula-matematica/estudio-nucleo-agentes/bis-c09/CONTRATO_CONTENIDO_Y_AUTORIDAD_CANDIDATO_v0_1.md",
+      "sha": "59d3fdc36f12a05db0a30d5650d0615e1e6e1b02"
+    },
+    {
+      "path": "docs/calidad/tuberias-ia/recepcion-gobernada-y-comprobacion-observada/CONTRATO_Y_FRONTERA.md",
+      "sha": "0a3e9861be45d586cdcd9e4ec53ec238755d3ce8"
+    }
+  ],
+  "rectores": "Se conserva lectura íntegra de los tres rectores ya cotejados; sin cambio de base posterior",
+  "limite": "Consulta dirigida de Bis y de las condiciones de admisión; no revisión ejecutiva de los doce contratos Bis completos"
+}

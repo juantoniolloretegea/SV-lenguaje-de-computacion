@@ -22,6 +22,9 @@ use crate::requirements_reuse::ReuseRule;
 pub mod initial;
 pub mod observed;
 
+#[cfg(feature = "institutional-admission")]
+pub(crate) mod institutional;
+
 /// Obligación nuclear de SEC.0-D.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
 pub enum CoreRequirementKind {

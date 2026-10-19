@@ -4,6 +4,16 @@ version = "0.1.0"
 edition = "2021"
 publish = false
 
+[features]
+default = []
+# ES: Frontera de instalación explícita; no habilita rutas de inferencia.
+# EN: Explicit installation boundary; does not enable inference routes.
+institutional-admission = ["dep:ed25519-dalek", "dep:sha2"]
+
+[dependencies]
+ed25519-dalek = { version = "=2.2.0", default-features = false, features = ["std", "fast", "zeroize"], optional = true }
+sha2 = { version = "=0.10.9", optional = true }
+
 [lib]
 path = "src/lib.rs"
 

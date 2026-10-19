@@ -1,0 +1,111 @@
+{
+  "base": "e7e3478c8a2da856451ee3b08c5158ab5dbd68b9",
+  "fechaUTC": "2026-10-19T10:05:28.4123969Z",
+  "linux": {
+    "depuracion": "símbolos deshabilitados; sin optimización de release",
+    "orden": "cargo test --workspace --features sv_core/institutional-admission --locked --offline",
+    "rust": "1.93.1",
+    "pruebas": 434,
+    "estado": "favorable",
+    "grupos": 28
+  },
+  "windows": {
+    "optimizadas": 273,
+    "nucleares": 273,
+    "predeterminadas": 246,
+    "documentacionYFronteras": 19,
+    "conjuntoCompleto": "No recibido en Windows: siete pruebas documentales requieren programas Unix",
+    "clienteExterno": 1,
+    "rust": "1.98.1"
+  },
+  "wasi": {
+    "favorables": 270,
+    "exclusiones": [
+      "PC06: concurrencia",
+      "IA22: concurrencia",
+      "IA21: recuperación tras pánico, destino sin desenrollado"
+    ],
+    "motor": "Wasmtime 48.0.2"
+  },
+  "especificas": 27,
+  "alteracionesDetectadas": 9,
+  "clippy": {
+    "nuevos": 0,
+    "diagnosticosHeredados": 15,
+    "errores": 0
+  },
+  "dependencias": {
+    "avisosDevueltos": 0,
+    "consultadasOSV": 36,
+    "paginacionPendiente": false
+  },
+  "formato": "Archivos nuevos conformes; fuentes históricas ajenas no reformateadas",
+  "cambios": [
+    {
+      "ruta": "rust/Cargo.lock",
+      "nuevo": false,
+      "sha256": "33c351653f92cc10c1d8368224628fdd56d8ee65b99ca2bf24d5fa77aad95f20",
+      "base": "9eba07b981902719f97d61213f569fd675111f57"
+    },
+    {
+      "ruta": "rust/sv_core/Cargo.toml",
+      "nuevo": false,
+      "sha256": "ba958e3cd6a6cc61f0f3d74cec0a4eb95f5072f9e3ada2061af41907ca711321",
+      "base": "d284864c44d0e36d022768131abf88c450b95eb6"
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements.rs",
+      "nuevo": false,
+      "sha256": "6d84465eb06dac2bf8305c3d305d56d46b8f1c3719dfc20f05c49495c4787a79",
+      "base": "0e015458636b1cd36f3f5c4b03222038e04c239d"
+    },
+    {
+      "ruta": "rust/sv_core/src/authority/transitions.rs",
+      "nuevo": false,
+      "sha256": "9576937cd820b7cc8f4663a486a9ad6b29327184f84e1838f471886ad3f12e09",
+      "base": "739fef1a1a691013d05bd2180a7b62efb58201d6"
+    },
+    {
+      "ruta": "rust/sv_core/src/authority/transitions/institutional.rs",
+      "nuevo": true,
+      "sha256": "2e45beafd3052fa55de5a1983d940f878fb45270d83ee655782c6f22e1ee9fb4",
+      "base": null
+    },
+    {
+      "ruta": "rust/sv_core/src/authority/transitions/institutional/plan.rs",
+      "nuevo": true,
+      "sha256": "38690898da0b0cc1287df011707a37ab8d17989f2e25a32e127d14be934fe340",
+      "base": null
+    },
+    {
+      "ruta": "rust/sv_core/src/authority/transitions/institutional/tests.rs",
+      "nuevo": true,
+      "sha256": "34b3c0b056c968f0dae6f4d1390e18e23008a6451cb6752d36d9a8c7355c5622",
+      "base": null
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements/institutional.rs",
+      "nuevo": true,
+      "sha256": "736ffeab9eee05aa469f92d0d89cff0e57d5385abab7cd02c028ff74f8e05843",
+      "base": null
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements/observed.rs",
+      "nuevo": false,
+      "sha256": "8da550cc65d169650f5b4f050c2486bfc1f2f6422e4106137f886ec6c5352f4f",
+      "base": "5b5a89dd50ccd868b558a5c707ca3ad47938bcb5"
+    },
+    {
+      "ruta": "rust/sv_core/tests/institutional_admission.rs",
+      "nuevo": true,
+      "sha256": "0762180490e8bb179305bfccfb4fe5e04b9db1a02b7c47e5b9157e7d418f0102",
+      "base": null
+    }
+  ],
+  "limites": [
+    "Sin reconocimiento institucional real ni custodia material del soporte",
+    "Sin persistencia entre procesos o reinicios",
+    "Sin cierre íntegro de Bis, adenda, R2 o R3",
+    "Sin producción, exámenes, contenido a proveedores o cambios del Gestor instalado"
+  ]
+}

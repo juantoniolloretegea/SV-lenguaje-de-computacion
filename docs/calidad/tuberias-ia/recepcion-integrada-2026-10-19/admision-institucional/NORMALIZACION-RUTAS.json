@@ -1,0 +1,110 @@
+[
+  {
+    "archivo": "DIAGNOSTICO-MEDIACION.log",
+    "sha256Original": "96c168bac6118d4aa273637eccecddbe609396871da121b9851e27661210cdf8",
+    "sha256Publico": "157d8435043aa8762b574c2ec3d839a52086ed46ab5c067e53b07c3431a21138",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "PRUEBAS-NUCLEO-WINDOWS-FINALES.log",
+    "sha256Original": "82c6fce06a6a4d70b1cb11789cde57d00f67dc86954cbae133739c938e91aae4",
+    "sha256Publico": "bfe79bcbc97297f142cdc7f794abdc08c8d58f961b9f26797aa57caf399e4c52",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "PRUEBAS-WINDOWS-OPT.log",
+    "sha256Original": "4485c3f874e8da5902d3a0e0eb9fea7785a6a59a58f439ad034998ce7c779f9b",
+    "sha256Publico": "081fd927c30937a3c0f9db9d638be4bf75a1a9ed7897b0a38ffba1f1a7ceedcf",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "PRUEBAS-PREDETERMINADAS.log",
+    "sha256Original": "b75edadd16613979219f34098db634efab1b4f453e973a6a949af82b3432f54c",
+    "sha256Publico": "fc7f52ba8ed4363e4d1b6f90decbb2f5408d383a30d07c741863968464acd5e7",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "CLIENTE-PUBLICO.log",
+    "sha256Original": "28ebc76101fed0f0bdad805d7821601cb5c685ab1a9746fc1e10a53c70182687",
+    "sha256Publico": "73b68f0b08ea74cdf158bf1c83b4111c700d79d9bce289c211930dcfe1cee860",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "DOC-FRONTERA.log",
+    "sha256Original": "87483adf54587572e5a84abb2a54a449639743aae872983344960c70f28606b0",
+    "sha256Publico": "87483adf54587572e5a84abb2a54a449639743aae872983344960c70f28606b0",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "PRUEBAS-LINUX-FINALES.log",
+    "sha256Original": "22f75b59ceebb5b3d13e1877e687d67f368ff40beb3d6159f707b18b8db42c6b",
+    "sha256Publico": "659856822dfc0910c044cf24b2e63a0a19550fee8a678549b773240334c46796",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "PRUEBAS-WASI-FINALES.log",
+    "sha256Original": "162652ff653f8f0cfdd74e5a26d155e3228bf4e8cf4abfaf01773d52a606d688",
+    "sha256Publico": "162652ff653f8f0cfdd74e5a26d155e3228bf4e8cf4abfaf01773d52a606d688",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "DEPENDENCIAS.txt",
+    "sha256Original": "b346e58f7b0d48f91f7fa3500f64aeb81e57dcc88ac450a882354b00c6dd5d54",
+    "sha256Publico": "8d00324bde982eb9ab9679c203836181620d5694859e02fe0396ea1ebcd3cf10",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "SENSIBILIDAD-M01.log",
+    "sha256Original": "9398cfbe72c3d29312f5718be361ef0ec785cdbecdf45def1514ae3e4d7ac5c7",
+    "sha256Publico": "fd77be2659e7748c650aab60fde16b36e2a0314962879bd54a44d92324216ef9",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "SENSIBILIDAD-M02.log",
+    "sha256Original": "dcb4550658087b8521a8757bb8430bb272537a7f7b7a286d3837f5680f21b975",
+    "sha256Publico": "f923a750950f64966f63ec702b44c5ed0c873ccc25ea26d0b0291ae29128fa0c",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "SENSIBILIDAD-M03.log",
+    "sha256Original": "6af11540177c5f1f5f9cfe384f920d2f34fb697239d436c6232cb4b2ae1ce65a",
+    "sha256Publico": "d473349eeca229a65839943e1a58ec92e67c8fedc7eb402a54afd7e9baedb8dd",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "SENSIBILIDAD-M04.log",
+    "sha256Original": "0f94647a3c7f4ebbde77f07861670bde7367913fa72c8171982c6ff55cd9b748",
+    "sha256Publico": "78c3a3012554a6bbe75eae43b7d6ad687c3663e71ee020afcc194d9d577de31c",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "SENSIBILIDAD-M05.log",
+    "sha256Original": "98aef8aa6d3c666d3dd6c0bcee8310f59254e49b714649bab4cb1af1d64752d3",
+    "sha256Publico": "2ef5246e79d06d2e79956222c8a13f70021acfadad05d32b8ae82de3c279dd79",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "SENSIBILIDAD-M06.log",
+    "sha256Original": "7e8464167bf276887b00bfe7633fa74308efc11da375de7ec496be2acd85fb3a",
+    "sha256Publico": "2d552799688e4b40332397a3f4ef3681a4af135441ef91cc9c3a0dd24e80d7ce",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "SENSIBILIDAD-M07.log",
+    "sha256Original": "7cba8d3c664a9e5388a9c5173527fa1871ffb64d2603bf8fccde99a2f7d04b50",
+    "sha256Publico": "648d8ff1124e05fede00fd8fde6cb15c0087ab688b141a04c462b8a64a7341f5",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "SENSIBILIDAD-M08.log",
+    "sha256Original": "729685ec0c8e8539c360da9b0a4634b3fd6cfb078b0e7e87d17e83c78b0f8ea8",
+    "sha256Publico": "e474a2a8f55dbea442a49471905746bf7625490b347bf69e550196afc2463dcc",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  },
+  {
+    "archivo": "SENSIBILIDAD-M09.log",
+    "sha256Original": "5549615b83aa1dec802fe9eac934a797c23a0ffa35fd8a93f3a0096755f5099c",
+    "sha256Publico": "76caf5f0fbfca341e5a49a117baac921d783d07985db291bd1ec8bea48163a3c",
+    "tratamiento": "Sólo sustitución de prefijos de rutas locales; resultados íntegros"
+  }
+]

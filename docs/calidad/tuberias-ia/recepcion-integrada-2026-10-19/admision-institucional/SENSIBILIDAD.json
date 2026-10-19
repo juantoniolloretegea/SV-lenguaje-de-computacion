@@ -1,0 +1,74 @@
+[
+  {
+    "caso": "M01",
+    "archivo": "authority/transitions/institutional.rs",
+    "prueba": "ia04",
+    "detectado": true,
+    "sha256Fuente": "2e45beafd3052fa55de5a1983d940f878fb45270d83ee655782c6f22e1ee9fb4",
+    "sha256Registro": "9398cfbe72c3d29312f5718be361ef0ec785cdbecdf45def1514ae3e4d7ac5c7"
+  },
+  {
+    "caso": "M02",
+    "archivo": "authority/transitions/institutional.rs",
+    "prueba": "ia07",
+    "detectado": true,
+    "sha256Fuente": "2e45beafd3052fa55de5a1983d940f878fb45270d83ee655782c6f22e1ee9fb4",
+    "sha256Registro": "dcb4550658087b8521a8757bb8430bb272537a7f7b7a286d3837f5680f21b975"
+  },
+  {
+    "caso": "M03",
+    "archivo": "authority/transitions/institutional.rs",
+    "prueba": "ia10",
+    "detectado": true,
+    "sha256Fuente": "2e45beafd3052fa55de5a1983d940f878fb45270d83ee655782c6f22e1ee9fb4",
+    "sha256Registro": "6af11540177c5f1f5f9cfe384f920d2f34fb697239d436c6232cb4b2ae1ce65a"
+  },
+  {
+    "caso": "M04",
+    "archivo": "authority/transitions/institutional.rs",
+    "prueba": "ia11",
+    "detectado": true,
+    "sha256Fuente": "2e45beafd3052fa55de5a1983d940f878fb45270d83ee655782c6f22e1ee9fb4",
+    "sha256Registro": "0f94647a3c7f4ebbde77f07861670bde7367913fa72c8171982c6ff55cd9b748"
+  },
+  {
+    "caso": "M05",
+    "archivo": "requirements/observed.rs",
+    "prueba": "ia09",
+    "detectado": true,
+    "sha256Fuente": "8da550cc65d169650f5b4f050c2486bfc1f2f6422e4106137f886ec6c5352f4f",
+    "sha256Registro": "98aef8aa6d3c666d3dd6c0bcee8310f59254e49b714649bab4cb1af1d64752d3"
+  },
+  {
+    "caso": "M06",
+    "archivo": "requirements/institutional.rs",
+    "prueba": "ia19",
+    "detectado": true,
+    "sha256Fuente": "736ffeab9eee05aa469f92d0d89cff0e57d5385abab7cd02c028ff74f8e05843",
+    "sha256Registro": "7e8464167bf276887b00bfe7633fa74308efc11da375de7ec496be2acd85fb3a"
+  },
+  {
+    "caso": "M07",
+    "archivo": "authority/transitions/institutional.rs",
+    "prueba": "ia13",
+    "detectado": true,
+    "sha256Fuente": "2e45beafd3052fa55de5a1983d940f878fb45270d83ee655782c6f22e1ee9fb4",
+    "sha256Registro": "7cba8d3c664a9e5388a9c5173527fa1871ffb64d2603bf8fccde99a2f7d04b50"
+  },
+  {
+    "caso": "M08",
+    "archivo": "authority/transitions/institutional.rs",
+    "prueba": "ia02",
+    "detectado": true,
+    "sha256Fuente": "2e45beafd3052fa55de5a1983d940f878fb45270d83ee655782c6f22e1ee9fb4",
+    "sha256Registro": "729685ec0c8e8539c360da9b0a4634b3fd6cfb078b0e7e87d17e83c78b0f8ea8"
+  },
+  {
+    "caso": "M09",
+    "archivo": "authority/transitions/institutional.rs",
+    "prueba": "ia08",
+    "detectado": true,
+    "sha256Fuente": "2e45beafd3052fa55de5a1983d940f878fb45270d83ee655782c6f22e1ee9fb4",
+    "sha256Registro": "5549615b83aa1dec802fe9eac934a797c23a0ffa35fd8a93f3a0096755f5099c"
+  }
+]
