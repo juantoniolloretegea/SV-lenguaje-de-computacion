@@ -1,7 +1,7 @@
 # Documentación del lenguaje
 
 **Fecha y Versión: V.1 del conjunto**  
-**Fecha:** 4 de abril de 2026  
+**Fecha:** 19 de octubre de 2026  
 **Versión del conjunto:** V.1 del conjunto  
 **Autor del corpus:** Juan Antonio Lloret Egea  
 **ORCID:** 0000-0002-6634-3351  
@@ -37,32 +37,28 @@ Guías, tutoriales y referencia del lenguaje de computación del Sistema Vectori
 - `docs/arquitectura/INFORME_DE_CONTINUIDAD_DEL_FRENTE_BASICO_Y_HABILITACION_DEL_BACKEND_SV.md`
 
 **Contenido pendiente:**
-- Guía de inicio rápido
+- Programas completos y aplicaciones de la DSL
 - Referencia de tipos y operadores
 - Guía de migración desde Python/Rust
 
-## Gobierno y manual de fase
+## Fundamentos y documentación del lenguaje
 
 La **sede doctrinal superior** del ecosistema SV permanece en [`SV-matematica-semantica`](https://github.com/juantoniolloretegea/SV-matematica-semantica). La versión pública consolidada del pliego puede consultarse allí:
 
 - [Pliego de condiciones del Sistema Vectorial SV](https://github.com/juantoniolloretegea/SV-matematica-semantica/blob/main/docs/gobierno/PLIEGO_DE_CONDICIONES_DEL_SISTEMA_VECTORIAL_SV.md)
 - [Bloque de gobierno doctrinal de fase](https://github.com/juantoniolloretegea/SV-matematica-semantica/tree/main/docs/gobierno)
 
-El **manual SVP de trabajo** de este repositorio permanece en la sede operativa local:
+El [libro del Lenguaje de Computación SV](https://documentos-sv.itvia.online/dominios/lenguaje-de-computacion/manual/) desarrolla la teoría, la arquitectura y la referencia. El [Manual de programación en SV para desarrolladores](manual_svp/README.md) enseña a llevar esa teoría a la práctica mediante archivos SVP, explicaciones y ejercicios comprobados. Los programas completos y la programación asistida por IA tienen su alcance pendiente indicado en el manual.
 
-- `docs/manual_svp/README.md`
-- `docs/manual_svp/CONSTRUCTOR_DEL_MANUAL_DEL_LENGUAJE_SVP.md`
-- `docs/manual_svp/INDICE_Y_ESTADO_DEL_MANUAL_DEL_LENGUAJE_SVP.csv`
-
-En este repositorio operativo permanecen además como piezas locales de gobierno y enlace:
+Los documentos de gobierno y enlace incluyen:
 
 - `docs/gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.md`
 - `docs/gobierno/WISHLIST_IRQ_DEL_ECOSISTEMA_SV.csv`
 - `docs/gobierno/POLITICA_Y_PROTOCOLO_DE_COMPATIBILIDAD_INTERLENGUAJES_DEL_LENGUAJE_SV.md`
 
-## Gobierno operativo adicional de fase
+## Compatibilidad con otros lenguajes
 
-- `docs/manual_svp/TRAMO_10_COMPATIBILIDAD_INTERLENGUAJES_Y_ADOPCION_DEL_LENGUAJE_SV.md`
+- [Política y protocolo de compatibilidad](gobierno/POLITICA_Y_PROTOCOLO_DE_COMPATIBILIDAD_INTERLENGUAJES_DEL_LENGUAJE_SV.md).
 
 ## Frente operativo final del lenguaje SV
 
@@ -102,3 +98,8 @@ La autorización restringida de apertura de `H2` debe leerse como paso de gobier
 La trazabilidad de agente y el control de lectura fresca pasan además a quedar institucionalizados en `docs/calidad/REGISTRO_BARRIDOS_DE_ACTIVIDAD_Y_LATENCIA_DEL_REPO.md` y `docs/calidad/REGISTRO_PARTES_DE_TRABAJO_POR_AGENTE.md`. Su función es reducir inferencia, memoria espuria y lectura parcial en futuros relevos, sin convertir el registro maestro en una bitácora excesivamente burocrática.
 
 La aparición pública de la **Colección I** del programa de gobierno determinista y la continuidad inmediata hacia `NLP` no alteran todavía el estado de fase del lenguaje, pero sí elevan la necesidad de vigilancia formal sobre `N4/Uso`, IR, gramática, validator, runner y backend bajo custodia estructural visible.
+
+
+---
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

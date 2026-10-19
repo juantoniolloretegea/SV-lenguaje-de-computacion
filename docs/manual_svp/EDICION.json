@@ -1,0 +1,78 @@
+{
+  "gramatica": "0.2",
+  "titulo": "Manual de programación en SV para desarrolladores",
+  "edicion": "0.1",
+  "fecha": "2026-10-19",
+  "ejemplos": [
+    {
+      "sha256": "109ba3f3737d94e7959a7d000207a30eee830efd99eb42fc31a658f2e6c858b5",
+      "perfil": "en",
+      "ruta": "tests/conformance/invalid/cellstate_vector_length_mismatch.svp",
+      "codigo_salida": 1
+    },
+    {
+      "sha256": "6b9106283251318fa57bf3cb8e1fda32eebefe518e160ed882d7368f8c591463",
+      "perfil": "en",
+      "ruta": "tests/conformance/valid/cell_basic.svp",
+      "codigo_salida": 0
+    },
+    {
+      "sha256": "b91d5caa7ffb8457fadf3920d4f6135142c4c8ea7927da8a549a012148a6230b",
+      "perfil": "en",
+      "ruta": "tests/conformance/valid/compose_basic.svp",
+      "codigo_salida": 0
+    },
+    {
+      "sha256": "2930f0684014d0736cc0a0a8ff050e779c114a51825488afd4144aa2fdd8304c",
+      "perfil": "en",
+      "ruta": "tests/conformance/valid/gate_table.svp",
+      "codigo_salida": 0
+    },
+    {
+      "sha256": "12426c56c9b44f83cfe1000bc4d2cbc5a53e28fa06bad1acb64103ac9872f3cb",
+      "perfil": "en",
+      "ruta": "tests/conformance/valid/query_context_all_variants.svp",
+      "codigo_salida": 0
+    },
+    {
+      "sha256": "ea3310416cd67bddffc1a783093b2f3ab4353a548a260a0f2949c7888d4f7c13",
+      "perfil": "en",
+      "ruta": "tests/conformance/valid/resolve_projection.svp",
+      "codigo_salida": 0
+    },
+    {
+      "sha256": "8d2736d4b19a20592e8e394a2f53ff1d11a00cb72ba2f192c078620c0ce90b4c",
+      "perfil": "en",
+      "ruta": "tests/conformance/valid/transition_data_events.svp",
+      "codigo_salida": 0
+    }
+  ],
+  "representacion_intermedia": "0.3",
+  "revision_compilador": "e01d108e65e9be7d97a099d844b324413ea8c4cb",
+  "alcance": "Admisión y representación de programas; no acredita ejecución decisional ni inferencia",
+  "ejercicios": [
+    {
+      "sha256": "b778f8affaba3d85cdec49e2d320b68557fd79bcea23898426edee3f8c1f8eec",
+      "perfil": "en",
+      "ruta": "docs/manual_svp/ejercicios/01-cambiar-posicion.svp",
+      "resultado": "Admitido; propiedades del ejercicio comprobadas",
+      "codigo_salida": 0
+    },
+    {
+      "sha256": "dc42b730c1b296e661531313a8cca9b50d7b33b3d0e109c0d7702f41110d5401",
+      "perfil": "en",
+      "ruta": "docs/manual_svp/ejercicios/02-renombrar-estado.svp",
+      "resultado": "Admitido; propiedades del ejercicio comprobadas",
+      "codigo_salida": 0
+    },
+    {
+      "sha256": "a529baeb5e01d717e3c16af490f6d1f9a16752d7a3a5e924d7086f22e900c23f",
+      "perfil": "es",
+      "ruta": "docs/manual_svp/ejercicios/03-celula-es.svp",
+      "resultado": "Admitido; propiedades del ejercicio comprobadas",
+      "codigo_salida": 0
+    }
+  ],
+  "proyeccion": "0.1.0",
+  "atribucion_licencia": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+}

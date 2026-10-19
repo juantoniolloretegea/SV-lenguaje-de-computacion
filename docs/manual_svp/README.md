@@ -1,35 +1,39 @@
-# Manual del Lenguaje SVP (.svp)
+# Manual de programación en SV para desarrolladores
 
-**Fecha y Versión: V.1 del conjunto**  
-**Fecha:** 4 de abril de 2026  
-**Versión del conjunto:** V.1 del conjunto  
-**Autor del corpus:** Juan Antonio Lloret Egea  
-**ORCID:** 0000-0002-6634-3351  
-**Institución:** ITVIA — IA eñ™  
-**ISSN:** 2695-6411  
-**Licencia:** CC BY-NC-ND 4.0  
-**Titularidad y autoría:** © Juan Antonio Lloret Egea, 2026. Este conjunto se distribuye con atribución explícita de autoría y bajo la licencia indicada, sin autorización para apropiación de la paternidad intelectual del Sistema Vectorial SV.  
+**Edición 0.1 · 19 de octubre de 2026 · Original en español.**
+
+Este manual enseña a escribir y comprobar programas del Lenguaje de Computación SV mediante archivos `.svp`. Lleva a la práctica la teoría desarrollada en el [libro del Lenguaje de Computación SV](https://documentos-sv.itvia.online/dominios/lenguaje-de-computacion/manual/): sus fundamentos, significado, arquitectura y condiciones de uso.
+
+## Cómo estudiar
+
+Comience por la preparación y siga las lecciones en orden. Cada construcción se presenta con su archivo completo, explicación, resultado esperado y ejercicio. Puede utilizar el Playground o un comprobador nativo compatible. Las lecciones enseñan la DSL; Rust es el lenguaje de implementación del SV.
+
+Los ejemplos de esta edición permiten comprobar admisión y representación de objetos y operaciones. La admisión de una operación no acredita su ejecución decisional. Los programas completos y la asistencia de IA tienen apartados propios pendientes de desarrollo.
+
+## PARTE I · Escritura y primeras comprobaciones
+
+- [**1.** Preparar y comprobar un programa](01-primer-programa.md).
+- [**2.** Declaraciones y estados celulares](02-declaraciones-y-estados.md).
+
+## PARTE II · Relaciones y operaciones
+
+- [**3.** Compuertas y tablas de admisibilidad](03-compuertas.md).
+- [**4.** Resolución de U y proyecciones](04-resolucion-u.md).
+- [**5.** Composición de arquitecturas](05-composicion.md).
+- [**6.** Sucesos, trayectorias y consultas](06-sucesos-y-consultas.md).
+
+## PARTE III · Ejercicios y desarrollo posterior
+
+- [**7.** Ejercicios, soluciones y diagnósticos](07-ejercicios-y-diagnosticos.md).
+- [**8.** Programas completos y aplicaciones — en desarrollo](08-programas-completos.md).
+- [**9.** Programación asistida por IA — pendiente](09-programacion-asistida.md).
+
+## Edición y referencias
+
+La [identificación de la edición](EDICION.json) recoge la revisión del comprobador, los archivos utilizados, sus huellas y los resultados esperados. La fecha editorial no cambia las versiones de gramática, representación intermedia o proyección. El libro ofrece la [referencia de esas especificaciones](https://documentos-sv.itvia.online/dominios/lenguaje-de-computacion/manual/referencia-terminologia.html).
+
+Las construcciones se apoyan en las especificaciones del SV. Los ejemplos son públicos y no requieren datos personales ni el envío de contenido a modelos de IA. Los casos deliberadamente inválidos se identifican como ejercicios de diagnóstico.
 
 ---
 
-
-Esta carpeta contiene el **manual de trabajo del lenguaje SVP** en su sede operativa, pensado para cerrar capítulos, tramos o fases de forma progresiva, sin perder el eje ni dispersarse en vías laterales.
-
-## Objetivo
-
-Construir un manual por bloques suficientemente nucleares para apreciar detalle y suficientemente generales para no perder la línea del lenguaje.
-
-## Contenido
-
-- `README.md`
-- `CONSTRUCTOR_DEL_MANUAL_DEL_LENGUAJE_SVP.md`
-- `INDICE_Y_ESTADO_DEL_MANUAL_DEL_LENGUAJE_SVP.csv`
-- `TRAMO_10_COMPATIBILIDAD_INTERLENGUAJES_Y_ADOPCION_DEL_LENGUAJE_SV.md`
-
-## Regla
-
-Cada nuevo tramo del manual deberá cerrarse con: objeto, rango, dependencias, qué fija, qué no fija, ejemplos mínimos `.svp`, relación con la IR y criterio de cierre.
-
-## Tramo nuevo abierto de fase
-
-- `SVP-MAN-10` — Compatibilidad interlenguajes y adopción.
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
