@@ -23,11 +23,13 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[hyper y hyper-util](https://github.com/hyperium/hyper)**: transporte HTTP del servicio, junto con los componentes del mismo ecosistema para cuerpos de mensajes y fechas HTTP.
 - **[image](https://github.com/image-rs/image)**: lectura y tratamiento de imágenes en los componentes documentales y visuales.
 - **[jsonwebtoken](https://github.com/Keats/jsonwebtoken)**: interpretación y verificación de credenciales estructuradas JWT en los recorridos de autenticación que las utilizan.
+- **[Linux](https://www.kernel.org/)**: núcleo del sistema operativo utilizado en entornos de construcción, comprobación y ejecución del lenguaje y de sus adaptadores.
 - **[lopdf](https://github.com/J-F-Liu/lopdf)**: lectura y análisis de la estructura de documentos PDF.
 - **[mdBook](https://rust-lang.github.io/mdBook/)**: construcción y navegación de los libros de documentación.
 - **[Mermaid](https://github.com/mermaid-js/mermaid)**: descripción textual y representación de diagramas de arquitectura, organización y procesos en la documentación.
 - **[MiniJinja](https://github.com/mitsuhiko/minijinja)**: aplicación de plantillas de conversación en las pruebas de integración de motores de inferencia.
 - **[mistral.rs](https://github.com/EricLBuehler/mistral.rs)**: motor de inferencia en Rust utilizado en pruebas técnicas de integración y observabilidad. Esta mención corresponde al proyecto de software, no a una recomendación de modelos de Mistral AI.
+- **[netstat2](https://github.com/ohadravid/netstat2-rs)**: observación de conexiones TCP y UDP asociadas al proceso en la instrumentación de pruebas.
 - **[OpenAI](https://openai.com/)**: tecnología de inteligencia artificial utilizada como apoyo al análisis, la programación y la revisión documental; también modelos abiertos empleados en pruebas de integración.
 - **[pdf-extract](https://github.com/jrmuizel/pdf-extract)**: extracción de texto de documentos PDF, base de la adaptación documental utilizada por el SV.
 - **[pulldown-cmark](https://github.com/pulldown-cmark/pulldown-cmark)**: interpretación de Markdown para su presentación documental.
@@ -47,7 +49,10 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[Tower](https://github.com/tower-rs/tower)**: utilidades para comprobar los servicios HTTP del Gestor.
 - **[unicode-normalization](https://github.com/unicode-rs/unicode-normalization)**: normalización Unicode en la extracción y el tratamiento de texto documental.
 - **[UserWay](https://userway.org/)**: herramienta complementaria de accesibilidad incorporada a la web institucional; no sustituye la accesibilidad propia de la interfaz.
+- **[WASI](https://wasi.dev/)**: interfaces del sistema para comprobar la ejecución WebAssembly fuera del navegador, dentro de las capacidades concedidas por el entorno.
 - **[wasm-bindgen](https://wasm-bindgen.github.io/wasm-bindgen/)**: comunicación entre WebAssembly y JavaScript en los visualizadores web asociados.
+- **[Wasmtime](https://github.com/bytecodealliance/wasmtime)**: entorno de ejecución utilizado para comprobar componentes WebAssembly con WASI. Puede emplearse en equipos locales y servidores.
+- **[WebAssembly](https://webassembly.org/)**: formato de ejecución que permite distribuir componentes Rust del lenguaje en el navegador y en otros entornos compatibles.
 - **[zip](https://github.com/zip-rs/zip2)**: lectura y preparación de archivos ZIP, incluidas las copias descargables previstas por el Gestor.
 
 Cada aportación se reconoce en su ámbito. La relación no sustituye el inventario de dependencias y versiones de cada distribución, ni atribuye a sus responsables participación en las decisiones, certificación o aval del SV. Se reconoce asimismo el trabajo de quienes mantienen las dependencias indirectas de estos proyectos. Sus licencias y atribuciones se conservan en las fuentes y distribuciones correspondientes; la licencia de este documento no las modifica.
