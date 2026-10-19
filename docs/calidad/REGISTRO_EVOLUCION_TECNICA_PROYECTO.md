@@ -3463,3 +3463,12 @@ Se centraliza la información de privacidad en formularios y comunicaciones, con
 La recepción no certifica el cumplimiento jurídico integral: permanecen la determinación institucional de bases, conservación, contratos y transferencias y la atención sustantiva de derechos. La recopilación preparatoria y las medidas de perfil tienen alcance explícito: la revisión competente debe incluir los demás depósitos y derechos de terceros. No se atribuye supresión universal a una medida sobre la ficha común. La prueba técnica de correo está separada de solicitudes reales; no las resuelve. Se conservan datos, credenciales y restricciones, sin producción, exámenes, traducciones ni cuentas externas. Sólo conexión, ningún contenido a proveedores de IA.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+
+## RETP-2026-325 · Recepción técnica de pertenencia · 19/10/2026
+
+Se recibe la corrección de pertenencia de permisos y compromisos de R1, reproducida antes del cambio y comprobada con casos propios, ajenos, agotamiento, concurrencia, conservación causal y sensibilidad. Los resultados y sus límites se conservan en el acta enlazada. La pertenencia es intraproceso; no acredita raíz profesional ni continuidad durable. Se mantienen pendientes la adenda completa, DFL-005/006 y R2. Sin producción experta, exámenes, cuentas externas o contenido a proveedores.
+
+[Acta y resultados](tuberias-ia/recepcion-integrada-2026-10-19/ACTA-01-PERTENENCIA.md).
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

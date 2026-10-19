@@ -410,3 +410,12 @@ Siguiente objeto C/I: cobertura de evidencia requerida y acceso independiente de
 [Recepción contractual R02](riesgos-materiales-s26/RECEPCION_CONTRACTUAL_R02.md): DFL-003/004 reciben selección y corte coherentes, historia fijada frente a proyección presente, cobertura de índices y correlación del consumidor; DFL-005 recibe custodia de la expectativa y referentes suficientes por operación; DFL-006 conserva identidad del productor/adquisición y evidencia material del resultado como dependencias. R2-0 recibe transacción, confirmación y recuperación. Se reutilizan las sedes; ninguna deuda se renumera ni se cierra.
 
 Incremento documental: cero nuevas pruebas de comportamiento; cuatro sondas R01 anteriores conservadas; cero casos globales S26 cerrados. Sin BD, GUI, nueva primitiva o garantía material acreditadas. S22 activo y S24 pendiente conservan su secuencia. Preparar T01/T02/T07 sobre copia del montaje existente: sustitución de propuesta bajo expectativa fija, mezcla de dependencias y lectura posterior efectiva. Publicar fixtures, código y oráculos antes de ejecutarlos.
+
+
+## Recepción RETP-2026-325 · Pertenencia de permisos · 19/10/2026
+
+Se recibe la corrección de pertenencia de permisos y compromisos de R1, reproducida antes del cambio y comprobada con casos propios, ajenos, agotamiento, concurrencia, conservación causal y sensibilidad. Los resultados y sus límites se conservan en el acta enlazada. La pertenencia es intraproceso; no acredita raíz profesional ni continuidad durable. Se mantienen pendientes la adenda completa, DFL-005/006 y R2. Sin producción experta, exámenes, cuentas externas o contenido a proveedores.
+
+La corrección de RETP-153 queda incorporada a las fuentes del núcleo bajo el alcance de [ACTA-01-PERTENENCIA](tuberias-ia/recepcion-integrada-2026-10-19/ACTA-01-PERTENENCIA.md). Los antecedentes se conservan. La recepción técnica parcial no cierra N-01, N-03 o N-10 ni sustituye las capacidades semánticas pendientes de S13. No se abren nuevas claves de deuda ni se renumeran diagnósticos.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

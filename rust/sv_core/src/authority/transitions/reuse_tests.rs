@@ -1,3 +1,5 @@
+mod continuity_membership;
+
 use super::*;
 use crate::control::{
     AccumulationRuleRef, ApplicabilityRuleRef, CheckResult, ControlId, CoverageRuleRef,

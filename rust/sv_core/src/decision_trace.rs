@@ -9,6 +9,24 @@
 //! envolvente para que una decisión gobernada no pueda omitir su traza.
 
 use std::collections::{BTreeMap, BTreeSet};
+use std::sync::atomic::{AtomicU64, Ordering};
+
+// ES: Pertenencia intraproceso, independiente del ordinal público de decisión.
+// No acredita autoridad, tiempo, persistencia ni identidad entre procesos. Un
+// token vivo nunca comparte este valor con otra continuidad de este ejecutable.
+// EN: In-process membership, independent of the public decision ordinal. It
+// attests neither authority, time, persistence nor cross-process identity. No
+// live token shares this value with another continuity in this executable.
+static NEXT_CONTINUITY: AtomicU64 = AtomicU64::new(1);
+// ES: La atomicidad basta para unicidad; no publica datos entre hilos. Se rechaza
+// el agotamiento sin desbordar ni reciclar, antes de producir una nueva decisión.
+// EN: Atomicity provides uniqueness, not inter-thread data publication. Exhaustion
+// fails closed without wrapping or recycling, before producing a new decision.
+fn allocate_continuity(counter: &AtomicU64) -> Option<u64> {
+    counter
+        .fetch_update(Ordering::Relaxed, Ordering::Relaxed, |n| n.checked_add(1))
+        .ok()
+}
 
 use crate::authority::transitions::AuthorityContinuity;
 use crate::authority::EffectDescriptor;
@@ -27,9 +45,7 @@ use crate::permission::{
 };
 use crate::requirements::{RequirementClass, RequirementDescriptor};
 use crate::requirements_bridge::{ResolvedCheckObservation, ResolvedRequirementResult};
-use crate::requirements_reuse::{
-    seal_historical_qualified_result, HistoricalQualificationError,
-};
+use crate::requirements_reuse::{seal_historical_qualified_result, HistoricalQualificationError};
 
 /// Referencia opaca de una decisión trazada dentro de una continuidad lógica.
 ///
@@ -106,9 +122,7 @@ impl ReuseRuleTrace {
     }
 
     #[inline]
-    pub fn bindings(
-        &self,
-    ) -> impl Iterator<Item = (&ReuseBindingKeyRef, &ReuseBindingValueRef)> {
+    pub fn bindings(&self) -> impl Iterator<Item = (&ReuseBindingKeyRef, &ReuseBindingValueRef)> {
         self.exact_bindings.iter()
     }
 }
@@ -418,6 +432,9 @@ pub enum TraceAssemblyError {
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum TracedDecisionError {
+    /// ES: Sin identidad nueva; no se ha producido una decisión gobernada.
+    /// EN: No fresh identity; no governed decision has been produced.
+    ContinuityExhausted,
     Decision(PermitDecisionError),
     Trace(TraceAssemblyError),
 }
@@ -439,6 +456,7 @@ impl From<TraceAssemblyError> for TracedDecisionError {
 /// No implementa `Clone` ni expone el `Permit` interno por valor.
 #[derive(Debug, PartialEq, Eq)]
 pub struct TracedPermit {
+    continuity_instance: u64,
     permit: Permit,
     decision_trace: DecisionTraceRef,
 }
@@ -516,6 +534,7 @@ impl TracedPermitDecision {
 /// autoritativa ni a los registros fuente.
 #[derive(Debug, PartialEq, Eq)]
 pub struct ProtectedDecisionContinuity {
+    continuity_instance: Option<u64>,
     execution: ExecutionContinuity,
     next_decision_ordinal: String,
     decisions: BTreeMap<DecisionTraceRef, DecisionTrace>,
@@ -524,8 +543,15 @@ pub struct ProtectedDecisionContinuity {
 }
 
 impl ProtectedDecisionContinuity {
+    // Inyección de agotamiento del banco; ausente del artefacto de producción.
+    #[cfg(test)]
+    pub(crate) fn simulate_identity_exhaustion(&mut self) {
+        self.continuity_instance = None;
+    }
+
     pub fn from_authority(authority: AuthorityContinuity) -> Self {
         Self {
+            continuity_instance: allocate_continuity(&NEXT_CONTINUITY),
             execution: ExecutionContinuity::from_authority(authority),
             next_decision_ordinal: "1".to_owned(),
             decisions: BTreeMap::new(),
@@ -619,10 +645,9 @@ fn decimal_successor(value: &str) -> String {
 
 fn decision_result(decision: &PermitDecision) -> (CheckResult, TracedPermitDisposition) {
     match decision {
-        PermitDecision::Granted(permit) => (
-            permit.technical_result(),
-            TracedPermitDisposition::Granted,
-        ),
+        PermitDecision::Granted(permit) => {
+            (permit.technical_result(), TracedPermitDisposition::Granted)
+        }
         PermitDecision::NotGranted(PermitRejection::RefutedRequirements) => (
             CheckResult::Refuted,
             TracedPermitDisposition::BlockedRefuted,
@@ -662,9 +687,9 @@ fn assemble_trace(
     let mut traced_requirements = BTreeMap::new();
     for resolved in resolved_results {
         let requirement = resolved.requirement().clone();
-        let descriptor = requirements.requirement(&requirement).ok_or_else(|| {
-            TraceAssemblyError::UnexpectedRequirementResult(requirement.clone())
-        })?;
+        let descriptor = requirements
+            .requirement(&requirement)
+            .ok_or_else(|| TraceAssemblyError::UnexpectedRequirementResult(requirement.clone()))?;
         if !resolved.matches_descriptor(descriptor) {
             return Err(TraceAssemblyError::RequirementBindingMismatch(requirement));
         }
@@ -720,6 +745,9 @@ pub fn decide_permit_traced(
     effect: &EffectDescriptor,
     resolved_results: &[ResolvedRequirementResult],
 ) -> Result<TracedPermitDecision, TracedDecisionError> {
+    let continuity_instance = continuity
+        .continuity_instance
+        .ok_or(TracedDecisionError::ContinuityExhausted)?;
     let decision = decide_permit(
         continuity.authority(),
         form_reference,
@@ -739,6 +767,7 @@ pub fn decide_permit_traced(
 
     Ok(match decision {
         PermitDecision::Granted(permit) => TracedPermitDecision::Granted(TracedPermit {
+            continuity_instance,
             permit,
             decision_trace: reference,
         }),
@@ -762,6 +791,9 @@ fn trace_matches_permit(trace: &DecisionTrace, permit: &Permit) -> bool {
 
 #[derive(Debug, Clone, PartialEq, Eq)]
 pub enum TracedMediationError {
+    /// ES: El permiso pertenece a otra continuidad; no se ha mediado.
+    /// EN: The permit belongs to another continuity; mediation did not occur.
+    ForeignContinuity,
     UnknownDecisionTrace(DecisionTraceRef),
     DecisionNotGranted(DecisionTraceRef),
     DecisionBindingMismatch(DecisionTraceRef),
@@ -772,6 +804,7 @@ pub enum TracedMediationError {
 /// No implementa `Clone` ni expone el compromiso interno por valor.
 #[derive(Debug, PartialEq, Eq)]
 pub struct TracedMediatedCommitment {
+    continuity_instance: u64,
     commitment: MediatedEffectCommitment,
     decision_trace: DecisionTraceRef,
 }
@@ -808,6 +841,9 @@ pub fn mediate_traced_permit(
     traced_permit: TracedPermit,
     effect: &EffectDescriptor,
 ) -> Result<TracedMediatedCommitment, TracedMediationError> {
+    if continuity.continuity_instance != Some(traced_permit.continuity_instance) {
+        return Err(TracedMediationError::ForeignContinuity);
+    }
     let reference = traced_permit.decision_trace.clone();
     let trace = continuity
         .decision_trace(&reference)
@@ -824,6 +860,7 @@ pub fn mediate_traced_permit(
     continuity.mediated.insert(reference.clone());
 
     Ok(TracedMediatedCommitment {
+        continuity_instance: traced_permit.continuity_instance,
         commitment,
         decision_trace: reference,
     })
@@ -881,6 +918,9 @@ pub enum TracedAdapterError<E> {
 
 #[derive(Debug, PartialEq, Eq)]
 pub enum TracedExecutionError<E> {
+    /// ES: El compromiso es ajeno; no se ha despachado al ejecutor.
+    /// EN: The commitment belongs elsewhere; nothing was dispatched to the executor.
+    ForeignContinuity,
     UnknownDecisionTrace(DecisionTraceRef),
     DecisionNotMediated(DecisionTraceRef),
     DecisionBindingMismatch(DecisionTraceRef),
@@ -890,10 +930,7 @@ pub enum TracedExecutionError<E> {
     },
 }
 
-fn trace_matches_commitment(
-    trace: &DecisionTrace,
-    commitment: &MediatedEffectCommitment,
-) -> bool {
+fn trace_matches_commitment(trace: &DecisionTrace, commitment: &MediatedEffectCommitment) -> bool {
     trace.permit_disposition() == TracedPermitDisposition::Granted
         && trace.aggregate() == CheckResult::Accredited
         && trace.form() == commitment.form()
@@ -924,7 +961,9 @@ impl<A: EffectExecutor> EffectExecutor for LinkingExecutor<'_, A> {
         } else {
             self.links.insert(key, self.decision_trace.clone());
         }
-        self.inner.execute(request).map_err(TracedAdapterError::Adapter)
+        self.inner
+            .execute(request)
+            .map_err(TracedAdapterError::Adapter)
     }
 }
 
@@ -940,6 +979,9 @@ pub fn execute_traced_mediated<A: EffectExecutor>(
     traced_commitment: TracedMediatedCommitment,
     adapter: &mut A,
 ) -> Result<TracedExerciseConfirmation, TracedExecutionError<A::Error>> {
+    if continuity.continuity_instance != Some(traced_commitment.continuity_instance) {
+        return Err(TracedExecutionError::ForeignContinuity);
+    }
     let reference = traced_commitment.decision_trace.clone();
     {
         let trace = continuity
@@ -991,11 +1033,45 @@ mod tests {
 
     #[test]
     fn decision_references_are_structural_ordinals() {
-        let mut continuity = ProtectedDecisionContinuity::from_authority(
-            AuthorityContinuity::uninhabited(),
-        );
+        let mut continuity =
+            ProtectedDecisionContinuity::from_authority(AuthorityContinuity::uninhabited());
         assert_eq!(continuity.candidate_decision_ref().as_str(), "decision:1");
         continuity.next_decision_ordinal = decimal_successor(&continuity.next_decision_ordinal);
         assert_eq!(continuity.candidate_decision_ref().as_str(), "decision:2");
+    }
+}
+
+#[cfg(test)]
+mod continuity_instance_tests {
+    use super::*;
+    #[test]
+    fn pc05_exhaustion_does_not_wrap_or_reuse() {
+        let counter = AtomicU64::new(u64::MAX - 1);
+        assert_eq!(allocate_continuity(&counter), Some(u64::MAX - 1));
+        assert_eq!(allocate_continuity(&counter), None);
+        assert_eq!(allocate_continuity(&counter), None);
+        assert_eq!(counter.load(Ordering::Relaxed), u64::MAX);
+    }
+    #[test]
+    fn pc06_parallel_allocation_preserves_distinct_instances() {
+        let counter = AtomicU64::new(1);
+        let mut values = std::thread::scope(|scope| {
+            let handles: Vec<_> = (0..8)
+                .map(|_| {
+                    let counter = &counter;
+                    scope.spawn(move || {
+                        (0..16)
+                            .map(|_| allocate_continuity(counter).unwrap())
+                            .collect::<Vec<_>>()
+                    })
+                })
+                .collect();
+            handles
+                .into_iter()
+                .flat_map(|h| h.join().unwrap())
+                .collect::<Vec<_>>()
+        });
+        values.sort_unstable();
+        assert_eq!(values, (1..=128).collect::<Vec<_>>());
     }
 }

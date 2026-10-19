@@ -1,0 +1,402 @@
+{
+  "version": "RECEPCION-PERTENENCIA/1",
+  "fecha": "2026-10-19",
+  "registro": "RETP-2026-325",
+  "base": "9f468e6ab45613f2e109f5432d02e43f27b3b717",
+  "fuentesCotejadas": 249,
+  "fuentesSinCambio": 246,
+  "cambios": [
+    {
+      "ruta": "rust/sv_core/src/authority/transitions/reuse_tests.rs",
+      "anterior": "55e1ab4d493bf3a6bd80fd1bea1878f0bec075e3",
+      "actual": "9845b105e7876bf77b01179c81fdac6a034c9b6e",
+      "sha256": "f9bf53a0b31d82034bb3915b7eb683904a4ce187115e9c8911c081b4c1c3bf07"
+    },
+    {
+      "ruta": "rust/sv_core/src/authority/transitions/reuse_tests/continuity_membership.rs",
+      "anterior": null,
+      "actual": "4b0442504b5a73a520c4ab7b8609e513336180c9",
+      "sha256": "74b82f87823721e0b1a8e7c645de51435af7f223a84f2ccecabd74a13e0f285a"
+    },
+    {
+      "ruta": "rust/sv_core/src/decision_trace.rs",
+      "anterior": "d3074524e0477e7c54728238119f7e54ded215c2",
+      "actual": "ac6cfa982921fc4ecab65b159f4787ed9ea03381",
+      "sha256": "330bda1c36aeb92aacae49df45ca6c16e60351a056c726352471bd2c487cb9ae"
+    }
+  ],
+  "pruebaPrevia": {
+    "casos": [
+      "PC01",
+      "PC02",
+      "PC03"
+    ],
+    "fallosEsperados": 2,
+    "sha256Registro": "07e76f7a8e597be00dac8b0b86d218b74a8d2c37dbbd7ae2d4c49e56945cb198",
+    "conformes": 1
+  },
+  "ejecuciones": [
+    {
+      "id": "windows",
+      "herramientas": "rustc 1.98.1",
+      "pruebasConformes": 221,
+      "bloques": [
+        {
+          "estado": "ok",
+          "conformes": 221,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        }
+      ],
+      "sha256Registro": "e1c8fb512b2504abed8f22f929e4b81924ec37ca5d889c7346c6efb6682ee637"
+    },
+    {
+      "id": "windows-optimizado",
+      "herramientas": "rustc 1.98.1",
+      "pruebasConformes": 221,
+      "bloques": [
+        {
+          "estado": "ok",
+          "conformes": 221,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        }
+      ],
+      "sha256Registro": "150801aa9bb62cc9ca8159a02cbcb130ae112c32cc1831cd22ace277f9f9f153"
+    },
+    {
+      "id": "linux-conjunto",
+      "herramientas": "rustc 1.93.1",
+      "pruebasConformes": 379,
+      "bloques": [
+        {
+          "estado": "ok",
+          "conformes": 221,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 3,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 3,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 45,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 3,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 4,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 3,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 11,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 9,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 12,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 3,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 8,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 5,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 5,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 3,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 5,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 2,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 6,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 3,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 6,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 0,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 0,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 0,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 2,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 17,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 0,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 0,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        }
+      ],
+      "sha256Registro": "6c87d7c11909959bd78fe78369d2900fef1f9c72d350e91887093514ae17eac2"
+    },
+    {
+      "id": "wasi",
+      "herramientas": "rustc 1.98.1; Wasmtime 48.0.2",
+      "pruebasConformes": 220,
+      "bloques": [
+        {
+          "estado": "ok",
+          "conformes": 220,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 1
+        }
+      ],
+      "sha256Registro": "07ae4bca618dbf64b3252f1d436508d2a4a310f2a7ed29dd6f5c46a876e149e6"
+    },
+    {
+      "id": "control-restitucion",
+      "herramientas": "rustc 1.98.1",
+      "pruebasConformes": 10,
+      "bloques": [
+        {
+          "estado": "ok",
+          "conformes": 10,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 211
+        }
+      ],
+      "sha256Registro": "93ae6ecbf9a92b55306b501650406cc66b509a712985e239cd8c78b002ba4390"
+    }
+  ],
+  "sensibilidad": [
+    {
+      "mutacion": "M01",
+      "archivo": "decision_trace.rs",
+      "prueba": "pc02",
+      "salida": 101,
+      "fuenteRestituida": true,
+      "sha256Fuente": "330bda1c36aeb92aacae49df45ca6c16e60351a056c726352471bd2c487cb9ae",
+      "sha256Registro": "07d654cdc943abdeef9d25f521a2bb1df1ecaca72a8d3a9945f6d1077e8ebc92"
+    },
+    {
+      "mutacion": "M02",
+      "archivo": "decision_trace.rs",
+      "prueba": "pc03",
+      "salida": 101,
+      "fuenteRestituida": true,
+      "sha256Fuente": "330bda1c36aeb92aacae49df45ca6c16e60351a056c726352471bd2c487cb9ae",
+      "sha256Registro": "4bf62cc574f4ebd58d095c38cabead879ab22584f99ea71b19f2eb66c182a31c"
+    },
+    {
+      "mutacion": "M03",
+      "archivo": "decision_trace.rs",
+      "prueba": "pc05",
+      "salida": 101,
+      "fuenteRestituida": true,
+      "sha256Fuente": "330bda1c36aeb92aacae49df45ca6c16e60351a056c726352471bd2c487cb9ae",
+      "sha256Registro": "f0a62aa9aa6902b9c01cfa8aee747c102b9075e454f1ce6ab12f4eaaa73c5051"
+    },
+    {
+      "mutacion": "M04",
+      "archivo": "execution.rs",
+      "prueba": "pc10",
+      "salida": 101,
+      "fuenteRestituida": true,
+      "sha256Fuente": "2c6dc86d8afb95dbd3b9fd6b1d5af5036e26084f648c6660d52484f2e3959319",
+      "sha256Registro": "1d5346e16779de25d6014afdd5d7a91d6d3be5a23658400d2b99d0112d412701"
+    }
+  ],
+  "fronteraPublica": [
+    {
+      "cliente": "control",
+      "sha256Registro": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "controlEjecutado": true,
+      "codigo": null,
+      "salida": 0
+    },
+    {
+      "cliente": "no_mutar_pertenencia",
+      "sha256Registro": "4256f031a2adfe6bc50febca1ea41d30bef574949e09b87ead8e69f65bcb8941",
+      "controlEjecutado": false,
+      "codigo": "E0616",
+      "salida": 1
+    },
+    {
+      "cliente": "no_agotar_desde_cliente",
+      "sha256Registro": "6273b0971f46efefab3fced8462eb8de5e93f6602e8de7f96d3a6521a7df3244",
+      "controlEjecutado": false,
+      "codigo": "E0599",
+      "salida": 1
+    }
+  ],
+  "clippy": {
+    "base": 16,
+    "final": 16,
+    "diferencias": [],
+    "observacion": "Se comparan causas, emisores y mensajes; las líneas se desplazan por las adiciones."
+  },
+  "navegador": {
+    "herramientas": "rustc 1.98.1; wasm32-unknown-unknown",
+    "compilado": true,
+    "sha256Registro": "50b11fc289bdcfd9ed2acecf567d531d75eca82d690ef045ec288bdbcb170ec3",
+    "ejecucionR1": false
+  },
+  "wasi": {
+    "hilos": false,
+    "exclusion": "pc06_parallel_allocation_preserves_distinct_instances",
+    "limiteMemoriaBytes": 268435456,
+    "limiteTiempoSegundos": 30
+  },
+  "reproduccion": {
+    "condiciones": "Ejecutar desde la raíz, con destinos y soportes indicados. En esta recepción se usó además --offline con dependencias ya disponibles. La prueba de conjunto Linux requiere los útiles documentales que el repositorio ya utiliza, incluido sha256sum. No se ejecutaron las campañas independientes dirigidas por Python o JavaScript.",
+    "comandos": [
+      "cargo test --locked --manifest-path rust/Cargo.toml -p sv_core --lib",
+      "cargo test --locked --manifest-path rust/Cargo.toml -p sv_core --lib --release",
+      "cargo test --locked --manifest-path rust/Cargo.toml --workspace",
+      "cargo clippy --locked --manifest-path rust/Cargo.toml --workspace --all-targets",
+      "cargo test --locked --manifest-path rust/Cargo.toml -p sv_core --lib --target wasm32-wasip1 --no-run",
+      "wasmtime run -W max-memory-size=268435456,timeout=30s <binario_de_pruebas_WASI> --skip pc06 --test-threads=1",
+      "cargo build --locked --manifest-path rust/Cargo.toml -p sv_wasm --target wasm32-unknown-unknown --release",
+      "cargo test --locked --manifest-path rust/Cargo.toml -p sv_core --lib pc -- --nocapture"
+    ]
+  },
+  "limites": [
+    "Montaje de autoridad sintético, sin raíz profesional",
+    "Sin recepción durable ni cierre de R2",
+    "Sin cierre completo de adenda OP-CYB-001",
+    "Sin conformidad global de todos los procedimientos de CI",
+    "Sin activación de producción, exámenes o cuentas externas",
+    "Sin contenido hacia proveedores",
+    "Clippy conserva 16 diagnósticos únicos de la base"
+  ],
+  "incidenciasInstrumentales": [
+    "Una invocación inicial de Wasmtime utilizó un argumento no admitido; se conservó el error y se corrigió conforme a su ayuda. No contó como ejecución.",
+    "La primera preparación de la tercera alteración no encontró su punto exacto; se detuvo, restituyó fuentes y se corrigió antes de ejecutar el testigo. No contó como detección."
+  ]
+}
