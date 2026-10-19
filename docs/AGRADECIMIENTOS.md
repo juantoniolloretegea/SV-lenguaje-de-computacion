@@ -31,6 +31,7 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[mistral.rs](https://github.com/EricLBuehler/mistral.rs)**: motor de inferencia en Rust utilizado en pruebas técnicas de integración y observabilidad. Esta mención corresponde al proyecto de software, no a una recomendación de modelos de Mistral AI.
 - **[netstat2](https://github.com/ohadravid/netstat2-rs)**: observación de conexiones TCP y UDP asociadas al proceso en la instrumentación de pruebas.
 - **[OpenAI](https://openai.com/)**: tecnología de inteligencia artificial utilizada como apoyo al análisis, la programación y la revisión documental; también modelos abiertos empleados en pruebas de integración.
+- **[OpenTelemetry Rust](https://github.com/open-telemetry/opentelemetry-rust)**: instrumentación y correlación de operaciones en componentes de los ensayos de inferencia y del acceso documental. Las trazas describen los puntos instrumentados; no acreditan observación exhaustiva de un modelo.
 - **[pdf-extract](https://github.com/jrmuizel/pdf-extract)**: extracción de texto de documentos PDF, base de la adaptación documental utilizada por el SV.
 - **[pulldown-cmark](https://github.com/pulldown-cmark/pulldown-cmark)**: interpretación de Markdown para su presentación documental.
 - **[rand](https://github.com/rust-random/rand)**: generación de valores aleatorios en los mecanismos que la requieren.
