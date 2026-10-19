@@ -1,0 +1,68 @@
+   Compiling sv_core v0.1.0 (C:\laboratorio\watson-local\lenguaje-computacion-sv\desarrollo\nucleo-recepcion-integrada-20261019\rust\sv_core)
+warning: constant `PROFILE_ID` is never used
+ --> sv_core\src\identifier_profile.rs:6:18
+  |
+6 | pub(crate) const PROFILE_ID: &str = "svp-grammar-0.2-lex-es-1";
+  |                  ^^^^^^^^^^
+  |
+  = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `matches_descriptor` is never used
+   --> sv_core\src\requirements_reuse.rs:121:19
+    |
+ 44 | impl ReuseRule {
+    | -------------- method in this implementation
+...
+121 |     pub(crate) fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
+    |                   ^^^^^^^^^^^^^^^^^^
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+    --> sv_core\src\frontend.rs:2084:13
+     |
+2084 |     fn peek(&self) -> &Token {
+     |             ^^^^^     ^^^^^^
+     |             |         ||
+     |             |         |the same lifetime is hidden here
+     |             |         the same lifetime is elided here
+     |             the lifetime is elided here
+     |
+     = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+     = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+     |
+2084 |     fn peek(&self) -> &Token<'_> {
+     |                             ++++
+
+warning: `sv_core` (lib test) generated 3 warnings (run `cargo fix --lib -p sv_core --tests` to apply 1 suggestion)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.58s
+     Running unittests src\lib.rs (compilacion\nucleo-recepcion-integrada-20261019\windows\debug\deps\sv_core-d470fa5112359d9c.exe)
+
+running 25 tests
+test authority::transitions::reuse_tests::reception_tests::oc06_equality_cannot_accredit_core_authority ... ok
+test authority::transitions::reuse_tests::reception_tests::oc03_missing_is_not_empty_or_tri_u ... ok
+test authority::transitions::reuse_tests::reception_tests::oc07_bounds_contract_reference_and_observation ... ok
+test authority::transitions::reuse_tests::reception_tests::oc01_computes_result_and_keeps_exact_evidence ... ok
+test authority::transitions::reuse_tests::reception_tests::oc02_refutes_changed_bytes_without_normalization ... ok
+test authority::transitions::reuse_tests::reception_tests::oc08_result_does_not_claim_other_continuity ... ok
+test authority::transitions::reuse_tests::reception_tests::oc05_rejects_foreign_applicability_with_equal_content ... ok
+test authority::transitions::reuse_tests::reception_tests::oc04_rejects_foreign_descriptor_with_equal_content ... ok
+test authority::transitions::reuse_tests::reception_tests::oc09_debug_does_not_disclose_evidence ... ok
+test authority::transitions::reuse_tests::reception_tests::oc10_later_input_mutation_cannot_change_retained_evidence ... ok
+test authority::transitions::reuse_tests::reception_tests::rg05_preserves_genesis_error_without_repair ... ok
+test authority::transitions::reuse_tests::reception_tests::rg03_rejects_changed_declarations_and_preserves_original ... ok
+test authority::transitions::reuse_tests::reception_tests::rg02_rejects_changed_act_before_consuming_preparation ... ok
+test authority::transitions::reuse_tests::reception_tests::rg04_does_not_produce_second_continuity ... ok
+test authority::transitions::reuse_tests::reception_tests::rg01_receives_fixed_act_and_actual_t0_plan ... ok
+test authority::transitions::reuse_tests::reception_tests::rg06_bounds_before_copy_and_admits_boundary ... ok
+test authority::transitions::reuse_tests::reception_tests::rg13_consumed_premise_is_not_reconstituted ... ok
+test authority::transitions::reuse_tests::reception_tests::rg12_received_act_does_not_replace_required_checks ... ok
+test authority::transitions::reuse_tests::reception_tests::rg07_debug_does_not_disclose_received_material ... ok
+test authority::transitions::reuse_tests::reception_tests::rg08_receipt_keeps_act_with_decision_and_execution ... ok
+test authority::transitions::reuse_tests::reception_tests::rg09_same_act_does_not_merge_receipts_or_consume_own_permit ... ok
+test authority::transitions::reuse_tests::reception_tests::rg14_caller_cannot_replace_prepared_bytes_through_buffers ... ok
+test authority::transitions::reuse_tests::reception_tests::rg10_foreign_commitment_never_reaches_adapter ... ok
+test authority::transitions::reuse_tests::reception_tests::rg15_each_received_field_has_its_own_bound ... ok
+test authority::transitions::reuse_tests::reception_tests::rg11_uncertain_effect_keeps_cause_and_cannot_be_retried ... ok
+
+test result: ok. 25 passed; 0 failed; 0 ignored; 0 measured; 221 filtered out; finished in 0.02s
+

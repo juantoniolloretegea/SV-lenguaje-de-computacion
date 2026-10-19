@@ -419,3 +419,11 @@ Se recibe la corrección de pertenencia de permisos y compromisos de R1, reprodu
 La corrección de RETP-153 queda incorporada a las fuentes del núcleo bajo el alcance de [ACTA-01-PERTENENCIA](tuberias-ia/recepcion-integrada-2026-10-19/ACTA-01-PERTENENCIA.md). Los antecedentes se conservan. La recepción técnica parcial no cierra N-01, N-03 o N-10 ni sustituye las capacidades semánticas pendientes de S13. No se abren nuevas claves de deuda ni se renumeran diagnósticos.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## Recepción RETP-2026-326 · 19/10/2026
+
+Se recibe la incorporación de RETP-154, con corrección de confidencialidad de diagnósticos y conservación conjunta del acto y su continuidad trazada. Las comprobaciones y sus límites constan en el acta. S44 y TT-0028 permanecen en ejecución; no se cierran la admisión institucional, la adenda completa ni R2.
+
+Se mantienen las claves de deuda existentes y los pendientes de consulta, transducción, cobertura, admisión y persistencia. La incorporación no modifica semántica, IR ni catálogo de errores. [Criterios de aceptación y responsabilidades](tuberias-ia/continuacion-15-09-2026/ACTA_007_RECEPCION_ACTO_Y_COMPROBACION_OBSERVADA_2026_10_19.md).
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

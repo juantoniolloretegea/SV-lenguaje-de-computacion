@@ -1,0 +1,9 @@
+error[E0599]: no associated function or constant named `for_test` found for struct `ExternalGenesisPremise` in the current scope
+ --> seguimiento\r2-adenda-20261019\frontera\no_fabricar_premisa.rs:2:45
+  |
+2 | fn main() { let _ = ExternalGenesisPremise::for_test(); }
+  |                                             ^^^^^^^^ associated function or constant not found in `ExternalGenesisPremise`
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0599`.

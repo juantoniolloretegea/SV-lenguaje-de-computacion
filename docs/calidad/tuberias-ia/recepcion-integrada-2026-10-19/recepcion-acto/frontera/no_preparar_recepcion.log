@@ -1,0 +1,14 @@
+error[E0624]: associated function `prepare` is private
+ --> seguimiento\r2-adenda-20261019\frontera\no_preparar_recepcion.rs:2:102
+  |
+2 | ...nesisPlan) { let _ = PreparedGenesisReception::prepare(premise, plan, b"act", "issuer", "version"); }
+  |                                                   ^^^^^^^ private associated function
+  |
+ --> sv_core\src\authority\transitions\reception.rs:89:4
+ ::: sv_core\src\authority\transitions\reception.rs:95:37
+  |
+  = note: private associated function defined here
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0624`.

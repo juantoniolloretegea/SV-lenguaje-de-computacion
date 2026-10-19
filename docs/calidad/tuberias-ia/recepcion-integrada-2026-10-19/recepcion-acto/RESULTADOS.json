@@ -1,0 +1,433 @@
+{
+  "version": "RECEPCION-ACTO-COMPROBACION/1",
+  "fecha": "2026-10-19",
+  "base": "733202084d21f5bffbd082498a4599bad309fc04",
+  "registro": "RETP-2026-326",
+  "fuentesSinCambio": 246,
+  "cambios": [
+    {
+      "ruta": "rust/sv_core/src/requirements.rs",
+      "anterior": "b74fe4f9f1b79dcc0209b9956e59b6ba5541fb1a",
+      "actual": "0e015458636b1cd36f3f5c4b03222038e04c239d",
+      "sha256": "92c503be3f47d6689e73b4dae448c8954ee661a18af5b7e049b6df23b629202a"
+    },
+    {
+      "ruta": "rust/sv_core/src/authority/transitions.rs",
+      "anterior": "12afa2d2e49ae1cedbeef2d6a4e46edce9f641e4",
+      "actual": "739fef1a1a691013d05bd2180a7b62efb58201d6",
+      "sha256": "af32a15d4b2333ce980e0306242c9a8133ba5c56a8c07ed429cf57853d87ded9"
+    },
+    {
+      "ruta": "rust/sv_core/src/authority/transitions/reception.rs",
+      "anterior": null,
+      "actual": "bef4176815c68713147d48306c99441e93dad8b7",
+      "sha256": "8083c35115cc0fbf9cab112dbcc9289bfcf55544fc5538418600828e5b6e70b5"
+    },
+    {
+      "ruta": "rust/sv_core/src/authority/transitions/reuse_tests.rs",
+      "anterior": "9845b105e7876bf77b01179c81fdac6a034c9b6e",
+      "actual": "e8cc28ee2beed80c5632cadde6f5e08a63b71fb5",
+      "sha256": "59c78f597568ba12be9c91082816fe88555b0b69cdf725c21c3b23d8041f6fa3"
+    },
+    {
+      "ruta": "rust/sv_core/src/authority/transitions/reuse_tests/reception_tests.rs",
+      "anterior": null,
+      "actual": "d406d4bb84d10f41e9072b26501a0cbd0cc99d99",
+      "sha256": "a00ee8b24812416b48cfe1e27c0989781a4354015b9d4c67a16bbe4c650002ec"
+    },
+    {
+      "ruta": "rust/sv_core/src/requirements/observed.rs",
+      "anterior": null,
+      "actual": "5b5a89dd50ccd868b558a5c707ca3ad47938bcb5",
+      "sha256": "6f0c377daf9e518b0019a37afb94b3f1184abb0e2b44cbf49ed36320f1e02073"
+    }
+  ],
+  "pruebas": [
+    {
+      "id": "recepcion",
+      "registro": "PRUEBAS-RECEPCION.log",
+      "conformes": 25.0,
+      "bloques": [
+        {
+          "estado": "ok",
+          "conformes": 25,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 221
+        }
+      ],
+      "sha256Registro": "15e6fbc93bd3cd1594fd264b0ba5401af160dc204dbc7fdeae32142c3002dc36"
+    },
+    {
+      "id": "windows",
+      "registro": "PRUEBAS-FINALES-WINDOWS.log",
+      "conformes": 246.0,
+      "bloques": [
+        {
+          "estado": "ok",
+          "conformes": 246,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        }
+      ],
+      "sha256Registro": "66e477234c15885853905cad532273415e17aa3927c3def9eb59ea1534d0a119"
+    },
+    {
+      "id": "windows-optimizado",
+      "registro": "PRUEBAS-WINDOWS-OPT.log",
+      "conformes": 246.0,
+      "bloques": [
+        {
+          "estado": "ok",
+          "conformes": 246,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        }
+      ],
+      "sha256Registro": "70c1cf9ac45f16d62686a2e89fa5907004965a04ec70321e0dd35f7aa3ca112b"
+    },
+    {
+      "id": "linux-conjunto",
+      "registro": "PRUEBAS-CONJUNTO-LINUX.log",
+      "conformes": 404.0,
+      "bloques": [
+        {
+          "estado": "ok",
+          "conformes": 246,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 3,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 3,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 45,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 3,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 4,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 3,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 11,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 9,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 12,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 3,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 8,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 5,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 5,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 3,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 5,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 2,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 6,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 3,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 6,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 0,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 0,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 0,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 2,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 17,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 0,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        },
+        {
+          "estado": "ok",
+          "conformes": 0,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 0
+        }
+      ],
+      "sha256Registro": "da14e8ec37d56827a37722c9207b56ec608bb2a52b1dd196d412112e9182279e"
+    },
+    {
+      "id": "wasi",
+      "registro": "PRUEBAS-WASI.log",
+      "conformes": 245.0,
+      "bloques": [
+        {
+          "estado": "ok",
+          "conformes": 245,
+          "fallos": 0,
+          "ignoradas": 0,
+          "filtradas": 1
+        }
+      ],
+      "sha256Registro": "148a5edbb3d688fdb99f39b17eefeae4511955e559a9019eaa99013aa5ed400e"
+    }
+  ],
+  "sensibilidad": [
+    {
+      "caso": "M01",
+      "archivo": "authority/transitions/reception.rs",
+      "prueba": "rg02",
+      "salida": 101,
+      "restituido": true,
+      "sha256Fuente": "8083c35115cc0fbf9cab112dbcc9289bfcf55544fc5538418600828e5b6e70b5",
+      "sha256Registro": "f88e8d8b53d0da482cddb105c4662f3c1b791d68d3ed07e161989cb67e9337bb"
+    },
+    {
+      "caso": "M02",
+      "archivo": "authority/transitions/reception.rs",
+      "prueba": "rg03",
+      "salida": 101,
+      "restituido": true,
+      "sha256Fuente": "8083c35115cc0fbf9cab112dbcc9289bfcf55544fc5538418600828e5b6e70b5",
+      "sha256Registro": "e3c7b3b0f266ef59c30a87aa4410fc3b35e8af9b58a6853cf5be6508c3f0a4b6"
+    },
+    {
+      "caso": "M03",
+      "archivo": "requirements/observed.rs",
+      "prueba": "oc06",
+      "salida": 101,
+      "restituido": true,
+      "sha256Fuente": "6f0c377daf9e518b0019a37afb94b3f1184abb0e2b44cbf49ed36320f1e02073",
+      "sha256Registro": "c82d6f7c8fce2d9369aa18b2b16a464cf585ff235a9ea421fb55672293658424"
+    },
+    {
+      "caso": "M04",
+      "archivo": "requirements/observed.rs",
+      "prueba": "oc03",
+      "salida": 101,
+      "restituido": true,
+      "sha256Fuente": "6f0c377daf9e518b0019a37afb94b3f1184abb0e2b44cbf49ed36320f1e02073",
+      "sha256Registro": "18c8f548e5bced7fcf5f45c1375d7ad901d898276dafa08cbf566b7d84b92de1"
+    },
+    {
+      "caso": "M05",
+      "archivo": "requirements/observed.rs",
+      "prueba": "oc04",
+      "salida": 101,
+      "restituido": true,
+      "sha256Fuente": "6f0c377daf9e518b0019a37afb94b3f1184abb0e2b44cbf49ed36320f1e02073",
+      "sha256Registro": "601bacae23e5ae854ffa63b91cfb312df87875022ec057301fed9facef663547"
+    }
+  ],
+  "frontera": [
+    {
+      "caso": "control",
+      "salida": 0,
+      "diagnostico": "",
+      "sha256Registro": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "caso": "no_extraer_comprobacion",
+      "salida": 1,
+      "diagnostico": "E0616",
+      "sha256Registro": "02b348fc5525064e48e51d471e8a8686c8b61eaf0576e53001adcbed5cfc887e"
+    },
+    {
+      "caso": "no_fabricar_premisa",
+      "salida": 1,
+      "diagnostico": "E0599",
+      "sha256Registro": "256bf3b64f9f94a1a6733f0bbb6b2d48ade072a18000b213d9a87936a1ac32a5"
+    },
+    {
+      "caso": "no_preparar_comprobacion",
+      "salida": 1,
+      "diagnostico": "E0624",
+      "sha256Registro": "05f19a371cf1e6be4329bd28f7633d72d8a254c50a66e97eb708e4eeff44df94"
+    },
+    {
+      "caso": "no_preparar_recepcion",
+      "salida": 1,
+      "diagnostico": "E0624",
+      "sha256Registro": "2cbbe032afc787cf40535b0a3318e61034caf2430180ba8e00aee6712077b28e"
+    },
+    {
+      "caso": "no_reemplazar_continuidad",
+      "salida": 1,
+      "diagnostico": "E0616",
+      "sha256Registro": "c258ff86aea777e62b652980842555738bb7ca0c89dbd780f7400a250fa5ede6"
+    }
+  ],
+  "clippy": {
+    "base": 16,
+    "actual": 15,
+    "diferencias": [
+      {
+        "InputObject": "warning|dead_code|sv_core\\src\\authority\\transitions\\reuse_tests.rs|function `permission_plan` is never used",
+        "SideIndicator": "<="
+      }
+    ]
+  },
+  "wasi": {
+    "tiempoMaximoSegundos": 30,
+    "exclusion": "pc06_parallel_allocation_preserves_distinct_instances",
+    "memoriaMaximaBytes": 268435456
+  },
+  "diagnosticosPrevios": {
+    "registro": "CONTRASTE-CONFIDENCIALIDAD-PREVIO.log",
+    "fallosReproducidos": 2,
+    "sha256Registro": "5dcafdf08188072fcf66e170ce0bc725fe4cd96111f3bfc95694e648b9919a74",
+    "casos": [
+      "rg07",
+      "oc09"
+    ]
+  },
+  "limites": [
+    "Admisión de la raíz supuesta exclusivamente en pruebas; productor institucional pendiente",
+    "Comparación exacta no acredita obligaciones nucleares ni verdad profesional",
+    "Sin persistencia, recuperación, cierre de R2 ni recepción integral de la adenda",
+    "Sin producción, exámenes, cuentas externas o contenido a proveedores",
+    "Cotas por campo; no cuota global de memoria, instancias o servicio",
+    "WASI no acredita ejecución en navegador ni concurrencia entre hilos"
+  ],
+  "herramientas": [
+    "Windows: rustc 1.98.1",
+    "Linux: rustc 1.93.1",
+    "Wasmtime 48.0.2"
+  ],
+  "reproduccion": [
+    "cargo test --locked --manifest-path rust/Cargo.toml --workspace",
+    "cargo test --locked --manifest-path rust/Cargo.toml -p sv_core --lib --release",
+    "cargo clippy --locked --manifest-path rust/Cargo.toml --workspace --all-targets",
+    "cargo test --locked --manifest-path rust/Cargo.toml -p sv_core --lib --target wasm32-wasip1 --no-run",
+    "wasmtime run -W max-memory-size=268435456,timeout=30s <pruebas.wasm> --skip pc06 --test-threads=1"
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "path": "docs/calidad/Inventario-sv/README.md",
+    "blob": "30850191d075510441783c5fcc6391c4a6a0e34b",
+    "sha256": "bf5eb2e5714bff908ac3fa2631a55cef73df63784c37390f5b4947dd1e8be3f2"
+  },
+  {
+    "path": "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv",
+    "blob": "6879f1091f76bbc47afe492ce913d66d87199dd8",
+    "sha256": "a68fef84828652a3543324274d1540cd1242bdd6d3482d8cb31dff2c95a63324"
+  },
+  {
+    "path": "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md",
+    "blob": "25e175e4f485c63000c3896daebdb622bee076e6",
+    "sha256": "510596f19dc84d7fef152e825823388328f6aee78000cb5922ae8d4c9f170a74"
+  },
+  {
+    "path": "docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md",
+    "blob": "ec8c0a15d69ecdc839b41fe0db6f573f86b02545",
+    "sha256": "d62aec46509143aba434075c96b492ea70d50f4498bc998ae10382a4e3c3faeb"
+  },
+  {
+    "path": "docs/calidad/tuberias-ia/continuacion-15-09-2026/inicio.md",
+    "blob": "24aa9bb18ae7f317b16612e7b80ff8ed6892edf2",
+    "sha256": "4d9d670863e18bedab94f44e7d8427a0fb1768ee694c8ba1c29fcfc2dc2a07a1"
+  },
+  {
+    "path": "docs/calidad/Inventario-sv/sucesos/fichas/S43.md",
+    "blob": "cb38433450051d9d85f4fc7c99455252d32eb61f",
+    "sha256": "d4b672cf02286c7c2fab77cb616ae1e0ec2ca1fd8d3641164d4e720643e266dd"
+  }
+]

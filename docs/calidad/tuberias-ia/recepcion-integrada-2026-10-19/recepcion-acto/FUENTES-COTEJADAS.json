@@ -1,0 +1,77 @@
+[
+  {
+    "path": "docs/calidad/Inventario-sv/README.md",
+    "blob": "30850191d075510441783c5fcc6391c4a6a0e34b",
+    "sha256": "bf5eb2e5714bff908ac3fa2631a55cef73df63784c37390f5b4947dd1e8be3f2"
+  },
+  {
+    "path": "docs/calidad/Inventario-sv/sucesos/fichas/S43.md",
+    "blob": "cb38433450051d9d85f4fc7c99455252d32eb61f",
+    "sha256": "d4b672cf02286c7c2fab77cb616ae1e0ec2ca1fd8d3641164d4e720643e266dd"
+  },
+  {
+    "path": "docs/calidad/Inventario-sv/sucesos/HISTORIAL_SUCESOS_SV.csv",
+    "blob": "5c63a6bc2cfcbcd28398e6ada620f68a16ba6782",
+    "sha256": "d5393f630dd4d78ccc46a9a6ef15ce67dd70eabd08207ac2944e872ce658ffcd"
+  },
+  {
+    "path": "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv",
+    "blob": "cfd64c8390dc9961e6abdb7828848c895cd2d203",
+    "sha256": "7454c219c2839255898d60ee73c00fa286516d0994d1836c1708ce151477c058"
+  },
+  {
+    "path": "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.md",
+    "blob": "b656d5aaf6f9ab52582296c33df5f1798129dfcd",
+    "sha256": "17c4ad98dca3a63ca576e46cb804be461356981c857e41aca293238f76c9d5cc"
+  },
+  {
+    "path": "docs/calidad/Inventario-sv/tiques-tecnicos/TIQUES_TECNICOS.csv",
+    "blob": "42962775759b8bdb8d2440061ded3a9c553e3ea0",
+    "sha256": "4d4ec771889a11ea77f82fc4e832f8fb17367cf9d478ab319b3cb9f70c74ddda"
+  },
+  {
+    "path": "docs/calidad/Inventario-sv/tiques-tecnicos/TT-0027.md",
+    "blob": "743710d24e483d4fbd98293e4ba6e37db5286b94",
+    "sha256": "7fa76e49b8bc8f93594db059e17f14c94b4d3d5f0509aa40c8539afe94a85751"
+  },
+  {
+    "path": "docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md",
+    "blob": "ec8c0a15d69ecdc839b41fe0db6f573f86b02545",
+    "sha256": "d62aec46509143aba434075c96b492ea70d50f4498bc998ae10382a4e3c3faeb"
+  },
+  {
+    "path": "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.csv",
+    "blob": "6879f1091f76bbc47afe492ce913d66d87199dd8",
+    "sha256": "a68fef84828652a3543324274d1540cd1242bdd6d3482d8cb31dff2c95a63324"
+  },
+  {
+    "path": "docs/calidad/REGISTRO_EVOLUCION_TECNICA_PROYECTO.md",
+    "blob": "25e175e4f485c63000c3896daebdb622bee076e6",
+    "sha256": "510596f19dc84d7fef152e825823388328f6aee78000cb5922ae8d4c9f170a74"
+  },
+  {
+    "path": "docs/calidad/riesgos-materiales-s26/RECEPCION_CONTRACTUAL_R02.md",
+    "blob": "78a2e1c67a8e2299da1bdd7d0979f842c7d7aad4",
+    "sha256": "d93e47c82c3ebb7140dd589f3490d424c34534b54186798ab83c8ede785c9fe9"
+  },
+  {
+    "path": "docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md",
+    "blob": "cb2dee32d0edc75d3e994dae14b1752c26130bc2",
+    "sha256": "5b1e16d06a9293275d169423454f7773fcccf8a257ab9a844b6dc50b6c0b8436"
+  },
+  {
+    "path": "docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_006_CODIGO_LIMPIO_AISLAMIENTO_PRIVACIDAD_2026_10_18.md",
+    "blob": "df0a54c77e8a88687fd384c280369fd62dc74007",
+    "sha256": "2b687f18ae919aff2d6d379c55d2e2959d05582f445793b6320bb1f83499cfc4"
+  },
+  {
+    "path": "docs/calidad/tuberias-ia/continuacion-15-09-2026/inicio.md",
+    "blob": "24aa9bb18ae7f317b16612e7b80ff8ed6892edf2",
+    "sha256": "4d9d670863e18bedab94f44e7d8427a0fb1768ee694c8ba1c29fcfc2dc2a07a1"
+  },
+  {
+    "path": "docs/calidad/tuberias-ia/recepcion-gobernada-y-comprobacion-observada/CAMBIO_INCREMENTAL.patch",
+    "blob": "ffc2c8684a7c5e8414f8268d7e9391e59b95764b",
+    "sha256": "95b060f8128c499fe526ec17a2b36c56d654cd19b91cdaf06f3efc01606bc66c"
+  }
+]

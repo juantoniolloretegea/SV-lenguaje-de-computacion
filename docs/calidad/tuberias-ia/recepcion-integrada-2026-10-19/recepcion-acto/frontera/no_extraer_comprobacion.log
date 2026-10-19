@@ -1,0 +1,9 @@
+error[E0616]: field `check` of struct `ObservedExactCheck` is private
+ --> seguimiento\r2-adenda-20261019\frontera\no_extraer_comprobacion.rs:2:53
+  |
+2 | fn forbidden(e: ObservedExactCheck<'_>) { let _ = e.check; }
+  |                                                     ^^^^^ private field
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0616`.

@@ -1,0 +1,47 @@
+[
+  {
+    "caso": "M01",
+    "archivo": "authority/transitions/reception.rs",
+    "prueba": "rg02",
+    "salida": 101,
+    "restituido": true,
+    "sha256Fuente": "8083c35115cc0fbf9cab112dbcc9289bfcf55544fc5538418600828e5b6e70b5",
+    "sha256Registro": "f88e8d8b53d0da482cddb105c4662f3c1b791d68d3ed07e161989cb67e9337bb"
+  },
+  {
+    "caso": "M02",
+    "archivo": "authority/transitions/reception.rs",
+    "prueba": "rg03",
+    "salida": 101,
+    "restituido": true,
+    "sha256Fuente": "8083c35115cc0fbf9cab112dbcc9289bfcf55544fc5538418600828e5b6e70b5",
+    "sha256Registro": "e3c7b3b0f266ef59c30a87aa4410fc3b35e8af9b58a6853cf5be6508c3f0a4b6"
+  },
+  {
+    "caso": "M03",
+    "archivo": "requirements/observed.rs",
+    "prueba": "oc06",
+    "salida": 101,
+    "restituido": true,
+    "sha256Fuente": "6f0c377daf9e518b0019a37afb94b3f1184abb0e2b44cbf49ed36320f1e02073",
+    "sha256Registro": "c82d6f7c8fce2d9369aa18b2b16a464cf585ff235a9ea421fb55672293658424"
+  },
+  {
+    "caso": "M04",
+    "archivo": "requirements/observed.rs",
+    "prueba": "oc03",
+    "salida": 101,
+    "restituido": true,
+    "sha256Fuente": "6f0c377daf9e518b0019a37afb94b3f1184abb0e2b44cbf49ed36320f1e02073",
+    "sha256Registro": "18c8f548e5bced7fcf5f45c1375d7ad901d898276dafa08cbf566b7d84b92de1"
+  },
+  {
+    "caso": "M05",
+    "archivo": "requirements/observed.rs",
+    "prueba": "oc04",
+    "salida": 101,
+    "restituido": true,
+    "sha256Fuente": "6f0c377daf9e518b0019a37afb94b3f1184abb0e2b44cbf49ed36320f1e02073",
+    "sha256Registro": "601bacae23e5ae854ffa63b91cfb312df87875022ec057301fed9facef663547"
+  }
+]

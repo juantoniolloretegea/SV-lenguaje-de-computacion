@@ -1,4 +1,5 @@
 mod continuity_membership;
+mod reception_tests;
 
 use super::*;
 use crate::control::{

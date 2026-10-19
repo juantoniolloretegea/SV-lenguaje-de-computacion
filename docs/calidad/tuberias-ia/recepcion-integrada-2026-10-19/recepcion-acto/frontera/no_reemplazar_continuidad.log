@@ -1,0 +1,9 @@
+error[E0616]: field `continuity` of struct `ReceivedGenesis` is private
+ --> seguimiento\r2-adenda-20261019\frontera\no_reemplazar_continuidad.rs:3:93
+  |
+3 | fn forbidden(received: &mut ReceivedGenesis, other: ProtectedDecisionContinuity) { received.continuity = other; }
+  |                                                                                             ^^^^^^^^^^ private field
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0616`.

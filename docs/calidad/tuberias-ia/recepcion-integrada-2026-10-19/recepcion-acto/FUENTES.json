@@ -1,0 +1,32 @@
+[
+  {
+    "path": "docs/calidad/Inventario-sv/sucesos/SUCESOS_SV.csv",
+    "blob": "cfd64c8390dc9961e6abdb7828848c895cd2d203",
+    "sha256": "7454c219c2839255898d60ee73c00fa286516d0994d1836c1708ce151477c058"
+  },
+  {
+    "path": "docs/calidad/Inventario-sv/tiques-tecnicos/TIQUES_TECNICOS.csv",
+    "blob": "42962775759b8bdb8d2440061ded3a9c553e3ea0",
+    "sha256": "4d4ec771889a11ea77f82fc4e832f8fb17367cf9d478ab319b3cb9f70c74ddda"
+  },
+  {
+    "path": "docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_001_CONTINUIDAD_Y_RUMBO_2026_09_15.md",
+    "blob": "cb2dee32d0edc75d3e994dae14b1752c26130bc2",
+    "sha256": "5b1e16d06a9293275d169423454f7773fcccf8a257ab9a844b6dc50b6c0b8436"
+  },
+  {
+    "path": "docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_006_CODIGO_LIMPIO_AISLAMIENTO_PRIVACIDAD_2026_10_18.md",
+    "blob": "df0a54c77e8a88687fd384c280369fd62dc74007",
+    "sha256": "2b687f18ae919aff2d6d379c55d2e2959d05582f445793b6320bb1f83499cfc4"
+  },
+  {
+    "path": "docs/calidad/Inventario-sv/tiques-tecnicos/TT-0027.md",
+    "blob": "743710d24e483d4fbd98293e4ba6e37db5286b94",
+    "sha256": "7fa76e49b8bc8f93594db059e17f14c94b4d3d5f0509aa40c8539afe94a85751"
+  },
+  {
+    "path": "docs/calidad/riesgos-materiales-s26/RECEPCION_CONTRACTUAL_R02.md",
+    "blob": "78a2e1c67a8e2299da1bdd7d0979f842c7d7aad4",
+    "sha256": "d93e47c82c3ebb7140dd589f3490d424c34534b54186798ab83c8ede785c9fe9"
+  }
+]

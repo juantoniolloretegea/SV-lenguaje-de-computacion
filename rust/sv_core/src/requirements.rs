@@ -20,6 +20,7 @@ use crate::requirements_coverage::CoverageRule;
 use crate::requirements_reuse::ReuseRule;
 
 pub mod initial;
+pub mod observed;
 
 /// Obligación nuclear de SEC.0-D.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]

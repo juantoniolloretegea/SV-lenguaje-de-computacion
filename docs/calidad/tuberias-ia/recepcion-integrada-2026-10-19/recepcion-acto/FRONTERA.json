@@ -1,0 +1,38 @@
+[
+  {
+    "caso": "control",
+    "salida": 0,
+    "diagnostico": "",
+    "sha256Registro": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "caso": "no_extraer_comprobacion",
+    "salida": 1,
+    "diagnostico": "E0616",
+    "sha256Registro": "02b348fc5525064e48e51d471e8a8686c8b61eaf0576e53001adcbed5cfc887e"
+  },
+  {
+    "caso": "no_fabricar_premisa",
+    "salida": 1,
+    "diagnostico": "E0599",
+    "sha256Registro": "256bf3b64f9f94a1a6733f0bbb6b2d48ade072a18000b213d9a87936a1ac32a5"
+  },
+  {
+    "caso": "no_preparar_comprobacion",
+    "salida": 1,
+    "diagnostico": "E0624",
+    "sha256Registro": "05f19a371cf1e6be4329bd28f7633d72d8a254c50a66e97eb708e4eeff44df94"
+  },
+  {
+    "caso": "no_preparar_recepcion",
+    "salida": 1,
+    "diagnostico": "E0624",
+    "sha256Registro": "2cbbe032afc787cf40535b0a3318e61034caf2430180ba8e00aee6712077b28e"
+  },
+  {
+    "caso": "no_reemplazar_continuidad",
+    "salida": 1,
+    "diagnostico": "E0616",
+    "sha256Registro": "c258ff86aea777e62b652980842555738bb7ca0c89dbd780f7400a250fa5ede6"
+  }
+]

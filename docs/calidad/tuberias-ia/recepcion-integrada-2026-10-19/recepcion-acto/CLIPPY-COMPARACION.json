@@ -1,0 +1,10 @@
+{
+  "base": 16,
+  "actual": 15,
+  "diferencias": [
+    {
+      "InputObject": "warning|dead_code|sv_core\\src\\authority\\transitions\\reuse_tests.rs|function `permission_plan` is never used",
+      "SideIndicator": "<="
+    }
+  ]
+}

@@ -291,3 +291,11 @@ La continuación del acta de 15/09/2026 incorpora S39 r83, TT-0024 y RETP-2026-3
 S39 r84 y TT-0024 incorporan la incidencia de interpretación y aplicación del criterio C02. [Acta 004, apartado 72](ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md#incidencia-evaluacion-glm-c02-20261010). Dictamen suspendido, sin nueva calificación ni nuevas inferencias; originales conservados.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## Recepción nuclear parcial y continuación · 19/10/2026
+
+Se recibe la incorporación de RETP-154, con corrección de confidencialidad de diagnósticos y conservación conjunta del acto y su continuidad trazada. Las comprobaciones y sus límites constan en el acta. S44 y TT-0028 permanecen en ejecución; no se cierran la admisión institucional, la adenda completa ni R2.
+
+[Acta 007](ACTA_007_RECEPCION_ACTO_Y_COMPROBACION_OBSERVADA_2026_10_19.md) distingue el resultado actual y las condiciones posteriores. Se conserva el orden de §9, sin habilitar producción, exámenes ni contenido a proveedores.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).

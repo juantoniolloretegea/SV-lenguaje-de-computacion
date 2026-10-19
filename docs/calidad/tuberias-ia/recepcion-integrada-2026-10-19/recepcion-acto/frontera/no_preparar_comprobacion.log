@@ -1,0 +1,14 @@
+error[E0624]: associated function `prepare` is private
+ --> seguimiento\r2-adenda-20261019\frontera\no_preparar_comprobacion.rs:2:123
+  |
+2 | ...erApplicability) { let _ = PreparedExactCheck::prepare(c, d, a, b"contract", b"expected"); }
+  |                                                   ^^^^^^^ private associated function
+  |
+ --> sv_core\src\requirements\observed.rs:62:4
+ ::: sv_core\src\requirements\observed.rs:68:41
+  |
+  = note: private associated function defined here
+
+error: aborting due to 1 previous error
+
+For more information about this error, try `rustc --explain E0624`.

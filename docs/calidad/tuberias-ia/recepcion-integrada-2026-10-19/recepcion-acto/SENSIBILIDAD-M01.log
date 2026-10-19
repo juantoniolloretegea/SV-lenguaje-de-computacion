@@ -1,0 +1,55 @@
+   Compiling sv_core v0.1.0 (C:\laboratorio\watson-local\lenguaje-computacion-sv\desarrollo\nucleo-recepcion-integrada-20261019\rust\sv_core)
+warning: constant `PROFILE_ID` is never used
+ --> sv_core\src\identifier_profile.rs:6:18
+  |
+6 | pub(crate) const PROFILE_ID: &str = "svp-grammar-0.2-lex-es-1";
+  |                  ^^^^^^^^^^
+  |
+  = note: `#[warn(dead_code)]` (part of `#[warn(unused)]`) on by default
+
+warning: method `matches_descriptor` is never used
+   --> sv_core\src\requirements_reuse.rs:121:19
+    |
+ 44 | impl ReuseRule {
+    | -------------- method in this implementation
+...
+121 |     pub(crate) fn matches_descriptor(&self, descriptor: &RequirementDescriptor) -> bool {
+    |                   ^^^^^^^^^^^^^^^^^^
+
+warning: hiding a lifetime that's elided elsewhere is confusing
+    --> sv_core\src\frontend.rs:2084:13
+     |
+2084 |     fn peek(&self) -> &Token {
+     |             ^^^^^     ^^^^^^
+     |             |         ||
+     |             |         |the same lifetime is hidden here
+     |             |         the same lifetime is elided here
+     |             the lifetime is elided here
+     |
+     = help: the same lifetime is referred to in inconsistent ways, making the signature confusing
+     = note: `#[warn(mismatched_lifetime_syntaxes)]` on by default
+help: use `'_` for type paths
+     |
+2084 |     fn peek(&self) -> &Token<'_> {
+     |                             ++++
+
+warning: `sv_core` (lib test) generated 3 warnings (run `cargo fix --lib -p sv_core --tests` to apply 1 suggestion)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.67s
+     Running unittests src\lib.rs (compilacion\nucleo-recepcion-integrada-20261019\windows\debug\deps\sv_core-d470fa5112359d9c.exe)
+
+running 1 test
+
+thread 'authority::transitions::reuse_tests::reception_tests::rg02_rejects_changed_act_before_consuming_preparation' (20720) panicked at sv_core\src\authority\transitions\reuse_tests\reception_tests.rs:90:5:
+assertion failed: matches!(r.receive(b"ACTO cambiado", ISSUER, VERSION),
+    Err(ReceptionError::ActMismatch))
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+test authority::transitions::reuse_tests::reception_tests::rg02_rejects_changed_act_before_consuming_preparation ... FAILED
+
+failures:
+
+failures:
+    authority::transitions::reuse_tests::reception_tests::rg02_rejects_changed_act_before_consuming_preparation
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 245 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `-p sv_core --lib`

@@ -11,6 +11,8 @@
 
 use std::collections::{BTreeMap, BTreeSet};
 
+pub mod reception;
+
 use super::{
     AccumulationContract, ConstitutedAuthority, EffectDescriptor, EffectEnvelope, FormDescriptor,
     GovernedDomain, InvalidAuthorityScope,
