@@ -1,0 +1,665 @@
+{
+  "version": 1,
+  "fecha": "2026-10-19",
+  "estado_entrega": "CONSOLIDADA_DOCUMENTALMENTE",
+  "recepcion_nuclear": "PENDIENTE",
+  "activaciones": {
+    "produccion": false,
+    "examenes": false,
+    "contenido_a_proveedores": false
+  },
+  "significado": "Correspondencia de obligaciones y criterios pendientes; no es resultado de ejecución ni nueva numeración de deuda.",
+  "necesidades": [
+    {
+      "id": "N-01",
+      "titulo": "Identidad de la realización y límites de autoridad",
+      "responsable": "Integración del Árbitro-Director",
+      "aportantes": [
+        "Desarrollo del Lenguaje y frontera R1",
+        "Autoridad institucional y unidad de dominio"
+      ],
+      "receptor": "Calidad del Lenguaje, con validación de la autoridad institucional para sus facultades",
+      "adenda": [
+        "B",
+        "G"
+      ],
+      "requisitos_cyb": [
+        "REQ-CYB-001",
+        "REQ-CYB-002",
+        "REQ-CYB-007"
+      ],
+      "rs": [
+        "RS01",
+        "RS02",
+        "RS05",
+        "RS07",
+        "RS11"
+      ],
+      "s13": [
+        "O05",
+        "O06"
+      ],
+      "evidencia": [
+        "F02",
+        "F04",
+        "F09"
+      ],
+      "conservado": "Ficha institucional y barreras de autoridad recibidas en sus alcances; compartir modelo o nodo no comparte facultades.",
+      "pendiente": "Correspondencia efectiva entre constitución profesional, revisión de configuración, identidad de realización, referentes protegidos y operación nuclear.",
+      "producto": "Contrato de recepción con dominio, instancia, nodo, modelo, revisiones, operación, finalidad, actor, principal representado, delegación, vigencia y límites; productor legítimo de cada referente.",
+      "positivo": "Dos dominios reutilizan un modelo o nodo conservando identidades y permisos distintos; dos sujetos o usos mantienen estados independientes aunque compartan parámetros. Una operación autorizada atraviesa la vía pública aplicable.",
+      "negativo": "Permiso de otra instancia, revisión sustituida bajo el mismo nombre, delegación excedida y afirmación textual de autoridad. Se intenta reutilizar el estado de otro sujeto o uso como si fuera propio.",
+      "esperado": "Autorización de la operación sólo con control legítimo; rechazo por la causa correspondiente antes de cualquier efecto. La ausencia del productor legítimo se registra como impedimento, nunca se sustituye por un constructor reservado a pruebas.",
+      "sensibilidad": "Alterar sólo la pertenencia o la revisión, manteniendo el resto íntegro, y comprobar que el observador distingue ambos recorridos. Variar sólo el sujeto o el uso y comprobar la independencia de sus estados.",
+      "puerta": "Antes de ofrecer la operación dependiente de autoridad nuclear.",
+      "dependencia": "La institución constituye facultades; el Lenguaje especifica y comprueba su recepción. No se resuelve inventando un permiso.",
+      "estado": "EVIDENCIA_PARCIAL_RECEPCION_INTEGRADA_PENDIENTE",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "N-02",
+      "titulo": "Recepción documental íntegra y localizable",
+      "responsable": "Integración documental del Árbitro-Director",
+      "aportantes": [
+        "Gestión documental y MCP",
+        "Desarrollo del Lenguaje",
+        "Unidad de dominio"
+      ],
+      "receptor": "Calidad del Lenguaje y unidad competente del dominio para la cobertura exigible",
+      "adenda": [
+        "A",
+        "C",
+        "H",
+        "I"
+      ],
+      "requisitos_cyb": [
+        "REQ-CYB-001",
+        "REQ-CYB-003",
+        "REQ-CYB-005",
+        "REQ-CYB-006"
+      ],
+      "rs": [
+        "RS04",
+        "RS06",
+        "RS07"
+      ],
+      "s13": [
+        "O03",
+        "O04"
+      ],
+      "evidencia": [
+        "F02",
+        "F03",
+        "F04",
+        "F06"
+      ],
+      "conservado": "Conservación, recuperación y consumo documental de RETP-106/107; matriz A–L con controles parciales. Integridad no equivale a suficiencia ni a permiso.",
+      "pendiente": "Cobertura independiente y reconstrucción de la entrada realmente consumida por una operación delimitada, incluidas sus excepciones y dependencias.",
+      "producto": "Contrato de corpus, edición, páginas, unidades, orden, transformaciones, referencia independiente, alcance de recuperación y detección de insuficiencia.",
+      "positivo": "Recuperar íntegramente el caso autorizado y su conjunto exigible, incluido el supuesto de vacío legítimo constituido.",
+      "negativo": "Citas ciertas con revocación omitida; orden hostil en una fuente combinada con omisión; truncamiento y dependencia irrecuperable.",
+      "esperado": "La instrucción permanece como dato; la revisión independiente detecta la dependencia ausente y no emite un consejo acreditado. Se conservan original y causa; no se rellena con U.",
+      "sensibilidad": "El comprobador debe detectar la omisión aunque la selección y sus huellas sean coherentes entre sí; un control completo debe seguir admitiéndose.",
+      "puerta": "Antes de admitir una operación que necesite ese corpus o antes de declarar suficiente su representación.",
+      "dependencia": "El dominio fija qué información es exigible; LIG puede reutilizarse cuando la recuperación se demuestre. No se envían documentos a proveedores.",
+      "estado": "EVIDENCIA_PARCIAL_RECEPCION_INTEGRADA_PENDIENTE",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "N-03",
+      "titulo": "Incidencia instrumental y continuación válida",
+      "responsable": "Frontera de ejecución y custodia del Árbitro-Director",
+      "aportantes": [
+        "Desarrollo nuclear de mediación y continuidad",
+        "Soporte de comunicaciones"
+      ],
+      "receptor": "Calidad del Lenguaje",
+      "adenda": [
+        "F"
+      ],
+      "requisitos_cyb": [
+        "REQ-CYB-003",
+        "REQ-CYB-004"
+      ],
+      "rs": [
+        "RS03",
+        "RS06",
+        "RS12"
+      ],
+      "s13": [
+        "O01",
+        "O10"
+      ],
+      "evidencia": [
+        "F02",
+        "F04",
+        "F06",
+        "F08"
+      ],
+      "conservado": "S15/S18 separan causas; R1 distingue el efecto indeterminado después del compromiso. Las recuperaciones administrativas no acreditan continuidad nuclear.",
+      "pendiente": "Conservación de causa, etapa, correlación y estado de compromiso desde recepción hasta efecto y recuperación.",
+      "producto": "Contrato de fallos y continuación con negativa, esquema inválido, no admisión, interrupción, respuesta parcial, despacho comprometido y efecto no confirmado.",
+      "positivo": "Completar una operación autorizada y recuperar su evidencia sin ejecutar un nuevo efecto.",
+      "negativo": "Interrumpir antes del despacho y después de un efecto cuyo acuse se pierde; presentar negativa válida, esquema inválido y fallo de comunicación.",
+      "esperado": "Causas y consecuencias distintas; el segundo caso no se declara sin efecto ni se reintenta automáticamente. Ningún incidente se convierte en 0, 1 o U.",
+      "sensibilidad": "Un ejecutor sintético con contador independiente distingue cero efectos, un efecto y una repetición; el cambio de etiqueta del sistema no basta para satisfacer el esperado.",
+      "puerta": "Antes de habilitar efectos, cancelación o reintentos que dependan de ese contrato.",
+      "dependencia": "Cuando se exija continuidad tras caída, enlazar el caso con R2; los efectos del ensayo serán locales y reversibles.",
+      "estado": "EVIDENCIA_PARCIAL_RECEPCION_INTEGRADA_PENDIENTE",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "N-04",
+      "titulo": "Aprendizaje por Retroalimentación del Sistema Vectorial SV",
+      "responsable": "Integración del Árbitro-Director",
+      "aportantes": [
+        "Custodia y continuidad",
+        "Unidad de dominio"
+      ],
+      "receptor": "Calidad del Lenguaje y revisión científica del alcance",
+      "adenda": [
+        "H",
+        "J"
+      ],
+      "requisitos_cyb": [
+        "REQ-CYB-002",
+        "REQ-CYB-004"
+      ],
+      "rs": [
+        "RS09",
+        "RS10",
+        "RS12"
+      ],
+      "s13": [
+        "O06",
+        "O09"
+      ],
+      "evidencia": [
+        "F01",
+        "F02",
+        "F06",
+        "F10"
+      ],
+      "conservado": "Revisiones por capas conservadas como antecedentes. Retroalimentación no significa modificación de pesos ni aprendizaje nuclear acreditado.",
+      "pendiente": "Integridad y pertenencia del contexto, antecedente y criterio entre revisiones; fundamento de mantenimiento o cambio.",
+      "producto": "Contrato de sucesión de capas con límites previos, base exacta, relación entre episodios, criterio reservado y condición de término. Debe incluir ejemplos, comprobación de regresiones y justificación explícita para mantener o cambiar un resultado.",
+      "positivo": "Reconstruir una revisión con sus antecedentes autorizados completos y conservar por separado el resultado anterior.",
+      "negativo": "Introducir memoria de otro episodio, truncar una dependencia o explicar una revisión antigua con fuentes posteriores.",
+      "esperado": "Rechazo o insuficiencia explícita; la reevaluación es un nuevo acto relacionado y no sustituye el fundamento anterior. La clave reservada no entra en el contexto del candidato.",
+      "sensibilidad": "Dos episodios con nombres y cardinalidades iguales pero fuentes distintas deben distinguirse por sus relaciones efectivas.",
+      "puerta": "Antes de habilitar nuevas revisiones automáticas o atribuir gobierno nuclear a la retroalimentación.",
+      "dependencia": "El contraste local puede utilizar entradas conservadas o sintéticas. La política de sólo conexión sigue impidiendo nuevas generaciones externas.",
+      "estado": "EVIDENCIA_PARCIAL_RECEPCION_INTEGRADA_PENDIENTE",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "N-05",
+      "titulo": "Adjudicación, criticidad y acceso al examen",
+      "responsable": "Evaluación científica y gestión del Árbitro-Director",
+      "aportantes": [
+        "Unidad de dominio",
+        "Desarrollo del contrato de evaluación",
+        "Presentación de resultados"
+      ],
+      "receptor": "Revisión científica competente y Calidad del Lenguaje para el enlace técnico",
+      "adenda": [
+        "K"
+      ],
+      "requisitos_cyb": [
+        "REQ-CYB-005",
+        "REQ-CYB-007",
+        "REQ-CYB-009"
+      ],
+      "rs": [
+        "RS05",
+        "RS08",
+        "RS11"
+      ],
+      "s13": [
+        "O01",
+        "O12"
+      ],
+      "evidencia": [
+        "F01",
+        "F02",
+        "F05",
+        "F10"
+      ],
+      "conservado": "Se distinguen rúbrica, criticidad, aptitud, preparación y permiso. El evaluador exterior puede errar; ese error no se atribuye al modelo.",
+      "pendiente": "Enlace auditable entre evidencia presentada, criterio previo, revisión sustantiva, adjudicación y permiso de etapa.",
+      "producto": "Contrato de evaluación y revisión con edición, alcance, criterios, objeto presentado, facultad del revisor, motivo y acto de aceptación o devolución. Conservar por separado categoría documental, contenido, forma, puntuación, posiciones críticas, dictamen y permiso.",
+      "positivo": "Aplicar una rúbrica previamente fijada a una respuesta artificial y reconstruir quién revisó qué, con qué alcance y resultado.",
+      "negativo": "Registrar sólo el nombre del revisor; cambiar retrospectivamente la clave; trasladar aptitud a otro dominio; usar un fallo del evaluador como error del candidato.",
+      "esperado": "No acreditar revisión por el nombre ni habilitar examen o producción por una hipótesis o resultado parcial. Conservar la incidencia de evaluación y el antecedente sin recalificación silenciosa.",
+      "sensibilidad": "Una alteración sustantiva del objeto presentado o de la versión de criterio debe invalidar la recepción anterior; comprobar un positivo con toda su evidencia.",
+      "puerta": "Antes de emitir una adjudicación recibida o conceder un permiso de etapa.",
+      "dependencia": "La competencia científica permanece fuera del modelo. El ensayo de esta ficha es documental local, no un examen de candidatos.",
+      "estado": "EVIDENCIA_PARCIAL_RECEPCION_INTEGRADA_PENDIENTE",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "N-06",
+      "titulo": "Par vector–frame y significado de las posiciones",
+      "responsable": "Desarrollo del Lenguaje y representación",
+      "aportantes": [
+        "Unidad de dominio",
+        "Integración de consulta nuclear",
+        "Presentación Rust/egui"
+      ],
+      "receptor": "Calidad del Lenguaje y unidad de dominio para la constitución y el significado",
+      "adenda": [
+        "D",
+        "K"
+      ],
+      "requisitos_cyb": [
+        "REQ-CYB-003",
+        "REQ-CYB-008",
+        "REQ-CYB-009"
+      ],
+      "rs": [
+        "RS06",
+        "RS08"
+      ],
+      "s13": [
+        "O02",
+        "O07",
+        "O10"
+      ],
+      "evidencia": [
+        "F02",
+        "F05",
+        "F06",
+        "F07",
+        "F13",
+        "F14"
+      ],
+      "conservado": "Contrato compartido del polígono en el Gestor y el visor; no equivale a integración con sv_core. Una sola terna vigente y un único polígono, dimensionado conforme a su contrato.",
+      "pendiente": "Respuesta ejecutiva de consulta con justificación y metadatos, productores legítimos, correspondencia posicional y fidelidad hasta el objeto entregado.",
+      "producto": "Contrato de operación y presentación que distinga consulta, resultado técnico, valor ternario, salida terminal, constitución de Frame y explicación; indique qué ejecuta el núcleo y qué se mantiene inhabilitado.",
+      "positivo": "Para una operación disponible, obtener y reconstruir respuesta, fundamento y metadatos; representar el estado correcto con las dimensiones y posiciones constituidas. El especialista puede consultar los valores y una leyenda comprensible sin cambiar el resultado.",
+      "negativo": "Mostrar figura de otro estado; suprimir una negación; permutar posiciones; redondear una magnitud; ofrecer como ejecución una IR sólo validada.",
+      "esperado": "Detectar la discordancia antes de ofrecer la salida como fiel. Si faltan consulta ejecutiva o transducción observación a Tri, declarar esa capacidad no disponible; no suplirla con cálculo exterior presentado como nuclear.",
+      "sensibilidad": "El observador independiente detecta una inversión de negación o posición aunque la figura y los datos alterados concuerden entre sí y lleven huellas válidas.",
+      "puerta": "Antes de ofrecer consulta nuclear, Frame profesional o producción observación a Tri.",
+      "dependencia": "K1-T y DFL-003/004/006 conservan su alcance. La unidad de dominio constituye células; el inventario de 32 definiciones no determina su tamaño.",
+      "estado": "EVIDENCIA_PARCIAL_RECEPCION_INTEGRADA_PENDIENTE",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "N-07",
+      "titulo": "Configuración efectiva, contexto, caché y recursos",
+      "responsable": "Soporte y observabilidad del Árbitro-Director",
+      "aportantes": [
+        "Desarrollo nuclear cuando se delegue un presupuesto",
+        "Custodia",
+        "Seguridad de plataforma"
+      ],
+      "receptor": "Calidad técnica del soporte y Calidad del Lenguaje para las obligaciones delegadas",
+      "adenda": [
+        "E",
+        "H"
+      ],
+      "requisitos_cyb": [
+        "REQ-CYB-006"
+      ],
+      "rs": [
+        "RS07",
+        "RS12"
+      ],
+      "s13": [
+        "O11"
+      ],
+      "evidencia": [
+        "F01",
+        "F02",
+        "F08",
+        "F10"
+      ],
+      "conservado": "Cuotas activas separadas del archivo histórico y controles de recursos en componentes identificados; no estrés integral del núcleo.",
+      "pendiente": "Imposición y medida de presupuestos, configuración efectiva, caché, contextos y capacidad histórica sin destruir dependencias necesarias.",
+      "producto": "Perfil de soporte con límites propuestos y aceptados antes del ensayo, canales observados, reserva administrativa, concurrencia, capacidad activa, archivo y condición de saturación. Identidad del motor, plantilla y tokenizador, entrada efectiva, reserva de contexto y configuración solicitada frente a la aplicada; distinguir tiempo de generación y duración total. Cualquier equivalencia numérica alegada necesita comparación independiente.",
+      "positivo": "Completar una carga limitada con medidas de CPU, memoria, almacenamiento y plazos; cerrar trabajo activo libera su capacidad sin borrar su historial.",
+      "negativo": "Saturar la cota, agotar reserva, introducir caché de otro contexto o intentar reducir un historial todavía necesario. Declarar aplicada una configuración que no se utilizó o atribuir a generación el tiempo total.",
+      "esperado": "Rechazo o aplazamiento diagnosticado; supervivencia del control administrativo dentro del contrato; ningún éxito inferido de datos no medidos. No se inventan umbrales ni se promete almacenamiento ilimitado. Los recursos aceleradores sólo se incluyen con medición del dispositivo y memoria efectivamente usados, sin deducir capacidad del nombre CPU/GPU/TPU/NPU.",
+      "sensibilidad": "Medidas independientes y un caso que rebasa cada límite relevante deben demostrar su imposición; la configuración declarada por sí sola no basta.",
+      "puerta": "Antes de admitir un soporte o anunciar capacidad, aislamiento, tiempo máximo o reducción de historial.",
+      "dependencia": "Las comprobaciones de disponibilidad se harán en un recinto de ensayo, sin provocar saturación del Gestor instalado. Canales no observados quedan excluidos de la garantía.",
+      "estado": "EVIDENCIA_PARCIAL_RECEPCION_INTEGRADA_PENDIENTE",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "N-08",
+      "titulo": "Procedencia y fidelidad del recorrido PDF",
+      "responsable": "Gestión documental y extractor Rust bajo el Árbitro-Director",
+      "aportantes": [
+        "Integración documental",
+        "Unidad de dominio",
+        "Presentación"
+      ],
+      "receptor": "Calidad documental y unidad de dominio para suficiencia y significado",
+      "adenda": [
+        "C",
+        "D",
+        "G",
+        "I"
+      ],
+      "requisitos_cyb": [
+        "REQ-CYB-001",
+        "REQ-CYB-005",
+        "REQ-CYB-008",
+        "REQ-CYB-009"
+      ],
+      "rs": [
+        "RS06",
+        "RS07",
+        "RS08"
+      ],
+      "s13": [
+        "O03",
+        "O07",
+        "O08"
+      ],
+      "evidencia": [
+        "F01",
+        "F02",
+        "F03",
+        "F06"
+      ],
+      "conservado": "Originales, transformaciones, duplicados y permisos tratados por el Gestor; la identidad de bytes no demuestra lectura visual ni comprensión.",
+      "pendiente": "Recorrido de origen a extracción y uso por la operación concreta, preservando unidades, rangos, negaciones, orden, excepciones y magnitudes exactas.",
+      "producto": "Contrato de transformación con localizadores y límites por formato; originales inmutables, bytes consumidos, fuentes de cada afirmación y referencia independiente.",
+      "positivo": "Recuperar un documento autorizado con columnas, excepciones y valores exactos conservando origen y transformación.",
+      "negativo": "Documento no soportado, extracción incompleta, pérdida de negación o unidad, conversión numérica con pérdida, base sustituida bajo el mismo nombre o referencia de duplicado solicitada sin permiso.",
+      "esperado": "Declarar límite o rechazar; conservar original y causa. La transformación no modifica el original ni divulga la existencia del duplicado a quien carece de permiso.",
+      "sensibilidad": "Par documental que difiera sólo en negación, unidad o precisión con consecuencias distintas; el cotejo de la selección no reemplaza el contraste de la fuente.",
+      "puerta": "Antes de ofrecer fidelidad o suficiencia de un formato para la operación dependiente.",
+      "dependencia": "La necesidad de interpretación es del dominio; no se amplía IR por el nombre de un formato. HelsinkiNLP permanece herramienta auxiliar ajena a los nodos de consejo.",
+      "estado": "EVIDENCIA_PARCIAL_RECEPCION_INTEGRADA_PENDIENTE",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "N-09",
+      "titulo": "Privacidad, mediación y pertenencia de permisos",
+      "responsable": "Integración de frontera del Lenguaje",
+      "aportantes": [
+        "Responsable institucional de privacidad y seguridad",
+        "Desarrollo R1",
+        "Gestor y soporte"
+      ],
+      "receptor": "Calidad del Lenguaje con recepción institucional de finalidad, destinatarios y tratamiento",
+      "adenda": [
+        "B",
+        "E",
+        "L"
+      ],
+      "requisitos_cyb": [
+        "REQ-CYB-007"
+      ],
+      "rs": [
+        "RS02",
+        "RS04",
+        "RS05",
+        "RS07",
+        "RS11"
+      ],
+      "s13": [
+        "O05",
+        "O11",
+        "O12"
+      ],
+      "evidencia": [
+        "F02",
+        "F04",
+        "F06",
+        "F07",
+        "F09",
+        "F11"
+      ],
+      "conservado": "Módulo de privacidad y control de salida a proveedores recibidos en su alcance. Sólo conexión, sin contenidos, incluidos contadores.",
+      "pendiente": "Composición efectiva de finalidad, mínimo, destinatario, vista, canales observados, pertenencia de permisos y mediación no eludible.",
+      "producto": "Contrato de flujos por operación con datos originales y derivados, destinatario, facultades, conservación, canales y punto material de imposición antes de entregar.",
+      "positivo": "Una vista mínima autorizada llega sólo al receptor local de ensayo legitimado y conserva evidencia de la decisión y de la entrega.",
+      "negativo": "Misma vista con secreto distinto, destinatario ajeno, permiso revocado durante una espera, exceso de datos y solicitud de contenido hacia un proveedor.",
+      "esperado": "No dependencia indebida del secreto en los canales delimitados; denegación del exceso y del destinatario ajeno; revalidación antes de entregar. La salida prohibida se impide antes de consultar credenciales o abrir transporte.",
+      "sensibilidad": "Variar exclusivamente secreto o destinatario, con observador externo al selector; incluir un canal declarado de registro o error. Una salida visible idéntica no prueba ausencia de fugas en canales no observados.",
+      "puerta": "Antes de habilitar el flujo o tratamiento correspondiente; el control de privacidad administrativa no habilita consejo experto.",
+      "dependencia": "Una futura anonimización necesita criterio y evidencia propios: ocultar nombres no demuestra anonimato. La institución fija condiciones jurídicas; esta entrega no certifica cumplimiento legal.",
+      "estado": "EVIDENCIA_PARCIAL_RECEPCION_INTEGRADA_PENDIENTE",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "N-10",
+      "titulo": "Conservación y recepción después de cada instalación",
+      "responsable": "Custodia e integración de continuidad R2",
+      "aportantes": [
+        "Desarrollo nuclear de persistencia",
+        "Satélite y soporte",
+        "Calidad documental"
+      ],
+      "receptor": "Calidad del Lenguaje y autoridad competente para la recuperación",
+      "adenda": [
+        "G",
+        "J",
+        "K"
+      ],
+      "requisitos_cyb": [
+        "REQ-CYB-002",
+        "REQ-CYB-004",
+        "REQ-CYB-006",
+        "REQ-CYB-009"
+      ],
+      "rs": [
+        "RS03",
+        "RS09",
+        "RS10",
+        "RS11",
+        "RS12"
+      ],
+      "s13": [
+        "O09"
+      ],
+      "evidencia": [
+        "F02",
+        "F05",
+        "F06",
+        "F08",
+        "F11"
+      ],
+      "conservado": "Custodia, copias y recuperación técnica tienen evidencia propia. La copia íntegra no equivale a continuidad autoritativa ni a recuperación gobernada.",
+      "pendiente": "Conservación de estado, fuentes y dependencias; vigencia y revocación tras caída; prevención de consumo duplicado, retroceso, clonación y bifurcación en el alcance R2. Distinguir facultad de actuar, recepción de pruebas y asunción de un deber; conservar las obligaciones de custodia durante una transferencia.",
+      "producto": "Contrato de recuperación sobre R2-0 existente: identidad de instalación, estado, generación, dependencias, consumo, exclusiones, reconciliación y condición para restablecer autoridad. Régimen aplicable a la transferencia del deber y evidencia de aceptación cuando aquél la exija.",
+      "positivo": "Restaurar una copia íntegra autorizada y reconstruir el fundamento original sin confundirla con una instalación nueva ni repetir efectos. En una transferencia válida, comprobar por separado recepción material, aceptación exigible y continuidad de la obligación.",
+      "negativo": "Restaurar una versión anterior a revocación o consumo; clonar una copia; bifurcar la continuidad; perder evidencia entre compromiso y efecto; intentar borrar una dependencia aún necesaria. Transferir custodia sin la aceptación exigida, o interpretar la mera recepción de un mensaje como exoneración del obligado.",
+      "esperado": "No reaparecen facultades revocadas o consumidas; la situación incierta se conserva hasta resolución gobernada. La reducción sólo procede si preserva las obligaciones del contrato. El cambio de custodio no exonera automáticamente; permanece el deber pendiente hasta cumplir el régimen aplicable.",
+      "sensibilidad": "Comprobar con un registro independiente de revocación/consumo; una copia autoconsistente debe poder rechazarse por falta de vigencia. La verificación no puede depender sólo de esa misma copia. Retirar sólo la aceptación requerida, manteniendo la recepción material, y comprobar que el deber no se considera extinguido.",
+      "puerta": "Antes de ofrecer continuidad persistente, restauración legítima o compactación con autoridad conservada.",
+      "dependencia": "Reutilizar R2-0 y separar confianza de plataforma R3. La suspensión histórica DFL-007 fue levantada; no se utiliza como bloqueo vigente.",
+      "estado": "EVIDENCIA_PARCIAL_RECEPCION_INTEGRADA_PENDIENTE",
+      "pruebas_nuevas_ejecutadas": false
+    }
+  ],
+  "fuentes_comunes": [
+    "F12",
+    "F13",
+    "F14",
+    "F15",
+    "F19"
+  ],
+  "contrastes_cyb": [
+    {
+      "id": "RS01",
+      "necesidades": [
+        "N-01"
+      ],
+      "obligacion": "Atribución de acto, sesión y principal",
+      "positivo": "Recuperar actor, principal representado, sesión y acto, con sus relaciones acreditadas.",
+      "negativo": "Conservar el mismo nombre visible y sustituir actor, sesión o principal.",
+      "esperado": "La atribución cambia o se rechaza por la relación alterada; un resultado técnico no constituye identidad.",
+      "sensibilidad": "Cambiar una sola relación y observar la causa sin alterar los bytes del resultado.",
+      "fuente": "F12",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "RS02",
+      "necesidades": [
+        "N-01",
+        "N-09"
+      ],
+      "obligacion": "Autoridad y delegación limitada",
+      "positivo": "Una operación dentro de facultad vigente conserva raíz, actor, destinatario, recurso y finalidad.",
+      "negativo": "Usar una referencia íntegra con delegación excedida o revocada; mantener una sesión posterior a la revocación de la cuenta.",
+      "esperado": "La operación queda impedida cuando corresponde; no se presume que revocar la cuenta cierre toda sesión.",
+      "sensibilidad": "Mantener el texto y alterar sólo el alcance o vigencia del permiso; observar en el punto del efecto.",
+      "fuente": "F12",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "RS03",
+      "necesidades": [
+        "N-10",
+        "N-03"
+      ],
+      "obligacion": "Tiempo, revocación y antecedentes",
+      "positivo": "Reconstruir emisión, registro y efecto, con intervalos y precisión; conservar revocaciones y cambios intermedios.",
+      "negativo": "Confundir recepción con efecto; eliminar un antecedente; atribuir precedencia a intervalos incompatibles o inciertos.",
+      "esperado": "Precedencia acreditada e incertidumbre quedan diferenciadas; no hay retroactividad por defecto.",
+      "sensibilidad": "Cambiar sólo una cota temporal o un antecedente y comprobar la variación exigida por el contrato.",
+      "fuente": "F12",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "RS04",
+      "necesidades": [
+        "N-02",
+        "N-09"
+      ],
+      "obligacion": "Vistas por finalidad y destinatario",
+      "positivo": "Recuperar original y vista autorizada, con relación y condición de acceso.",
+      "negativo": "Usar recuperabilidad documental como permiso para difundir; entregar otra vista o a otro destinatario.",
+      "esperado": "Se conserva el original y se impide la difusión no autorizada antes de ofrecerla.",
+      "sensibilidad": "Cambiar sólo finalidad o destinatario y comprobar la diferencia de acceso material.",
+      "fuente": "F12",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "RS05",
+      "necesidades": [
+        "N-01",
+        "N-05"
+      ],
+      "obligacion": "Plan, razón y permiso",
+      "positivo": "Distinguir plan, autorización, razones, alternativas, viabilidad, proporcionalidad y consecuencias; aplicar una excepción urgente sólo si su régimen la constituye.",
+      "negativo": "Tratar toda desviación del plan como ilicitud, o invocar urgencia sin su régimen aplicable.",
+      "esperado": "No se confunden previsión, permiso y excepción; el consejo no fabrica autoridad.",
+      "sensibilidad": "Mismo hecho con y sin excepción legítimamente constituida; la razón debe reflejar la diferencia.",
+      "fuente": "F12",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "RS06",
+      "necesidades": [
+        "N-02",
+        "N-03",
+        "N-06"
+      ],
+      "obligacion": "Admisión, indeterminación y fallo técnico",
+      "positivo": "Admitir evidencia válida de un acto no autorizado cuando el contrato lo permita; producir un valor sólo con evidencia y criterio constituidos.",
+      "negativo": "Confundir instalación fallida con fallo de captura; usar silencio como evidencia negativa; convertir un fallo técnico en Tri.U.",
+      "esperado": "Se separan no admisión, no aplicabilidad, insuficiencia, valor semántico y fallo instrumental.",
+      "sensibilidad": "Mantener el acto observado y variar la validez de captura o la evidencia requerida; el diagnóstico debe distinguirlos.",
+      "fuente": "F12",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "RS07",
+      "necesidades": [
+        "N-01",
+        "N-02",
+        "N-07",
+        "N-09"
+      ],
+      "obligacion": "Cobertura de instancias, permisos y flujos",
+      "positivo": "Un conjunto finito y constituido conserva todas las dependencias exigibles; el vacío tiene justificación independiente.",
+      "negativo": "Omitir un trayecto o dependencia, mezclar ámbitos o declarar vacío lo no comprobado.",
+      "esperado": "Falta de cobertura diagnosticada; no se presume suficiencia de una selección del propio candidato.",
+      "sensibilidad": "Retirar sólo una dependencia requerida del conjunto inicialmente válido, conservando las citas restantes.",
+      "fuente": "F12",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "RS08",
+      "necesidades": [
+        "N-05",
+        "N-06",
+        "N-08"
+      ],
+      "obligacion": "Explicación y salidas diferenciadas",
+      "positivo": "Conservar resultado técnico, legitimidad, incertidumbre y consecuencias en una explicación fiel, con arquitectura y significado constituidos.",
+      "negativo": "Llamar Frame a un informe sin arquitectura; invertir una negación; deducir legitimidad de un éxito técnico.",
+      "esperado": "La presentación no cambia el dictamen ni confunde sus dimensiones; no se ofrece una figura sin fundamento como Frame legítimo.",
+      "sensibilidad": "Mantener el resultado estructurado y alterar sólo la explicación; detectar la discordancia.",
+      "fuente": "F12",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "RS09",
+      "necesidades": [
+        "N-04",
+        "N-10"
+      ],
+      "obligacion": "Estado inicial y límite de la historia",
+      "positivo": "Recuperar por separado referencia aprobada, estado observado y pasado conocido.",
+      "negativo": "Atribuir a una captura posterior el estado anterior, o restaurar una base antigua como vigente.",
+      "esperado": "El límite histórico permanece explícito; una copia íntegra no acredita vigencia.",
+      "sensibilidad": "Añadir una captura posterior sin evidencia anterior y comprobar que no amplía el pasado acreditado.",
+      "fuente": "F12",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "RS10",
+      "necesidades": [
+        "N-04",
+        "N-10"
+      ],
+      "obligacion": "Antecedentes múltiples y relaciones tipadas",
+      "positivo": "Conservar extremos, tipos y respaldo de antecedentes múltiples; admitir referencia recíproca legítima.",
+      "negativo": "Convertir referencia recíproca en precedencia estricta, aceptar un ciclo de precedencia imposible o inferir causalidad sin respaldo.",
+      "esperado": "Referencia, precedencia y causalidad mantienen reglas diferentes.",
+      "sensibilidad": "Conservar los extremos y cambiar sólo el tipo de relación; detectar el ciclo cuando sea una precedencia estricta.",
+      "fuente": "F12",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "RS11",
+      "necesidades": [
+        "N-01",
+        "N-05",
+        "N-10"
+      ],
+      "obligacion": "Custodia, designación y obligación pendiente",
+      "positivo": "Separar poder actuar, recibir pruebas y asumir un deber; acreditar aceptación cuando la exija el régimen.",
+      "negativo": "Transferir custodia y exonerar al obligado por el solo envío o acuse; suponer aceptación cuando sea exigible y falte.",
+      "esperado": "La obligación pendiente continúa según su régimen, sin exoneración automática ni aceptación universal inventada.",
+      "sensibilidad": "Eliminar sólo la aceptación requerida y conservar entrega y acuse; el deber no debe darse por extinguido.",
+      "fuente": "F12",
+      "pruebas_nuevas_ejecutadas": false
+    },
+    {
+      "id": "RS12",
+      "necesidades": [
+        "N-03",
+        "N-04",
+        "N-07",
+        "N-10"
+      ],
+      "obligacion": "Conciliación, cobertura y reevaluación selectiva",
+      "positivo": "Conservar identidad por clase, generación de la prueba y dependencias temporales pertinentes.",
+      "negativo": "Usar prueba de otra generación; repetir un efecto de resultado incierto; reevaluar sobre dependencias ajenas.",
+      "esperado": "La conciliación conserva lo incierto; sólo se admiten pruebas pertinentes a la generación y ámbito; no hay repetición silenciosa.",
+      "sensibilidad": "Cambiar sólo generación o dependencia relevante y distinguirlo de un cambio no pertinente.",
+      "fuente": "F12",
+      "pruebas_nuevas_ejecutadas": false
+    }
+  ],
+  "atribucion": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+}

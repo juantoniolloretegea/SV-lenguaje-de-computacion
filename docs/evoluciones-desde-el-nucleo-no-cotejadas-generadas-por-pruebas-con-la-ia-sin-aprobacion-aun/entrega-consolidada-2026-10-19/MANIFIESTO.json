@@ -1,0 +1,32 @@
+{
+  "alcance": "Integridad de los cinco documentos de la entrega; el manifiesto no se incluye a sí mismo.",
+  "atribucion": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).",
+  "fecha": "2026-10-19",
+  "archivos": [
+    {
+      "sha256": "fe75282a2f042d40710a9b0a1e246babafae11092fcd27247b89302ef258a967",
+      "bytes": 50598,
+      "ruta": "ENTREGA.md"
+    },
+    {
+      "sha256": "53b260446932006dc85f0b67025bd4431233a1d5018ad241309fd216ae39bb17",
+      "bytes": 36560,
+      "ruta": "MATRIZ.json"
+    },
+    {
+      "sha256": "9c8770b8aba1f537122545dc9aa99f4a0b1780b29a83dda849867be3b7e1b46d",
+      "bytes": 14805,
+      "ruta": "COMPROBACION-CYB.md"
+    },
+    {
+      "sha256": "38dd22b834137456f4676244f5f1008459d8ac791bae7c6d62e00c34b679ce71",
+      "bytes": 16103,
+      "ruta": "FUENTES.json"
+    },
+    {
+      "sha256": "494033303ebf41e1a827d1229d51855dfe20891a01c5319aecff37eefe39ac35",
+      "bytes": 7671,
+      "ruta": "ADVERSARIAL.md"
+    }
+  ]
+}

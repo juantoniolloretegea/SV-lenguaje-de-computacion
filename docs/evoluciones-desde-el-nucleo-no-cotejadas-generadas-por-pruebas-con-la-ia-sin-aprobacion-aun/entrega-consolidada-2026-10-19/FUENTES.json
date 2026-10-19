@@ -1,0 +1,216 @@
+{
+  "fecha": "2026-10-19",
+  "alcance": "Identidades de las fuentes documentales; no duplicación de sus contenidos ni certificación de sus realizaciones.",
+  "fuentes": [
+    {
+      "id": "F01",
+      "titulo": "Necesidades N-01–N-10",
+      "funcion": "Inventario existente; no constituye aprobación de cambios nucleares.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/evoluciones-desde-el-nucleo-no-cotejadas-generadas-por-pruebas-con-la-ia-sin-aprobacion-aun/readme.md",
+      "blob": "32a09a56667f540ba34f09b1de4e52d9c31426b8",
+      "sha256": "21ee4d55f6fe636e3b4fb653063a4daa4e4ac7d471e5cafe5bdd8032d455e68d",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/evoluciones-desde-el-nucleo-no-cotejadas-generadas-por-pruebas-con-la-ia-sin-aprobacion-aun/readme.md"
+    },
+    {
+      "id": "F02",
+      "titulo": "Precisión sobre Gestor, aislamiento y privacidad",
+      "funcion": "Ampliación de alcance de N-01–N-10 sin nueva numeración.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/evoluciones-desde-el-nucleo-no-cotejadas-generadas-por-pruebas-con-la-ia-sin-aprobacion-aun/PRECISION-GESTOR-AISLAMIENTO-Y-PRIVACIDAD-2026-10-18.md",
+      "blob": "5a5b8ed0bb8d40fa79cbf7bc688ba571a16a9cc0",
+      "sha256": "e907ab9bae2f5a0527b02449246b5e54f76d25a769a47656d8063d42a728c3cc",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/evoluciones-desde-el-nucleo-no-cotejadas-generadas-por-pruebas-con-la-ia-sin-aprobacion-aun/PRECISION-GESTOR-AISLAMIENTO-Y-PRIVACIDAD-2026-10-18.md"
+    },
+    {
+      "id": "F03",
+      "titulo": "Recepción y contraste OP-CYB-001",
+      "funcion": "RETP-106; alcance documental, ligaduras y pruebas acotadas.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/calidad/RECEPCION_Y_CONTRASTE_OP_CYB_001_2026_09_09.md",
+      "blob": "a5d41a9827d411963b8b274f4234ddbc2a31e168",
+      "sha256": "50718491db8f01c5673b954a5efc3e9d35344c7dddc0804b8bbfcb375c9834a3",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/calidad/RECEPCION_Y_CONTRASTE_OP_CYB_001_2026_09_09.md"
+    },
+    {
+      "id": "F04",
+      "titulo": "Contrato de consumo documental CYB",
+      "funcion": "RETP-107–110; consumo y barreras con sus límites.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/calidad/CONTRATO_DE_CONSUMO_DOCUMENTAL_CYB_2026_09_09.md",
+      "blob": "546d01ce91746a9f55681abf6224ad4627a56f82",
+      "sha256": "eab27dd380388333ed7d74349b09eb829f89c5ddf855e8f283db116cdc23c2f3",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/calidad/CONTRATO_DE_CONSUMO_DOCUMENTAL_CYB_2026_09_09.md"
+    },
+    {
+      "id": "F05",
+      "titulo": "S13: suficiencia semántica y de representación",
+      "funcion": "Doce obligaciones O01–O12; consulta, transducción y frontera pendientes.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s13-suficiencia-semantica-ir/ACTA_SUFICIENCIA.md",
+      "blob": "da03e16efd11f952d5b3b362ff979df27d895cc5",
+      "sha256": "6264eace0c3536fab89a0903d7bbdb5693af06ff6c591c1d37289dab9bb875bf",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s13-suficiencia-semantica-ir/ACTA_SUFICIENCIA.md"
+    },
+    {
+      "id": "F06",
+      "titulo": "S19: matriz de cobertura A–L",
+      "funcion": "Recepción de los casos S18; límites de cada letra.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s19-recepcion-integracion-y-causas/MATRIZ_COBERTURA_A_L.md",
+      "blob": "f536fc02ff064455a6f50d938dea3083f8ed85e2",
+      "sha256": "32118c0a17af585922d4cb94b4ca9d7efb7ed0673e8d23b5989901941685aef4",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s19-recepcion-integracion-y-causas/MATRIZ_COBERTURA_A_L.md"
+    },
+    {
+      "id": "F07",
+      "titulo": "S16: fronteras pendientes",
+      "funcion": "Autoridad, confidencialidad, revisión y entrega efectiva: B/E/K/L.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s16-fronteras-pendientes/ACTA_FRONTERAS.md",
+      "blob": "b3e475afa25d5605fdc71a4ed06fc15ebfcb6910",
+      "sha256": "04a11ac7c926af0618ef30fe3c79047c26f70d213658d0062ed8e4fa1a79ea6c",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s16-fronteras-pendientes/ACTA_FRONTERAS.md"
+    },
+    {
+      "id": "F08",
+      "titulo": "Contrato R2-0",
+      "funcion": "Persistencia, continuidad y recuperación; no es recepción final.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/arquitectura/CONTRATO_R2_0_PERSISTENCIA_CONTINUIDAD_Y_RECUPERACION_2026_08_25.md",
+      "blob": "8faa1028e04a1e4fdd7d10bea63c74064abaccf3",
+      "sha256": "da8970f4d9fca06d9bb76bb628e96339f54e3adde1c75e1dec09e5049c45513e",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/arquitectura/CONTRATO_R2_0_PERSISTENCIA_CONTINUIDAD_Y_RECUPERACION_2026_08_25.md"
+    },
+    {
+      "id": "F09",
+      "titulo": "Acta 006: código limpio, aislamiento y privacidad",
+      "funcion": "Recepciones del Gestor en su alcance, sin habilitar consejo experto.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_006_CODIGO_LIMPIO_AISLAMIENTO_PRIVACIDAD_2026_10_18.md",
+      "blob": "50b56e42d3588924ffdae15e242789f1b172fd46",
+      "sha256": "d9acbfe7f7c8cb7ccd14a00783ffebba000b1a8fe4cff9816c4ad020d200889f",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_006_CODIGO_LIMPIO_AISLAMIENTO_PRIVACIDAD_2026_10_18.md"
+    },
+    {
+      "id": "F10",
+      "titulo": "Acta 004: finalidad, alcance y continuidad EIO",
+      "funcion": "Secuencia de recepciones experimentales; no clausura integral.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md",
+      "blob": "2e2a834d370e0703e79b98cd16530b46410ca2b4",
+      "sha256": "44bf326f25d0dd036808316f6123974be1eed8ecae7bf4221ec4ccba18910e3c",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_004_FINALIDAD_ALCANCE_Y_CONTINUIDAD_EIO_2026_09_22.md"
+    },
+    {
+      "id": "F11",
+      "titulo": "S32: alcance, privacidad, seguridad y OP-CYB-001",
+      "funcion": "Frontera documental y obligaciones de privacidad del dominio.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md",
+      "blob": "a0e51499ec185338055679169ca52e88ce17d7e1",
+      "sha256": "6d0435c6ec6a1739c9a2b046375897800de9885204a671a63e546864a8bb48ec",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/calidad/tuberias-ia/continuacion-15-09-2026/PARTE_ALCANCE_PRIVACIDAD_SEGURIDAD_Y_OP_CYB_001_2026_09_15.md"
+    },
+    {
+      "id": "F12",
+      "titulo": "Acta de relevo con adenda §12",
+      "funcion": "Sucesión que conserva el original; fuente de A–L y obligaciones de consejo.",
+      "repositorio": "juantoniolloretegea/SVperitus-dataset",
+      "revision": "bbac1b44b1d3b845305e9cde492a08221206d631",
+      "ruta": "dominios/ciberseguridad-inteligente/dominio-04-09-26/universos/OP-CYB-001/ACTA_CONTINUIDAD_Y_RELEVO_OP_CYB_001_AL_LENGUAJE_SV_2026_09_09.md",
+      "blob": "54d72e794b13f5b785f76121f641768351046a8d",
+      "sha256": "7ffabc2d347e4f5519acf8127994ada23dbe2bd0c9c98107f68bb509a970f210",
+      "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/bbac1b44b1d3b845305e9cde492a08221206d631/dominios/ciberseguridad-inteligente/dominio-04-09-26/universos/OP-CYB-001/ACTA_CONTINUIDAD_Y_RELEVO_OP_CYB_001_AL_LENGUAJE_SV_2026_09_09.md"
+    },
+    {
+      "id": "F13",
+      "titulo": "Pilares y restricciones de diseño",
+      "funcion": "Rector leído íntegramente; preservación de contratos y puertas.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md",
+      "blob": "044f89f7c826f0ba52c58ee8ff19572e7b3b2187",
+      "sha256": "d3c9f7d7a3c3626f7fe75917d89d067cd7d281178f857a9d693ca945a7144755",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/calidad/PILARES_Y_RESTRICCIONES_DE_DISENO_DEL_LENGUAJE_DE_COMPUTACION_SV_2026_09_05.md"
+    },
+    {
+      "id": "F14",
+      "titulo": "Perfiles, contratos y ensamblaje",
+      "funcion": "Rector leído íntegramente; fuente, dominio y soporte, incluidas PT01–PT14.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md",
+      "blob": "1df9b818f3f531f628fe0e89dd2c497b5da52d4d",
+      "sha256": "38673267da27fae204f81689aaaf4cb0fd123e7f2e4a3384850c44762c0c06d8",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/calidad/ACTA_TECNICA_DE_PERFILES_CONTRATOS_Y_ENSAMBLAJE_DEL_LENGUAJE_SV_2026_09_06.md"
+    },
+    {
+      "id": "F15",
+      "titulo": "Transición secuencial desde OP-IMM-001",
+      "funcion": "Rector y sucesiones leídos íntegramente; no reabre etapas recibidas.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md",
+      "blob": "44f8fda87856ab16007195cab324d40a758e506a",
+      "sha256": "b625b2f1ad0db01d38779edcb5033447543da319106ffc1089be1cc1648e9871",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/dominios/inmunologia/ACTA_DE_CONFORMIDAD_DE_TRANSICION_SECUENCIAL_DESDE_OP-IMM-001_AL_LENGUAJE_SV_2026_09_03.md"
+    },
+    {
+      "id": "F16",
+      "titulo": "S40: interlocución y cobertura de contraste",
+      "funcion": "Continuidad de necesidades de la interlocución experta; no cierre profesional.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/calidad/tuberias-ia/continuacion-15-09-2026/S40_INTERLOCUCION_DEL_EXPERTO_Y_CONSEJO_VERIFICABLE_2026_09_20.md",
+      "blob": "7e6af726d2e79abc03b7163d4a55845b01d48d8f",
+      "sha256": "39955bd567e08e139fc562baa4a57b924d404b1f1a31cbfac9c437527d9d2116",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/calidad/tuberias-ia/continuacion-15-09-2026/S40_INTERLOCUCION_DEL_EXPERTO_Y_CONSEJO_VERIFICABLE_2026_09_20.md"
+    },
+    {
+      "id": "F17",
+      "titulo": "Registro de deuda viva",
+      "funcion": "Estado de las deudas y sucesiones; prevalece sobre bloqueos históricos levantados.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md",
+      "blob": "f2b045eca80b535380f8681960bc5c41b7f4ba55",
+      "sha256": "78a599fcccc68af3519bac2a27c09244e83e210b97a26ac0eaf20b628e6da03b",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/calidad/REGISTRO_DEUDA_VIVA_DEL_FRENTE_FINAL_DEL_LENGUAJE_SV.md"
+    },
+    {
+      "id": "F18",
+      "titulo": "S19: acta de recepción",
+      "funcion": "Recorrido conjunto recibido con alcance parcial y sin cierre universal.",
+      "repositorio": "juantoniolloretegea/SV-lenguaje-de-computacion",
+      "revision": "8a99e3de43c6799862b7450854b3751e39ba7e1c",
+      "ruta": "docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s19-recepcion-integracion-y-causas/ACTA_RECEPCION_S19.md",
+      "blob": "b7710e8fc83b508802e6fe1db9b8aceb0780ac62",
+      "sha256": "d673c535e6bcda1f24e40583d9a81548c0827fb4d8a2c62a048c34f12e10288a",
+      "url": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/8a99e3de43c6799862b7450854b3751e39ba7e1c/docs/calidad/tuberias-ia/integracion-adenda-ia-frame-y-catalogo-errores/s19-recepcion-integracion-y-causas/ACTA_RECEPCION_S19.md"
+    },
+    {
+      "id": "F19",
+      "titulo": "Acta inicial OP-CYB-001",
+      "funcion": "Antecedente de once apartados; la adenda no estaba aún incluida.",
+      "repositorio": "juantoniolloretegea/SVperitus-dataset",
+      "revision": "169af16d05ffc954454bb5528ec106e5752b7016",
+      "ruta": "dominios/ciberseguridad-inteligente/dominio-04-09-26/universos/OP-CYB-001/ACTA_CONTINUIDAD_Y_RELEVO_OP_CYB_001_AL_LENGUAJE_SV_2026_09_09.md",
+      "blob": "b1096606c62740d367b393abf803c089a9a3e93e",
+      "sha256": "d7d4870b25006f93f1418b5cfc3b28be57fd348ef52288d70dbf8d51739c2a09",
+      "url": "https://github.com/juantoniolloretegea/SVperitus-dataset/blob/169af16d05ffc954454bb5528ec106e5752b7016/dominios/ciberseguridad-inteligente/dominio-04-09-26/universos/OP-CYB-001/ACTA_CONTINUIDAD_Y_RELEVO_OP_CYB_001_AL_LENGUAJE_SV_2026_09_09.md"
+    }
+  ],
+  "atribucion": "© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0)."
+}
