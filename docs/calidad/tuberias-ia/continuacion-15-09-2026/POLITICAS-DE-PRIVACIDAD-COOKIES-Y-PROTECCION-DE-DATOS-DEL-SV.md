@@ -1,6 +1,6 @@
 # Políticas de Privacidad, cookies y Protección de Datos del SV
 
-Versión SV-PRIVACIDAD-2 · 18 de octubre de 2026.
+Versión SV-PRIVACIDAD-2.1 · 21 de octubre de 2026.
 
 ## Identificación institucional y contacto
 
@@ -55,7 +55,7 @@ Sólo el personal autorizado puede tramitar el registro privado. Se utilizan los
 
 La institución debe mantener sus contratos, condiciones de encargo, ubicaciones y, cuando proceda, garantías de transferencias internacionales. Utilizar un proveedor conocido no acredita por sí solo la conformidad del tratamiento.
 
-La política **Aislamiento del SV de IAs externas** permite exclusivamente comprobaciones de conexión y presencia del modelo en el catálogo mediante autenticación y consulta sin contenido. Bloquea documentos, preguntas, respuestas, solicitudes de derechos y textos de prueba hacia proveedores de IA. Una conexión comprobada no autoriza inferencias ni exámenes.
+La política **Aislamiento del SV de IAs externas** permite como regla general comprobar la conexión y la presencia del modelo en el catálogo sin contenido documental. La excepción vigente permite al Evaluador autorizar expresamente el envío de los originales y cuadernillos de un expediente al contador oficial de Anthropic, sin plantilla correctora ni generación de respuestas. El destinatario recibe esos documentos íntegros: la operación no se presenta como una mera conexión. Se registran autorización, fecha, modelo, configuración, huellas y resultado. La institución debe revisar los derechos sobre la documentación y las condiciones del destinatario antes de autorizarla. Las solicitudes de derechos y los datos privados ajenos a esa entrega permanecen excluidos. Ni una conexión comprobada ni un recuento habilitan inferencias, exámenes o producción.
 
 ## Conservación y seguridad
 

@@ -1,8 +1,8 @@
 # Código limpio y auditable
 
-Norma del Sistema Vectorial SV · Versión 1 · 18 de octubre de 2026.
+Norma del Sistema Vectorial SV · Versión 1.1 · 21 de octubre de 2026. Entrada en vigor: 18 de octubre de 2026.
 
-**Carácter obligatorio desde esta fecha.** Se aplica al código Rust final del SV, a sus bibliotecas propias, ejecutables, adaptadores, persistencia y comprobaciones. La entrada en vigor no certifica retrospectivamente todos los componentes existentes. Cada entrega debe identificar su alcance comprobado y las desviaciones pendientes; ninguna excepción tácita se considera conformidad.
+**Carácter obligatorio desde el 18 de octubre de 2026.** Se aplica al código Rust final del SV, a sus bibliotecas propias, ejecutables, adaptadores, persistencia y comprobaciones. La entrada en vigor no certifica retrospectivamente todos los componentes existentes. Cada entrega debe identificar su alcance comprobado y las desviaciones pendientes; ninguna excepción tácita se considera conformidad.
 
 ## 1. Autoridad, contratos y organización
 
@@ -48,15 +48,15 @@ Los accesos a almacenamiento fijo se limitan a rutas resueltas del recinto autor
 
 ## 5. Aislamiento del SV de IAs externas
 
-**Política vigente: sólo conexión; ningún contenido a proveedores de IA.** Quedan excluidos documentos, preguntas, respuestas, instrucciones, soluciones, conversaciones, datos personales y pruebas sintéticas de inferencia. Los permisos históricos de suministro no levantan esta prohibición.
+**Política general: sólo conexión con proveedores de IA.** La excepción vigente permite el recuento oficial de Anthropic de un expediente de evaluación, mediante autorización expresa de su entrega documental concreta. Esta excepción no habilita inferencia, exámenes ni producción. Las soluciones, conversaciones y datos personales ajenos a los documentos autorizados quedan excluidos. Los permisos históricos de suministro no levantan la prohibición general.
 
 `aislamiento_ia.rs` realiza el control de salida del Gestor hacia proveedores de IA. No sustituye la instrucción ni el contrato de frontera del núcleo. No se añade una FFI para denominar aislamiento a una interfaz entre lenguajes. La comprobación se solicita voluntariamente, deriva una ruta de catálogo del destino configurado y permite GET sin cuerpo. Sólo emplea los datos técnicos y la credencial necesarios para autenticar ese destino. La vinculación de cuenta mantiene sus intercambios de autorización fijos, sin contenido documental.
 
-Los contadores remotos de tokens también son destinatarios de contenido cuando reciben el texto que han de medir. Quedan bloqueados aunque no generen respuestas o no facturen inferencia. Una medición anterior conserva su evidencia y autorización histórica, pero no habilita un nuevo envío. La interfaz debe declarar esta regla de forma visible, explicar qué comprueba una conexión y agrupar las fuentes de respaldo por su función.
+Los contadores remotos de tokens reciben contenido. La excepción se realiza mediante un recorrido Rust específico, limitado al destino oficial de recuento de Anthropic y a los originales verificados del expediente. Exige identidad, permiso vigente, confirmación de la entrega, correspondencia de modelo y configuración, huellas documentales y registro previo de la operación. No permite direcciones libres, archivos adicionales, soluciones ni parámetros de generación. Conserva la respuesta y su huella, fecha, modelo y configuración; un recuento es una estimación, no consumo facturado. Un cambio documental o de configuración invalida su aplicación automática. No se repite la operación sin una nueva autorización explícita. La interfaz explica estas condiciones antes de la entrega.
 
-La salida no admite instrucciones, cabeceras libres, redirecciones, reintentos, herramientas ni peticiones derivadas de respuestas. Se limita tiempo, destino público y tamaño de respuesta. La interpretación del catálogo sólo comprueba la identidad declarada del modelo; cualquier instrucción incrustada se trata como datos inertes. La presencia en el catálogo no acredita inferencia, capacidad máxima, versión efectiva, saldo ni aptitud.
+La configuración de salida no admite instrucciones arbitrarias, cabeceras libres, redirecciones, reintentos, herramientas ni peticiones derivadas de respuestas. Se limita tiempo, destino público y tamaño de respuesta. La interpretación del catálogo sólo comprueba la identidad declarada del modelo; cualquier instrucción incrustada se trata como datos inertes. La presencia en el catálogo no acredita inferencia, capacidad máxima, versión efectiva, saldo ni aptitud.
 
-El punto histórico de envío de contenido rechaza antes de acceder a la credencial, realizar DNS o abrir una conexión. La interfaz de exámenes debe mostrar el impedimento. No existe una preferencia, variable de entorno o casilla que lo suprima. Una futura modificación de esta política requiere decisión expresa, cambio identificado, revisión y nuevas pruebas; nunca se deduce de un permiso antiguo.
+El punto de envío de contenido para inferencia continúa rechazando antes de acceder a la credencial, realizar DNS o abrir una conexión. La interfaz de exámenes muestra el impedimento. No existe una preferencia, variable de entorno o casilla que lo suprima; la autorización de recuento sólo habilita su recorrido independiente. Cualquier ampliación requiere decisión expresa, cambio identificado, revisión y nuevas pruebas. Las credenciales son propias de cada instalación, se conservan fuera de los artefactos distribuidos y no se incorporan a una release junto con sesiones, expedientes o copias institucionales.
 
 La garantía técnica queda delimitada al ejecutable y configuración comprobados. No borra datos entregados anteriormente, no gobierna otros programas de la institución ni prueba qué retiene un proveedor sobre los datos mínimos de autenticación. Las conexiones de identidad, correo, custodia y accesibilidad se inventarían por separado como tratamientos y destinatarios; no se ocultan bajo la denominación «conexión de IA».
 
