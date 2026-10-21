@@ -1,6 +1,6 @@
 # Código limpio y auditable
 
-Norma del Sistema Vectorial SV · Versión 1.1 · 21 de octubre de 2026. Entrada en vigor: 18 de octubre de 2026.
+Norma del Sistema Vectorial SV · Versión 1.2 · 21 de octubre de 2026. Entrada en vigor: 18 de octubre de 2026.
 
 **Carácter obligatorio desde el 18 de octubre de 2026.** Se aplica al código Rust final del SV, a sus bibliotecas propias, ejecutables, adaptadores, persistencia y comprobaciones. La entrada en vigor no certifica retrospectivamente todos los componentes existentes. Cada entrega debe identificar su alcance comprobado y las desviaciones pendientes; ninguna excepción tácita se considera conformidad.
 
@@ -48,7 +48,7 @@ Los accesos a almacenamiento fijo se limitan a rutas resueltas del recinto autor
 
 ## 5. Aislamiento del SV de IAs externas
 
-**Política general: sólo conexión con proveedores de IA.** La excepción vigente permite el recuento oficial de Anthropic de un expediente de evaluación, mediante autorización expresa de su entrega documental concreta. Esta excepción no habilita inferencia, exámenes ni producción. Las soluciones, conversaciones y datos personales ajenos a los documentos autorizados quedan excluidos. Los permisos históricos de suministro no levantan la prohibición general.
+**Política general: sólo conexión con proveedores de IA.** La excepción vigente permite el recuento oficial de Anthropic de un expediente de evaluación, mediante autorización expresa de su entrega documental concreta. La autorización de recuento no habilita generación. Una excepción independiente permite un examen de Claude Opus 5.5 con la edición general vigente, previa habilitación administrativa expresa de su expediente y condiciones y lanzamiento del Evaluador. Ninguna de ambas excepciones habilita otros candidatos ni producción. Las soluciones, conversaciones y datos personales ajenos a los documentos autorizados quedan excluidos. Los permisos históricos de suministro no levantan la prohibición general.
 
 `aislamiento_ia.rs` realiza el control de salida del Gestor hacia proveedores de IA. No sustituye la instrucción ni el contrato de frontera del núcleo. No se añade una FFI para denominar aislamiento a una interfaz entre lenguajes. La comprobación se solicita voluntariamente, deriva una ruta de catálogo del destino configurado y permite GET sin cuerpo. Sólo emplea los datos técnicos y la credencial necesarios para autenticar ese destino. La vinculación de cuenta mantiene sus intercambios de autorización fijos, sin contenido documental.
 
@@ -56,7 +56,7 @@ Los contadores remotos de tokens reciben contenido. La excepción se realiza med
 
 La configuración de salida no admite instrucciones arbitrarias, cabeceras libres, redirecciones, reintentos, herramientas ni peticiones derivadas de respuestas. Se limita tiempo, destino público y tamaño de respuesta. La interpretación del catálogo sólo comprueba la identidad declarada del modelo; cualquier instrucción incrustada se trata como datos inertes. La presencia en el catálogo no acredita inferencia, capacidad máxima, versión efectiva, saldo ni aptitud.
 
-El punto de envío de contenido para inferencia continúa rechazando antes de acceder a la credencial, realizar DNS o abrir una conexión. La interfaz de exámenes muestra el impedimento. No existe una preferencia, variable de entorno o casilla que lo suprima; la autorización de recuento sólo habilita su recorrido independiente. Cualquier ampliación requiere decisión expresa, cambio identificado, revisión y nuevas pruebas. Las credenciales son propias de cada instalación, se conservan fuera de los artefactos distribuidos y no se incorporan a una release junto con sesiones, expedientes o copias institucionales.
+El punto general de envío de contenido continúa rechazando antes de acceder a la credencial, realizar DNS o abrir una conexión. El recorrido del examen exige un suceso administrativo que identifique expediente, responsable, fundamento y huellas del plan y los tiempos. Se revalida antes de las credenciales y de la red y durante la recepción. Retirar o volver a recibir condiciones invalida la habilitación anterior. La reserva transaccional impide repetir el intento; un corte irreversible conserva lo recibido sin reenvío ni dictamen. No existe una variable de entorno que suprima estos controles. Las respuestas se conservan como datos; no ejecutan herramientas ni conceden acceso al SV. La observación exigida condiciona el cierre y la corrección. Cualquier ampliación requiere decisión expresa, cambio identificado, revisión y nuevas pruebas. Las credenciales son propias de cada instalación, se conservan fuera de los artefactos distribuidos y no se incorporan a una release junto con sesiones, expedientes o copias institucionales.
 
 La garantía técnica queda delimitada al ejecutable y configuración comprobados. No borra datos entregados anteriormente, no gobierna otros programas de la institución ni prueba qué retiene un proveedor sobre los datos mínimos de autenticación. Las conexiones de identidad, correo, custodia y accesibilidad se inventarían por separado como tratamientos y destinatarios; no se ocultan bajo la denominación «conexión de IA».
 
