@@ -207,3 +207,8 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
   assert.equal(pretty(report), readFileSync(location('evidence.json'), 'utf8'), 'EvidenceDrift: revisar el cambio, no actualizar esperados automáticamente');
   console.log(JSON.stringify({result: 'PASS', ...report.totals, evidence_sha256: digest(Buffer.from(pretty(report)))}));
 }
+
+
+// SPDX-License-Identifier: CC-BY-NC-ND-4.0
+// © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+// https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.es
