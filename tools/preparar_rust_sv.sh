@@ -16,3 +16,8 @@ rustup target add --toolchain 1.98.0 wasm32-wasip1 wasm32-unknown-unknown
 rustup run 1.98.0 rustc --version --verbose
 rustup run 1.98.0 cargo --version
 printf '%s\n' 'Preparado. Para esta consola: . "${CARGO_HOME:-$HOME/.cargo}/env"'
+
+
+# SPDX-License-Identifier: CC-BY-NC-ND-4.0
+# © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+# https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.es

@@ -74,3 +74,8 @@ try {
   checks.push('sensibilidad: byte alterado y truncamiento detectados');
   console.log(JSON.stringify({ resultado: 'CONFORME', bytes: canonical.length, sha256: sha(canonical), comprobaciones: checks, limite: 'Disponibilidad e identidad documental; no prueba de bloqueo de usos prohibidos ni confianza frente a host comprometido.' }, null, 2));
 } finally { fs.rmSync(temp, { recursive: true, force: true }); }
+
+
+// SPDX-License-Identifier: CC-BY-NC-ND-4.0
+// © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+// https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.es
