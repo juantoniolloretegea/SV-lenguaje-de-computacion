@@ -85,3 +85,8 @@ if __name__ == '__main__':
     cases=prepare(args.native_probe,args.output_dir,args.wasm_probe,args.wasi_runner)
     (args.output_dir/'report.json').write_text(json.dumps({'schema':'sv-k1-bridge-set-v1','cases':cases,'passed':len(cases)},ensure_ascii=False,indent=2)+'\n')
     print(f'J-B0: {len(cases)}/18, nativo'+(' y WASI' if args.wasm_probe else ''))
+
+
+# SPDX-License-Identifier: CC-BY-NC-ND-4.0
+# © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+# https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.es
