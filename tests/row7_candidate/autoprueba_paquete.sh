@@ -26,3 +26,8 @@ for id in PYTHON INESPERADO AUSENTE ALTERADO FIFO FIFO_PERMITIDO FIFO_CORTE ENLA
   printf '%s: RECHAZADO por %s\n' "$id" "$result"
 done
 printf 'Controles de paquete: 8/8 rechazados por su causa; control íntegro admitido.\n'
+
+
+# SPDX-License-Identifier: CC-BY-NC-ND-4.0
+# © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+# https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.es

@@ -109,3 +109,8 @@ export function continuity(k,d,m=null) {
 }
 export const regulatedMutants=['CUENTA_COMO_SESION','FIRMA_COMO_COMPETENCIA','SOLO_NOMBRE_ACCION','IGNORAR_INCERTIDUMBRE','CUALQUIER_REVOCACION','SILENCIO_COMO_AUSENCIA','FECHA_ESCRITA_COMO_EMISION','CUENTAS_COMO_PERSONAS','PERMISO_COMO_PLAN','APLICABILIDAD_COMO_EXITO','DOBLE_PRECISION_INTERMEDIA'];
 export const continuityMutants=['genesis','tiempo_partida','causalidad','todo_ciclo','exoneracion','heredar_responsabilidad','aceptacion_universal','solo_cantidad','un_trayecto','todo_cambio','retroactividad'];
+
+
+// SPDX-License-Identifier: CC-BY-NC-ND-4.0
+// © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+// https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.es
