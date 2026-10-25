@@ -9,7 +9,6 @@ mod probe;
 #[test] fn cyb_instancias_documentales_independientes() {probe::check_independent_instances();}
 #[test] fn cyb_definicion_y_modulos_exactos() {probe::check_operation_artifacts();}
 
-
 // SPDX-License-Identifier: CC-BY-NC-ND-4.0
 // © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
 // https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.es
