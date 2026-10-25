@@ -37,3 +37,8 @@ test('Admite el testigo G/H y conserva sus identificadores y ocho pares', () => 
   assert.deepEqual(source.witnesses.map(w => w.id), ['GH-DOC-01','GH-DOC-02','GH-DOC-03','GH-DOC-04','GH-DOC-05','GH-DOC-06','GH-DOC-07','GH-DOC-08']);
   for (const witness of source.witnesses) assert.deepEqual(witness.domain.states.map(s => s.id), ['x','y']);
 });
+
+
+// SPDX-License-Identifier: CC-BY-NC-ND-4.0
+// © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+// https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.es
