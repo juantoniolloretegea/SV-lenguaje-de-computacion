@@ -28,3 +28,8 @@ mapfile -d '' actual < <(find . -type f ! -path './INVENTARIO.sha256' -print0 | 
 for i in "${!actual[@]}"; do [[ "${actual[$i]}" == "${declared[$i]}" ]] || fail PAQUETE_INVENTARIO; done
 sha256sum --check --status INVENTARIO.sha256 || fail PAQUETE_HUELLA
 printf 'CONFORME_EN_INTEGRIDAD_DE_PAQUETE\n'
+
+
+# SPDX-License-Identifier: CC-BY-NC-ND-4.0
+# © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+# https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.es
