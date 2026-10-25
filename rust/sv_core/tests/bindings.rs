@@ -92,3 +92,7 @@ fn l00_operacion_duplicada() { cases::check_case(43).unwrap(); }
 fn controles_positivos_preservan_identidad_orden_y_multiplicidad() {
     for i in cases::NEGATIVE_COUNT..cases::CASE_COUNT { cases::check_case(i).unwrap(); }
 }
+
+// SPDX-License-Identifier: CC-BY-NC-ND-4.0
+// © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+// https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.es
