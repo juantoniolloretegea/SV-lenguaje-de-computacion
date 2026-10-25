@@ -50,7 +50,6 @@ pub const INPUTS: &[Input] = &[
     Input { witness: r###"GH-DOC-08"###, state: r###"y"###, variant: r###"HS"###, operation: r###"GH-DOC-08-RECUPERAR"###, definition: r###"{"id":"GH-DOC-08-RECUPERAR","paths":["detail.ventana","detail.incluye_extremo_final"],"meaning":"Recuperación literal del dato documental indicado, sin interpretación clínica"}"###, payload: r###"{"schema":"GH-DOC/1","context":"GH-DOC-08","common":{"evento":"evento-sintetico","instante":"t0","intervalo":["t-1","t0"]}}"###, side: r###"{"detail":{"ventana":"ventana-B","incluye_extremo_final":false}}"###, definition_sha: r###"b667d2fa7327d529383ca7d57bfd04142a75c145a5457c3e9bb5a7f726b635f3"###, payload_sha: r###"65ca1f773b4bbd6c68d697e8b9916edb339a2aaf6339e247062f225384977f75"###, side_sha: r###"9eaa51b51da13fb3543224025f04f7401b26dfd9c77376d6098506cabf0f1aa4"### },
 ];
 
-
 // SPDX-License-Identifier: CC-BY-NC-ND-4.0
 // © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
 // https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.es
