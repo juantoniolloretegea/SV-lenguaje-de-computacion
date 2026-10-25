@@ -4,8 +4,6 @@
 
 Este manual enseña a escribir y comprobar programas del Lenguaje de Computación SV mediante archivos `.svp`. Lleva a la práctica la teoría desarrollada en el [libro del Lenguaje de Computación SV](https://documentos-sv.itvia.online/dominios/lenguaje-de-computacion/manual/): sus fundamentos, significado, arquitectura y condiciones de uso.
 
-[Leer el manual en la biblioteca](https://documentos-sv.itvia.online/desarrolladores/) · [Enciclopedia temática del SV](https://documentos-sv.itvia.online/enciclopedia/)
-
 ## Cómo estudiar
 
 Comience por la preparación y siga las lecciones en orden. Cada construcción se presenta con su archivo completo, explicación, resultado esperado y ejercicio. Puede utilizar el Playground o un comprobador nativo compatible. Las lecciones enseñan la DSL; Rust es el lenguaje de implementación del SV.

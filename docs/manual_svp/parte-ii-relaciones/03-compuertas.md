@@ -1,7 +1,5 @@
 # **3.** Compuertas y tablas de admisibilidad
 
-[Lectura en la biblioteca](https://documentos-sv.itvia.online/desarrolladores/parte-ii-relaciones/03-compuertas.html) · [Enciclopedia temática](https://documentos-sv.itvia.online/enciclopedia/)
-
 [Índice del manual](../README.md) · [Anterior](../parte-i-escritura/02-declaraciones-y-estados.md) · [Siguiente](04-resolucion-u.md)
 
 ## **3.1.** Relacionar dos evaluaciones

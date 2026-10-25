@@ -1,7 +1,5 @@
 # **9.** Programación asistida por IA — pendiente
 
-[Lectura en la biblioteca](https://documentos-sv.itvia.online/desarrolladores/parte-iii-ejercicios/09-programacion-asistida.html) · [Enciclopedia temática](https://documentos-sv.itvia.online/enciclopedia/)
-
 [Índice del manual](../README.md) · [Anterior](08-programas-completos.md)
 
 **Pendiente de desarrollo.**

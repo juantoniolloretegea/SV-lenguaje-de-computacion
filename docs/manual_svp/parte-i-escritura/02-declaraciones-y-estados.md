@@ -1,7 +1,5 @@
 # **2.** Declaraciones y estados celulares
 
-[Lectura en la biblioteca](https://documentos-sv.itvia.online/desarrolladores/parte-i-escritura/02-declaraciones-y-estados.html) · [Enciclopedia temática](https://documentos-sv.itvia.online/enciclopedia/)
-
 [Índice del manual](../README.md) · [Anterior](01-primer-programa.md) · [Siguiente](../parte-ii-relaciones/03-compuertas.md)
 
 ## **2.1.** Del concepto a la escritura

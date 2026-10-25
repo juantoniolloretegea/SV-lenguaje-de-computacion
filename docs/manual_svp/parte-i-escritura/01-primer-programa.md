@@ -1,7 +1,5 @@
 # **1.** Preparar y comprobar un programa
 
-[Lectura en la biblioteca](https://documentos-sv.itvia.online/desarrolladores/parte-i-escritura/01-primer-programa.html) · [Enciclopedia temática](https://documentos-sv.itvia.online/enciclopedia/)
-
 [Índice del manual](../README.md) · [Siguiente](02-declaraciones-y-estados.md)
 
 ## **1.1.** Qué va a aprender

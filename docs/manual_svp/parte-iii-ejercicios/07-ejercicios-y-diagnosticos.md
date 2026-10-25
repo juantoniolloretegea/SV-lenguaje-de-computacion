@@ -1,7 +1,5 @@
 # **7.** Ejercicios, soluciones y diagnósticos
 
-[Lectura en la biblioteca](https://documentos-sv.itvia.online/desarrolladores/parte-iii-ejercicios/07-ejercicios-y-diagnosticos.html) · [Enciclopedia temática](https://documentos-sv.itvia.online/enciclopedia/)
-
 [Índice del manual](../README.md) · [Anterior](../parte-ii-relaciones/06-sucesos-y-consultas.md) · [Siguiente](08-programas-completos.md)
 
 ## **7.1.** Método de comprobación

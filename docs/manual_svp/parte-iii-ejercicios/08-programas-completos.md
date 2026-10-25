@@ -1,7 +1,5 @@
 # **8.** Programas completos y aplicaciones — en desarrollo
 
-[Lectura en la biblioteca](https://documentos-sv.itvia.online/desarrolladores/parte-iii-ejercicios/08-programas-completos.html) · [Enciclopedia temática](https://documentos-sv.itvia.online/enciclopedia/)
-
 [Índice del manual](../README.md) · [Anterior](07-ejercicios-y-diagnosticos.md) · [Siguiente](09-programacion-asistida.md)
 
 **En desarrollo.**

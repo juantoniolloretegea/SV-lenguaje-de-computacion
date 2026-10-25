@@ -1,7 +1,5 @@
 # **6.** Sucesos, trayectorias y consultas
 
-[Lectura en la biblioteca](https://documentos-sv.itvia.online/desarrolladores/parte-ii-relaciones/06-sucesos-y-consultas.html) · [Enciclopedia temática](https://documentos-sv.itvia.online/enciclopedia/)
-
 [Índice del manual](../README.md) · [Anterior](05-composicion.md) · [Siguiente](../parte-iii-ejercicios/07-ejercicios-y-diagnosticos.md)
 
 ## **6.1.** Representar datos de transición

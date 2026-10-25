@@ -1,7 +1,5 @@
 # **5.** Composición de arquitecturas
 
-[Lectura en la biblioteca](https://documentos-sv.itvia.online/desarrolladores/parte-ii-relaciones/05-composicion.html) · [Enciclopedia temática](https://documentos-sv.itvia.online/enciclopedia/)
-
 [Índice del manual](../README.md) · [Anterior](04-resolucion-u.md) · [Siguiente](06-sucesos-y-consultas.md)
 
 ## **5.1.** Declarar las relaciones

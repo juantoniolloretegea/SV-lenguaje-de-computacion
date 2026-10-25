@@ -1,7 +1,5 @@
 # **4.** Resolución de U y proyecciones
 
-[Lectura en la biblioteca](https://documentos-sv.itvia.online/desarrolladores/parte-ii-relaciones/04-resolucion-u.html) · [Enciclopedia temática](https://documentos-sv.itvia.online/enciclopedia/)
-
 [Índice del manual](../README.md) · [Anterior](03-compuertas.md) · [Siguiente](05-composicion.md)
 
 ## **4.1.** Identificar la indeterminación
