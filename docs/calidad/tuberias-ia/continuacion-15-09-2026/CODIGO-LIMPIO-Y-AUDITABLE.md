@@ -1,6 +1,6 @@
 # Código limpio y auditable
 
-Norma del Sistema Vectorial SV · Versión 1.5 · 22 de octubre de 2026. Entrada en vigor: 18 de octubre de 2026.
+Norma del Sistema Vectorial SV · Versión 1.6 · 25 de octubre de 2026. Entrada en vigor: 18 de octubre de 2026.
 
 **Carácter obligatorio desde el 18 de octubre de 2026.** Se aplica al código Rust final del SV, a sus bibliotecas propias, ejecutables, adaptadores, persistencia y comprobaciones. La entrada en vigor no certifica retrospectivamente todos los componentes existentes. Cada entrega debe identificar su alcance comprobado y las desviaciones pendientes; ninguna excepción tácita se considera conformidad.
 
@@ -21,6 +21,23 @@ Los nombres siguen las convenciones Rust: módulos, funciones y campos en `snake
 Los comentarios necesarios expresan **por qué existe una condición**, qué frontera protege y qué compatibilidad conserva. Las fronteras, invariantes, formatos persistentes y operaciones privilegiadas tienen explicación breve en español e inglés, con el mismo significado. No se traduce mecánicamente cada línea ni se duplica la documentación del lenguaje. La documentación extensa se enlaza desde el código.
 
 Se prefieren tipos y enumeraciones que impidan estados contradictorios; `Option` representa ausencia, no cero. Los resultados recuperables se devuelven mediante `Result`, con causas estables y ayuda comprensible. Se restringen `unwrap`, `expect` y `panic` en recorridos que dependen de datos o recursos externos; su uso excepcional requiere una invariancia demostrada. Los errores no publican claves, contenidos, rutas privadas ni respuestas completas de terceros.
+
+### 2.1. Autoría y licencia de cada implementación
+
+Desde el 25 de octubre de 2026, toda implementación de código propio del SV, nueva o modificada, debe incorporar en cada archivo el aviso literal de autoría y licencia siguiente. La obligación comprende bibliotecas, ejecutables, adaptadores, interfaces, pruebas y programas auxiliares propios, sin que ello autorice lenguajes, componentes o funciones distintos de los admitidos por las normas del sistema.
+
+> © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+El aviso se dispone como comentario válido del lenguaje, en la cabecera o al final del archivo, acompañado de `SPDX-License-Identifier: CC-BY-NC-ND-4.0` y del [texto oficial de la licencia](https://creativecommons.org/licenses/by-nc-nd/4.0/legalcode.es). Debe conservar las instrucciones de ejecución, la codificación y el comportamiento del programa. La declaración general de `LICENSE` no sustituye esta identificación individual.
+
+Cuando el formato no admite comentarios, o cuando el archivo es una prueba de bytes exactos, un producto generado, una fuente firmada o una evidencia histórica cuya integridad debe conservarse, el aviso se incorpora a un archivo adjunto denominado `<nombre-original>.license`. Este adjunto identifica expresamente el archivo y su huella; ambos deben conservarse y distribuirse juntos. La excepción no permite omitir la atribución ni modificar silenciosamente firmas, manifiestos o resultados anteriores.
+
+Si los permisos del repositorio impiden modificar el archivo o situar el aviso junto a él, la declaración individual se conserva en `licencias-de-archivos/`, con la ruta completa y la huella del original. Esta excepción debe quedar identificada en la revisión; no autoriza eludir las protecciones del repositorio.
+
+Los componentes de terceros conservan sus autores, avisos y licencias. La presente declaración se limita al código y a las aportaciones de titularidad propia; no sustituye derechos ajenos ni revoca permisos válidamente concedidos con anterioridad. Los archivos con contenido de procedencia mixta requieren delimitar esas aportaciones, sin atribuir íntegramente al SV el trabajo de terceros.
+
+Antes de aceptar una implementación o una entrega, la revisión debe comprobar la presencia del aviso, su alcance, la conservación de las licencias de terceros y las excepciones justificadas. Los generadores y las plantillas de código propio deben conservarlo en sus productos. La ausencia de esta comprobación impide declarar cumplida esta obligación. Esta norma no acredita por sí sola que exista una comprobación automática ni que todas las ediciones históricas hayan sido revisadas.
+
 
 ## 3. Memoria y concurrencia
 
