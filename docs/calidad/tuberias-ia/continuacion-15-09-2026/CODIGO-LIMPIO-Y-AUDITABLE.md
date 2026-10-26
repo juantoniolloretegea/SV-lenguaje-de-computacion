@@ -1,6 +1,6 @@
 # Código limpio y auditable
 
-Norma del Sistema Vectorial SV · Versión 1.7 · 26 de octubre de 2026. Entrada en vigor: 18 de octubre de 2026.
+Norma del Sistema Vectorial SV · Versión 1.8 · 26 de octubre de 2026. Entrada en vigor: 18 de octubre de 2026.
 
 **Carácter obligatorio desde el 18 de octubre de 2026.** Se aplica al código Rust final del SV, a sus bibliotecas propias, ejecutables, adaptadores, persistencia y comprobaciones. La entrada en vigor no certifica retrospectivamente todos los componentes existentes. Cada entrega debe identificar su alcance comprobado y las desviaciones pendientes; ninguna excepción tácita se considera conformidad.
 
@@ -78,6 +78,7 @@ El punto general de envío de contenido continúa rechazando antes de acceder a 
 
 La garantía técnica queda delimitada al ejecutable y configuración comprobados. No borra datos entregados anteriormente, no gobierna otros programas de la institución ni prueba qué retiene un proveedor sobre los datos mínimos de autenticación. Las conexiones de identidad, correo, custodia y accesibilidad se inventarían por separado como tratamientos y destinatarios; no se ocultan bajo la denominación «conexión de IA».
 
+**Consulta delimitada del Panel del Experto, 26/10/2026.** La ampliación expresa comprende la comprobación sintética de seis referencias SV(25,5) y la investigación bibliográfica pública sobre tricoleucemia, bajo las reglas del dominio de Inmunología. Sólo se admite la cuota incluida de ChatGPT y Astra 6. El servidor decide antes del envío mediante operaciones identificadas: no admite texto libre, expedientes, datos de pacientes, herramientas administrativas, claves alternativas ni usos personales ajenos al dominio. La investigación requiere autorización por consulta; la modalidad ordinaria carece de herramientas de Internet. Reserva, aislamiento, revocación, observación, consumo, límites y custodia son obligatorios. La explicación del modelo no acredita determinismo ni observación de su razonamiento interno: se cotejan por separado fuentes, orden, valores y omisiones de la salida. Los hallazgos externos permanecen pendientes de los filtros científicos y de la aprobación competente; no se incorporan automáticamente. Las incidencias de pertinencia se notifican sin el texto rechazado. Su revisión puede corregir una regla excesiva dentro de la especialidad, nunca permitir asuntos ajenos ni reenviar por sí sola una consulta. Esta ampliación no acredita recepción clínica, clasificación general de preguntas ni acceso de terceros. Las demás restricciones permanecen vigentes.
 ### 5.1. Núcleo aislado y transporte por la tubería del SV
 
 La IA no accede directamente al núcleo. Su transporte hacia él debe realizarse por la tubería del SV y someterse a la instrucción y al contrato de frontera constituidos. No se crea una vía paralela mediante llamadas directas, contenido ejecutable del modelo, memoria compartida sin contrato, escritura de tablas o modificación de permisos. La definición y semántica del núcleo tienen una única autoridad; el Gestor no las reimplementa.
