@@ -1,6 +1,6 @@
 # Código limpio y auditable
 
-Norma del Sistema Vectorial SV · Versión 1.8 · 26 de octubre de 2026. Entrada en vigor: 18 de octubre de 2026.
+Norma del Sistema Vectorial SV · Versión 1.9 · 26 de octubre de 2026. Entrada en vigor: 18 de octubre de 2026.
 
 **Carácter obligatorio desde el 18 de octubre de 2026.** Se aplica al código Rust final del SV, a sus bibliotecas propias, ejecutables, adaptadores, persistencia y comprobaciones. La entrada en vigor no certifica retrospectivamente todos los componentes existentes. Cada entrega debe identificar su alcance comprobado y las desviaciones pendientes; ninguna excepción tácita se considera conformidad.
 
@@ -114,6 +114,10 @@ La entrega incluye formato comprobado, compilación reproducible en el entorno d
 La optimización parte de medidas comparables de tiempo, memoria, almacenamiento y concurrencia. Se priorizan cargas excesivas y operaciones repetidas evitables, sin debilitar permisos, conservar datos fuera de su ámbito o alterar documentos. Una caché nunca acredita autorización. No se promete rapidez obtenida suprimiendo comprobaciones necesarias.
 
 La revisión independiente recibe fuentes, esquema, instrucciones de construcción, pruebas, resultados y limitaciones. La autoridad de recepción es distinta de quien implementa; «preparado para revisión» no significa certificado por auditores externos.
+
+### 8.1. Mantenimiento de dependencias y publicación de versiones
+
+La [Política de mantenimiento de dependencias y publicación de versiones](../../POLITICA-DEPENDENCIAS-Y-VERSIONES.md), versión 1.0 de 26/10/2026, desarrolla la revisión periódica de avisos, la resolución fijada de dependencias, la compatibilidad, las condiciones de recepción y la recuperación. Se aplica a las crates propias, sus dependencias directas e indirectas y las herramientas externas de la distribución. No autoriza actualizaciones indiscriminadas, cambios semánticos del núcleo ni automatizaciones o gastos adicionales. Su publicación no acredita retrospectivamente la actualización o auditoría del conjunto existente.
 
 ## Referencias de aplicación
 
