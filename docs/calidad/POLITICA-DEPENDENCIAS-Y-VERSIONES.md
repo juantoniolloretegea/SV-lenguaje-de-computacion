@@ -1,8 +1,8 @@
 # Política de mantenimiento de dependencias y publicación de versiones
 
-Sistema Vectorial SV · Versión 1.0 · 26 de octubre de 2026.
+Sistema Vectorial SV · Versión 1.1 · 26 de octubre de 2026.
 
-Esta política desarrolla la norma de [Código limpio y auditable](tuberias-ia/continuacion-15-09-2026/CODIGO-LIMPIO-Y-AUDITABLE.md). Se aplica a los paquetes Rust propios —crates—, sus dependencias directas e indirectas y las herramientas externas que intervienen en una distribución. Su publicación establece el procedimiento; no acredita que todas las dependencias existentes hayan sido actualizadas o auditadas, ni activa una vigilancia automatizada.
+Esta política desarrolla la norma de [Código limpio y auditable](tuberias-ia/continuacion-15-09-2026/CODIGO-LIMPIO-Y-AUDITABLE.md). Se aplica a los paquetes Rust propios —crates—, sus dependencias directas e indirectas y las herramientas externas que intervienen en una distribución. La actualización automática queda autorizada dentro de los componentes y contratos recibidos. Su ejecución debe acreditarse por instalación y ciclo; la existencia de esta política no acredita por sí sola que todas las dependencias se encuentren actualizadas.
 
 ## 1. Inventario y estados verificables
 
@@ -12,7 +12,7 @@ Se conserva un inventario legible por máquinas, exportable en un formato de lis
 
 ## 2. Revisión periódica y vulnerabilidades
 
-El responsable técnico designado revisa semanalmente los avisos aplicables de [RustSec](https://rustsec.org/), los avisos oficiales de seguridad y las notas de versión de los proyectos utilizados. Realiza además una revisión mensual de mantenimiento, abandono de proyectos, compatibilidad y versiones de Rust admitidas. Un aviso recibido sobre explotación activa, exposición de datos, autenticación, integridad o recuperación se examina sin esperar a la siguiente revisión periódica. La falta de responsable o de ejecución se registra como pendiente; no se muestra un estado favorable vencido.
+El servicio en Rust realiza una revisión diaria de las fuentes y de los componentes incorporados al mantenimiento automático. El responsable técnico designado revisa semanalmente los avisos aplicables de [RustSec](https://rustsec.org/), los avisos oficiales de seguridad y las notas de versión de los proyectos utilizados. Realiza además una revisión mensual de mantenimiento, abandono de proyectos, compatibilidad y versiones de Rust admitidas. Un aviso recibido sobre explotación activa, exposición de datos, autenticación, integridad o recuperación se examina sin esperar a la siguiente revisión periódica. La falta de responsable o de ejecución se registra como pendiente; no se muestra un estado favorable vencido.
 
 La revisión relaciona identificador y fecha del aviso, versiones afectadas y corregidas, componente real, características compiladas, recorridos alcanzables, consecuencia justificada, mitigación, responsable y fecha de nueva revisión. Un resultado sin coincidencias no acredita ausencia de vulnerabilidades desconocidas. La falta de información no se clasifica como riesgo menor. Las escalas externas conservan su significado y no se convierten en niveles clínicos ni en valores de la terna del SV.
 
@@ -47,9 +47,21 @@ Cada versión publicada reúne notas del cambio, compatibilidad, incidencias con
 
 Se distinguen preparación, recepción, publicación e instalación. Publicar una versión no la instala ni autoriza producción. La entrega conserva la versión anterior necesaria para una reversión recibida y establece cómo detener el proceso si falla una comprobación. Una restauración no repite comunicaciones, notificaciones ni otras operaciones externas ya realizadas.
 
-La política no autoriza por sí sola publicar paquetes en crates.io, abrir ramas, activar actualizaciones automáticas, aceptar licencias nuevas, contratar servicios ni consumir recursos adicionales. Las automatizaciones sólo se habilitan con alcance y permisos recibidos; su existencia no sustituye la evidencia de ejecución. Se actualizan la documentación competente y los agradecimientos cuando cambia la aportación real de un proyecto.
+La política no autoriza por sí sola publicar paquetes en crates.io, abrir ramas, ampliar el alcance automatizado recibido, aceptar licencias nuevas, contratar servicios ni consumir recursos adicionales. Las automatizaciones sólo se habilitan con alcance y permisos recibidos; su existencia no sustituye la evidencia de ejecución. Se actualizan la documentación competente y los agradecimientos cuando cambia la aportación real de un proyecto.
 
-## 6. Registro mínimo y consecuencias de omisión
+## 6. Aplicación automática y avisos
+
+El ciclo diario identifica las revisiones publicadas, conserva la copia del código en la sede privada y coteja la recuperación de los objetos nuevos antes de aplicar una candidata. La copia distingue fuentes propias, terceros y atribución pendiente; conserva modos de archivo, versiones, procedencia y huellas. Las dependencias enumeradas en los archivos de resolución no se presentan como fuentes externas íntegramente custodiadas. Esta copia no sustituye las copias coherentes de las bases ni su restauración.
+
+Para cada componente incorporado, el servicio selecciona parches estables dentro de la misma serie compatible, actualiza la resolución fijada en una preparación separada y contrasta dependencias, licencias, retiradas y avisos de seguridad. Ejecuta formato, análisis, pruebas y construcción sin acceso a la red, a credenciales ni a las bases de la instalación. La publicación cotejada y la incorporación se registran por separado. La sustitución del ejecutable, cuando esté habilitada, conserva el anterior y comprueba la configuración; un proceso abierto conserva su versión hasta que vuelva a iniciarse. No se declara una versión efectivamente usada por el mero hecho de sustituir el archivo.
+
+Una comprobación incompleta, un cambio incompatible, una dependencia nueva, una licencia distinta o una promoción interrumpida detienen esa incorporación y generan un aviso. Las migraciones persistentes y los conjuntos con dependencias locales requieren un procedimiento de recepción conjunta; no se eluden sus pruebas mediante actualizaciones parciales. La automatización no amplía contratos, facultades ni habilitación clínica.
+
+El panel de copias y el panel de avisos muestran la comprobación fechada a la administración general y a la función autorizada de continuidad. Para Drive se distinguen lectura válida, atención por capacidad y vinculación pendiente; una sesión de navegador no sustituye la autorización de ejecución periódica. Los umbrales iniciales son 80 % y 90 % de ocupación, y la imposibilidad de alojar la siguiente copia más la reserva. La ampliación la decide y realiza una persona autorizada. No hay compras ni borrado de expedientes automatizados por este mantenimiento.
+
+La ejecución utiliza recursos acotados. Una interrupción de red conserva los objetos recibidos en una reserva limitada para continuar sin duplicar descargas; una reserva agotada produce un aviso. El inventario identifica el alcance comprobado y sus exclusiones. Una ejecución diaria no equivale a una prueba diaria de restauración integral ni a una segunda copia independiente de GitHub.
+
+## 7. Registro mínimo y consecuencias de omisión
 
 El registro de mantenimiento contiene componente, versiones anterior y propuesta, fuente del cambio, aviso de seguridad si existe, alcance afectado, decisión y responsable, comprobaciones y resultados, exclusiones, revisión publicada, instalaciones afectadas y próxima revisión. Los sucesos remiten a la evidencia, sin duplicarla en cada registro.
 
