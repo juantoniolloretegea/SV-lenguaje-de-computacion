@@ -1633,36 +1633,39 @@ El antecedente CYB16 mantiene su identidad histórica y su fundamento C02 queda 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
 
 
-## S43
+## S43 · Código limpio, aislamiento de proveedores y protección de datos
 
-[Código limpio, aislamiento y protección de datos](fichas/S43.md). Revisión 1; recepción técnica acotada. Norma obligatoria, esquema común y controles de privacidad incorporados al Gestor; rechazo de contenido hacia proveedores, incluidos contadores; declaraciones jerarquizadas y libros relacionados actualizados. No se recibe el circuito de inferencia con el núcleo. Revisión visual autenticada pendiente de restablecer la sesión; las pantallas públicas están comprobadas. Sin producción, exámenes, cuentas externas, inferencias, contadores ni correos de prueba. No certifica cumplimiento jurídico integral, confinamiento de todos los componentes ni cierre de semántica o IR. Permanecen pendientes las obligaciones y decisiones institucionales delimitadas en la política.
+**estado:** finalizado
 
-© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+**fecha_alta_utc:** 2026-10-18T07:31:22Z
 
+**fecha_inicio_utc:** 
 
-## Adenda de recepción visual · 18/10/2026
+**fecha_actualizacion_utc:** 2026-10-27T12:59:48Z
 
-Recepción visual autenticada concluida: Modelos y conexiones, EET-IA, guía privada, esquema de Bases y registro de derechos. Jerarquía común y sesión conservada en el recorrido comprobado. No se enviaron formularios ni se ejecutaron conexiones o modelos.
+**fecha_fin_utc:** 2026-10-18T11:14:33.9607052+00:00
 
-Se cierra el pendiente visual de esta entrega. Permanecen las obligaciones institucionales, Clippy no ejecutado por indisponibilidad y los límites técnicos y jurídicos del acta. No se activan producción, exámenes ni cuentas externas.
+**unidad_responsable:** Gestión documental del SV
 
-© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+**alcance:** Norma obligatoria para código Rust final; correcciones del Gestor, esquema, derechos, interfaz y documentación. Separación de la salida a proveedores y la frontera del núcleo.
 
+**repositorios_y_ramas:** SV-lenguaje-de-computacion: main, normativa y registro; gestión documental: custodia privada del código y evidencias.
 
-## Adenda de lectura, traducción auxiliar y presentación · 18/10/2026
+**cortes_de_entrada:** Lenguaje 40df67a40c86b405061d2b8ae40f0064d2672dc0; tres documentos rectores leídos íntegramente y cotejados.
 
-Se actualiza la guía de lectura V.08, se incorpora una operación específica y persistente para la traducción auxiliar y se separan datos y programa del visor, con origen aislado mediante CSP. Se comprueban persistencia, autoridad, revisión, cancelación y presentación. Los libros y el diagrama distinguen lenguajes, transporte y autoridad nuclear. La recepción técnica privada conserva las pruebas y las huellas de esta entrega. Custodia: IA-en/gestion-usuarios-y-documentacion-sv, revisión 370e441501dad243a7a1016b185534959afcbd72, auditorias/20261018-lectura-traduccion-frontera.
+**dependencias:** Arquitectura núcleo–frontera–soporte; continuación 15/09/2026; necesidades N-01–N-10; identidad jurídica y políticas institucionales.
 
-La traducción permanece fuera de los nodos expertos. Se conserva la preferencia real, las cuatro bases, las credenciales y las restricciones de contenido a proveedores. La entrada auxiliar de teclado de egui queda identificada en el DOM; no se confunde un elemento no visible con autoridad oculta. No se modifican núcleo, terna o contrato del polígono. Sin producción, exámenes, inferencias ni cuentas externas; permanecen los límites técnicos y jurídicos del acta.
+**resultado:** Norma obligatoria, esquema común y controles de privacidad incorporados al Gestor; rechazo de contenido hacia proveedores, incluidos contadores; declaraciones jerarquizadas y libros relacionados actualizados. No se recibe el circuito de inferencia con el núcleo. Recepción visual autenticada concluida: Modelos y conexiones, EET-IA, guía privada, esquema de Bases y registro de derechos. Jerarquía común y sesión conservada en el recorrido comprobado. No se enviaron formularios ni se ejecutaron conexiones o modelos. Se actualiza la guía de lectura V.08, se incorpora una operación específica y persistente para la traducción auxiliar y se separan datos y programa del visor, con origen aislado mediante CSP. Se comprueban persistencia, autoridad, revisión, cancelación y presentación. Los libros y el diagrama distinguen lenguajes, transporte y autoridad nuclear. La recepción técnica privada conserva las pruebas y las huellas de esta entrega. Custodia: IA-en/gestion-usuarios-y-documentacion-sv, revisión 370e441501dad243a7a1016b185534959afcbd72, auditorias/20261018-lectura-traduccion-frontera. Se centraliza la información de privacidad en formularios y comunicaciones, con identidad institucional configurable y sin consentimiento forzado. Se distingue la confirmación del buzón y la copia de la solicitud de una respuesta sustantiva. Se comprueba la presencia material del traductor auxiliar y se ajusta la presentación del Mapa web. Se incorpora en Rust el perfil Departamento de protección de datos, la configuración institucional, los apéndices, el diagnóstico y las preferencias de cookies y la tramitación de expedientes con identidad, fuentes, plazos, medidas sobre la ficha común y respuestas versionadas. Se comprueban permisos, concurrencia y conciliación entre bases. Custodia: IA-en/gestion-usuarios-y-documentacion-sv, revisión d34c7bab6ae048330d62cfcdd0e5e2e383b3547e, auditorias/20261018-privacidad-formularios-motor.
 
-© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+**verificacion:** 468 pruebas favorables, cero fallos, 4 exclusiones expresas; 14.99 segundos. Revisión adversarial de autorización, capacidad, aislamiento y registro de derechos. Recepción visual pública y autenticada favorable; sin modificación de datos de prueba. Recepción visual pública y autenticada favorable; sin modificación de datos de prueba. Recepción visual pública y autenticada y comprobación separada de correo; ninguna solicitud anterior resuelta automáticamente.
 
+**evidencias:** docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_006_CODIGO_LIMPIO_AISLAMIENTO_PRIVACIDAD_2026_10_18.md
 
-## Adenda del módulo institucional de privacidad y tratamiento de solicitudes · 18/10/2026
+**referencia_calidad:** TT-0027; Acta 006; RETP-2026-324
 
-Se centraliza la información de privacidad en formularios y comunicaciones, con identidad institucional configurable y sin consentimiento forzado. Se distingue la confirmación del buzón y la copia de la solicitud de una respuesta sustantiva. Se comprueba la presencia material del traductor auxiliar y se ajusta la presentación del Mapa web. Se incorpora en Rust el perfil Departamento de protección de datos, la configuración institucional, los apéndices, el diagnóstico y las preferencias de cookies y la tramitación de expedientes con identidad, fuentes, plazos, medidas sobre la ficha común y respuestas versionadas. Se comprueban permisos, concurrencia y conciliación entre bases. Custodia: IA-en/gestion-usuarios-y-documentacion-sv, revisión d34c7bab6ae048330d62cfcdd0e5e2e383b3547e, auditorias/20261018-privacidad-formularios-motor.
+**siguiente_accion:** Mantener las obligaciones institucionales y de integración todavía abiertas. La continuación del Gestor y la concordancia documental se registran en S45; S44 conserva el desarrollo nuclear.
 
-La recepción no certifica el cumplimiento jurídico integral: permanecen la determinación institucional de bases, conservación, contratos y transferencias y la atención sustantiva de derechos. La recopilación preparatoria y las medidas de perfil tienen alcance explícito: la revisión competente debe incluir los demás depósitos y derechos de terceros. No se atribuye supresión universal a una medida sobre la ficha común. La prueba técnica de correo está separada de solicitudes reales; no las resuelve. Se conservan datos, credenciales y restricciones, sin producción, exámenes, traducciones ni cuentas externas. Sólo conexión, ningún contenido a proveedores de IA.
+**observaciones:** Sin producción, exámenes, cuentas externas, inferencias, contadores ni correos de prueba. No certifica cumplimiento jurídico integral, confinamiento de todos los componentes ni cierre de semántica o IR. Permanecen pendientes las obligaciones y decisiones institucionales delimitadas en la política. Adenda del 27/10/2026: se normaliza el estado al valor reglado finalizado, conservando el alcance y la fecha del cierre histórico. Las prohibiciones de contenido descritas en 2026-10-18 corresponden a aquella recepción; la norma vigente distingue excepciones expresas por expediente, sin permiso general ni recepción clínica. Véanse Código limpio y auditable y S45. No se repiten ni se suman las pruebas históricas.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
 
@@ -1713,5 +1716,41 @@ Admisión firmada y composición intraproceso comprobadas, sin constructor de pr
 [Acta 008](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA_008_ADMISION_FIRMADA_Y_COMPOSICION_INTRAPROCESO_2026_10_19.md).
 
 Siguiente condición: Recibir protección real de configuración y reconocimiento institucional; continuar las dependencias de consolidación, adenda y R2 en el orden documentado, incluida recuperación sin restaurar facultades.
+
+© 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
+## S45 · Personalización de accesos y concordancia documental del Gestor
+
+**estado:** en ejecución
+
+**fecha_alta_utc:** 2026-10-27T12:59:48Z
+
+**fecha_inicio_utc:** 2026-10-27T11:20:38Z
+
+**fecha_actualizacion_utc:** 2026-10-27T12:59:48Z
+
+**fecha_fin_utc:** 
+
+**unidad_responsable:** Gestión documental del SV
+
+**alcance:** Selector de accesos autorizados, recepción de interfaz y conciliación de actas, sucesos y libros. No altera contratos nucleares, permisos ni licencias generales.
+
+**repositorios_y_ramas:** SV-lenguaje-de-computacion, IA-en/gestion-usuarios-y-documentacion-sv e IA-en/biblioteca-documental: main; sin nuevas ramas.
+
+**cortes_de_entrada:** Lenguaje 766595130b55769de7fd640c1a3e8f013d8f9b59; Gestor 3391d32d59a3611402a98da398647ae25e103807; biblioteca b426ddd5bbfb7704933b66996af95e3ef159ebfb.
+
+**dependencias:** S43 y TT-0027; S44 y TT-0028; Código limpio y auditable; consecuencias de omisión; recepciones documentales y técnicas del 26 y 27/10/2026.
+
+**resultado:** Panel plegable para más de ocho accesos autorizados, preferencias por cuenta y paridad ES/EN. Fuente 5cbc0f2862e9838a2738c68f69bc8d998229d911 instalada y recibida; siete bases conservadas. Biblioteca a34e9bb17a62560b641cab2eedcc42b7c4e6d637 publicada y entregada a la sede web. Recolocación del Acta RETP-2026-325 con referencia compatible en origen. Conciliación editorial de reglas de uso y controles técnicos, con originales históricos preservados.
+
+**verificacion:** Nueve pruebas específicas del panel, Clippy sin avisos propios y recepción visual de selección, recarga, plegado y ES/EN. Revisión estructural/editorial de 142 fuentes en once libros; alcance limitado a capítulos afectados y declaraciones de estado. No constituye revalidación científica o jurídica integral. Restan la recepción de la edición documental final y el cotejo remoto del registro.
+
+**evidencias:** https://github.com/IA-en/gestion-usuarios-y-documentacion-sv/commit/5cbc0f2862e9838a2738c68f69bc8d998229d911; https://github.com/IA-en/biblioteca-documental/commit/a34e9bb17a62560b641cab2eedcc42b7c4e6d637; docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA-01-PERTENENCIA.md
+
+**referencia_calidad:** S43; S44; TT-0027; TT-0028; Actas 006 y 008; RETP-2026-325.
+
+**siguiente_accion:** Cotejar la publicación del registro y la entrega de los libros privados finales; conservar las dependencias clínicas, institucionales y nucleares abiertas.
+
+**observaciones:** Alta posterior al inicio: la fecha de inicio identifica la publicación de fuentes ya comprobada, no el comienzo exacto del trabajo. No se habilitan datos de pacientes, consultas libres, modelos, gasto ni ataques al servicio. Los estados del núcleo y la recepción de los bancos de ensayo son independientes. Sin nueva acta sobre la organización interna del trabajo.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
