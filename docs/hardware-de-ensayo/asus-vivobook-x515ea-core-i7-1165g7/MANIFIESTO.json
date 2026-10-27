@@ -1,0 +1,36 @@
+{
+  "fecha": "2026-10-27",
+  "licencia": "CC-BY-NC-ND-4.0",
+  "rutas_relativas_a": "docs/hardware-de-ensayo",
+  "algoritmo": "SHA-256",
+  "archivos": [
+    {
+      "sha256": "c9a0b9e8aaf5c4b4725231b5db74851971d76fcf3e2e73cccd349cf78f717ff8",
+      "ruta": "ALCANCE.md",
+      "bytes": 3913
+    },
+    {
+      "sha256": "c7412545e9109797997ef45852a2d3a11f50406baac158046a2bae7ae518a140",
+      "ruta": "asus-vivobook-x515ea-core-i7-1165g7/FICHA.md",
+      "bytes": 7751
+    },
+    {
+      "sha256": "ee1817f8b2c96b1c4e4cc9304b32be9ba20343fada6ac1d00f6983fec20366cb",
+      "ruta": "asus-vivobook-x515ea-core-i7-1165g7/MANIFIESTO.json.license",
+      "bytes": 445
+    },
+    {
+      "sha256": "6e5b31cab56c45731f6503b64cfc976934b854d6484a881b35ff747810fc9cf8",
+      "ruta": "asus-vivobook-x515ea-core-i7-1165g7/MEDICIONES.json",
+      "bytes": 3169
+    },
+    {
+      "sha256": "ee1817f8b2c96b1c4e4cc9304b32be9ba20343fada6ac1d00f6983fec20366cb",
+      "ruta": "asus-vivobook-x515ea-core-i7-1165g7/MEDICIONES.json.license",
+      "bytes": 445
+    }
+  ],
+  "alcance": "Documentacion publica y agregados; excluye originales privados",
+  "version": "1.0",
+  "aviso_licencia": "MANIFIESTO.json.license"
+}

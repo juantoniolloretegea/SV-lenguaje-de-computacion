@@ -1,0 +1,90 @@
+{
+  "version": "1.0",
+  "fecha": "2026-10-27",
+  "plataforma": "SV-PLATAFORMA-X515EA-I7-1165G7-20261027",
+  "responsable": "ingeniero responsable de la prueba",
+  "naturaleza": "observacion_pasiva_y_demostracion_emulada",
+  "examen_del_candidato_ejecutado": false,
+  "perimetro_fisico_del_examen_recibido": false,
+  "comparacion_tensorial_realizada": false,
+  "hardware_del_proveedor_remoto_observado": false,
+  "antecedente": {
+    "fuente": "https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/5820ebaaf4058fdda5a4f545eb5b73da6f412898/docs/hardware-de-aceleracion-tensorial/selector-arbitro-director-cpu-gpu-tpu-npu/explorador-tensorial-sv/evidencias/contraste-windows.json",
+    "capacidades_por_deteccion": 0,
+    "limite": "Observacion historica; no prueba de calculo",
+    "fecha": "2026-10-15",
+    "muestras": 20,
+    "discordancias": 0
+  },
+  "observador": {
+    "fallos": 0,
+    "programa_sha256": "c33694c86244ee4fa6c653e222b911e0f1f3bc0740825d29c9f9c25e0053138f",
+    "version": "0.1.0",
+    "pruebas": 3,
+    "clippy_avisos_propios": 0
+  },
+  "muestreo": {
+    "muestras_json": 23,
+    "columnas_sensores": 136,
+    "memoria_disponible_min_bytes": 2008014848,
+    "cpu_paquete_min_C": 67,
+    "adquisicion_muestra_max_ms": 477,
+    "objetivo_duracion_s": 45,
+    "limite": "Actividad ordinaria concurrente; no ensayo de carga ni consumo atribuible exclusivamente al observador",
+    "cpu_paquete_max_C": 93,
+    "muestras_sensores_vigentes": 22
+  },
+  "etw": {
+    "sucesos": 88558,
+    "cobertura": [
+      "procesos",
+      "hilos",
+      "imagenes",
+      "TCP",
+      "UDP"
+    ],
+    "sucesos_perdidos_declarados": 0,
+    "cobertura_completa_del_sistema": false,
+    "duracion_s": 46
+  },
+  "vtune": {
+    "captura": "terminada_con_aviso_por_limite_de_volumen",
+    "ventana_integra_de_cinco_segundos_acreditada": false,
+    "acceso_memoria": "no_disponible_en_la_configuracion_observada",
+    "causa_metricas_ausentes": "Informe sin recepcion; la configuracion de contadores no acredita valores validos",
+    "metricas_detalladas_cache_IPC_latencia": null,
+    "limite_MB": 32,
+    "informe_finalizado": false,
+    "limite_informe_s": 45
+  },
+  "x86_emulado": {
+    "direcciones_emuladas_hex": [
+      "7000",
+      "7001"
+    ],
+    "AX_hex": "1235",
+    "herramienta": "Bochs 3.1",
+    "BX_hex": "1235",
+    "salida_automatizada_ordinaria_recibida": false,
+    "memoria_emulada_MiB": 16,
+    "instrucciones": 8,
+    "modo_bits": 16,
+    "bus_fisico_medido": false,
+    "bytes_resultantes_hex": [
+      "35",
+      "12"
+    ]
+  },
+  "fuentes_restringidas": [
+    {
+      "sha256": "dec56376b64fde8c316abbd6df112d0803ac722efd78e97aff65776a12909f3b",
+      "ruta": "auditorias/20261027-observacion-equipo/RECEPCION-Y-LIMITES.md",
+      "revision": "16f4cc948ed545969565d2c3b90be0903e4ac596",
+      "documento": "RECEPCION-Y-LIMITES.md",
+      "originales_integrales_publicados": false,
+      "repositorio": "IA-en/gestion-usuarios-y-documentacion-sv"
+    }
+  ],
+  "licencia": "CC-BY-NC-ND-4.0",
+  "aviso_licencia": "MEDICIONES.json.license"
+}
