@@ -1,36 +1,37 @@
 {
+  "aviso_licencia": "MANIFIESTO.json.license",
   "fecha": "2026-10-27",
+  "version": "1.1",
+  "alcance": "Documentación pública y agregados; excluye originales privados",
+  "exclusion_autorreferencia": "El manifiesto y su aviso no se incluyen en su propio inventario; sus huellas se cotejan en el recibo de publicación.",
   "licencia": "CC-BY-NC-ND-4.0",
-  "rutas_relativas_a": "docs/hardware-de-ensayo",
   "algoritmo": "SHA-256",
   "archivos": [
     {
-      "sha256": "c9a0b9e8aaf5c4b4725231b5db74851971d76fcf3e2e73cccd349cf78f717ff8",
-      "ruta": "ALCANCE.md",
-      "bytes": 3913
+      "sha256": "192f883f8db18d2e2d52053cc476d3c67e7e8cbb3769e119300da352537aa42f",
+      "bytes": 4293,
+      "ruta": "ALCANCE.md"
     },
     {
-      "sha256": "c7412545e9109797997ef45852a2d3a11f50406baac158046a2bae7ae518a140",
-      "ruta": "asus-vivobook-x515ea-core-i7-1165g7/FICHA.md",
-      "bytes": 7751
+      "sha256": "99be2949a4cb936cde4d872b9e2a64819299d171e25ce967554e80715fecc9eb",
+      "bytes": 10001,
+      "ruta": "SUFICIENCIA-DEL-ENSAYO.md"
     },
     {
-      "sha256": "ee1817f8b2c96b1c4e4cc9304b32be9ba20343fada6ac1d00f6983fec20366cb",
-      "ruta": "asus-vivobook-x515ea-core-i7-1165g7/MANIFIESTO.json.license",
-      "bytes": 445
+      "sha256": "aa70386aab577f6ea8a2b8c89ec8174e778bc487d9f96f38d02a04702345771f",
+      "bytes": 10131,
+      "ruta": "asus-vivobook-x515ea-core-i7-1165g7/FICHA.md"
     },
     {
-      "sha256": "6e5b31cab56c45731f6503b64cfc976934b854d6484a881b35ff747810fc9cf8",
-      "ruta": "asus-vivobook-x515ea-core-i7-1165g7/MEDICIONES.json",
-      "bytes": 3169
+      "sha256": "2489dac83791fdc29582943a26951dd1185bf37b11a721374d09762971f92c3f",
+      "bytes": 5537,
+      "ruta": "asus-vivobook-x515ea-core-i7-1165g7/MEDICIONES.json"
     },
     {
-      "sha256": "ee1817f8b2c96b1c4e4cc9304b32be9ba20343fada6ac1d00f6983fec20366cb",
-      "ruta": "asus-vivobook-x515ea-core-i7-1165g7/MEDICIONES.json.license",
-      "bytes": 445
+      "sha256": "427494f15ca978632113c84003397d1efec5baf1d87d438e2ad2e887edf8e3da",
+      "bytes": 480,
+      "ruta": "asus-vivobook-x515ea-core-i7-1165g7/MEDICIONES.json.license"
     }
   ],
-  "alcance": "Documentacion publica y agregados; excluye originales privados",
-  "version": "1.0",
-  "aviso_licencia": "MANIFIESTO.json.license"
+  "rutas_relativas_a": "docs/hardware-de-ensayo"
 }

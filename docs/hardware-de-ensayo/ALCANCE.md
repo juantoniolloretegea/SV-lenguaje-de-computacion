@@ -1,8 +1,10 @@
 # Hardware y plataformas de ensayo del SV
 
-27 de octubre de 2026 · Versión 1.0.
+27 de octubre de 2026 · Versión 1.1.
 
 Este apartado documenta el soporte material y las condiciones de observación, aislamiento, parada y recuperación de los ensayos. Una ficha identifica una configuración y la evidencia disponible; no concede por sí sola autorización para ejecutar una prueba.
+
+La [suficiencia del ensayo](SUFICIENCIA-DEL-ENSAYO.md) fija la condición de validez: las protecciones exteriores no deben resolver la tarea en lugar del candidato, y las carencias de medición no se eliminan del protocolo para declarar aptitud. La distribución entre portátil y soportes remotos conserva cada obligación necesaria y exige evidencia propia de cada plataforma.
 
 ## Relación con el cómputo y la aceleración tensorial
 
