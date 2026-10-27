@@ -1721,15 +1721,15 @@ Siguiente condición: Recibir protección real de configuración y reconocimient
 
 ## S45 · Personalización de accesos y concordancia documental del Gestor
 
-**estado:** en ejecución
+**estado:** finalizado
 
 **fecha_alta_utc:** 2026-10-27T12:59:48Z
 
 **fecha_inicio_utc:** 2026-10-27T11:20:38Z
 
-**fecha_actualizacion_utc:** 2026-10-27T12:59:48Z
+**fecha_actualizacion_utc:** 2026-10-27T13:42:22Z
 
-**fecha_fin_utc:** 
+**fecha_fin_utc:** 2026-10-27T13:42:22Z
 
 **unidad_responsable:** Gestión documental del SV
 
@@ -1741,16 +1741,16 @@ Siguiente condición: Recibir protección real de configuración y reconocimient
 
 **dependencias:** S43 y TT-0027; S44 y TT-0028; Código limpio y auditable; consecuencias de omisión; recepciones documentales y técnicas del 26 y 27/10/2026.
 
-**resultado:** Panel plegable para más de ocho accesos autorizados, preferencias por cuenta y paridad ES/EN. Fuente 5cbc0f2862e9838a2738c68f69bc8d998229d911 instalada y recibida; siete bases conservadas. Biblioteca a34e9bb17a62560b641cab2eedcc42b7c4e6d637 publicada y entregada a la sede web. Recolocación del Acta RETP-2026-325 con referencia compatible en origen. Conciliación editorial de reglas de uso y controles técnicos, con originales históricos preservados.
+**resultado:** Panel plegable para más de ocho accesos autorizados, preferencias por cuenta y paridad ES/EN. Fuente 5cbc0f2862e9838a2738c68f69bc8d998229d911 instalada y recibida; siete bases conservadas. Biblioteca a34e9bb17a62560b641cab2eedcc42b7c4e6d637 publicada y entregada a la sede web. Recolocación del Acta RETP-2026-325 con referencia compatible en origen. Conciliación editorial de reglas de uso y controles técnicos, con originales históricos preservados. Edición final de libros privados 26eda9f42402429284f48ca7c03d5f5464ab187b incorporada al Gestor; programa f4d17975a0ff57a22f6713c2dd1a4ac4a9005b43b666d2260bdaa5b81a60d9d2. Dieciséis párrafos repetidos sustituidos por referencias compartidas; cuatro repeticiones justificadas conservadas. Acta y registros cotejados en 5820ebaaf4058fdda5a4f545eb5b73da6f412898.
 
-**verificacion:** Nueve pruebas específicas del panel, Clippy sin avisos propios y recepción visual de selección, recarga, plegado y ES/EN. Revisión estructural/editorial de 142 fuentes en once libros; alcance limitado a capítulos afectados y declaraciones de estado. No constituye revalidación científica o jurídica integral. Restan la recepción de la edición documental final y el cotejo remoto del registro.
+**verificacion:** Nueve pruebas específicas del panel y cuatro del recorrido documental final satisfactorias. Primer intento documental con tres aciertos y un fallo de paridad de enlaces conservado; corregido y repetido. Clippy sin avisos propios; veintiocho advertencias de pdf-extract. Cotejo funcional de siete bases, credenciales intactas y tres servicios activos sin reinicios inesperados. Revisión estructural/editorial de 142 fuentes en once libros, limitada a capítulos afectados y declaraciones de estado. Recepción visual del panel y del capítulo Gestión con su referencia compartida en ES/EN. No constituye revalidación científica o jurídica integral, examen de candidato ni prueba en dispositivo móvil.
 
-**evidencias:** https://github.com/IA-en/gestion-usuarios-y-documentacion-sv/commit/5cbc0f2862e9838a2738c68f69bc8d998229d911; https://github.com/IA-en/biblioteca-documental/commit/a34e9bb17a62560b641cab2eedcc42b7c4e6d637; docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA-01-PERTENENCIA.md
+**evidencias:** https://github.com/IA-en/gestion-usuarios-y-documentacion-sv/commit/5cbc0f2862e9838a2738c68f69bc8d998229d911; https://github.com/IA-en/biblioteca-documental/commit/a34e9bb17a62560b641cab2eedcc42b7c4e6d637; docs/calidad/tuberias-ia/continuacion-15-09-2026/ACTA-01-PERTENENCIA.md; https://github.com/IA-en/gestion-usuarios-y-documentacion-sv/commit/26eda9f42402429284f48ca7c03d5f5464ab187b; https://github.com/IA-en/gestion-usuarios-y-documentacion-sv/commit/8781a19110d38299b4add63ee3b983b2a93b6828
 
 **referencia_calidad:** S43; S44; TT-0027; TT-0028; Actas 006 y 008; RETP-2026-325.
 
-**siguiente_accion:** Cotejar la publicación del registro y la entrega de los libros privados finales; conservar las dependencias clínicas, institucionales y nucleares abiertas.
+**siguiente_accion:** Conservar las dependencias clínicas, institucionales y nucleares abiertas. El banco práctico y su soporte requieren recepción separada. La concordancia puntual del README del Explorador, ajena a los capítulos modificados, queda identificada para revisión autorizada.
 
-**observaciones:** Alta posterior al inicio: la fecha de inicio identifica la publicación de fuentes ya comprobada, no el comienzo exacto del trabajo. No se habilitan datos de pacientes, consultas libres, modelos, gasto ni ataques al servicio. Los estados del núcleo y la recepción de los bancos de ensayo son independientes. Sin nueva acta sobre la organización interna del trabajo.
+**observaciones:** Alta posterior al inicio: la fecha de inicio identifica la publicación de fuentes ya comprobada, no el comienzo exacto del trabajo. No se habilitan datos de pacientes, consultas libres, modelos, gasto ni ataques al servicio. Los estados del núcleo y la recepción de los bancos de ensayo son independientes. Sin nueva acta sobre la organización interna del trabajo. Cierre delimitado de la entrega documental. El README histórico del Explorador conserva una formulación sobre el traductor auxiliar sustituida por la precisión del 18/10/2026; no se ha modificado ni se ha trasladado ese texto a la ficha nueva de hardware. Se conserva esta reserva, sin atribuir concordancia universal a los documentos del SV.
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
