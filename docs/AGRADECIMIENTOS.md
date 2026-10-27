@@ -19,6 +19,7 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[Fontations y Skrifa](https://github.com/googlefonts/fontations)**: lectura de fuentes tipográficas y sus métricas en el tratamiento documental de PDF.
 - **[Git](https://git-scm.com/)**: identificación de revisiones y conservación de la evolución del código y los documentos.
 - **[GitHub](https://github.com/)**: alojamiento de fuentes y documentación, identificación de revisiones y servicios de comprobación automatizada en los repositorios que los tengan habilitados.
+- **[Google Drive](https://workspace.google.com/products/drive/)**: almacenamiento remoto de copias cifradas y secuenciales de los recursos del SV incluidos en el catálogo autorizado. La custodia automática y la recuperación con cotejo de integridad están comprobadas; la copia de bases y su política específica de conservación siguen pendientes de recepción.
 - **[Harmony, de OpenAI](https://github.com/openai/harmony)**: formato de mensajes y representación de conversaciones utilizado en las pruebas de integración de modelos de la familia gpt-oss. Es un formato de intercambio, no un motor de inferencia.
 - **[Hayro](https://github.com/LaurenzV/hayro)**: interpretación y representación gráfica de documentos PDF en Rust.
 - **[Helsinki-NLP y OPUS-MT](https://huggingface.co/Helsinki-NLP/opus-mt-en-es)**: modelo de traducción inglés-español utilizado como herramienta auxiliar local del Gestor. Su función es apoyar la lectura; no sustituye el original ni realiza el consejo experto de un dominio.
@@ -44,7 +45,7 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[Rust](https://rust-lang.org/)**: lenguaje, compilador y biblioteca estándar sobre los que se realiza el Lenguaje de Computación SV.
 - **[RustCrypto](https://github.com/RustCrypto)**: bibliotecas de resumen criptográfico y autenticación de mensajes, como SHA-2 y HMAC, y utilidades como zeroize para el borrado de valores sensibles en memoria.
 - **[rustfmt](https://github.com/rust-lang/rustfmt)**: presentación uniforme de las fuentes Rust.
-- **[Rustic](https://github.com/rustic-rs/rustic)**: herramienta en Rust instalada y comprobada con datos sintéticos para copias cifradas, deduplicación y recuperación. Su integración remota y el uso con las bases del servicio siguen pendientes de recepción.
+- **[Rustic](https://github.com/rustic-rs/rustic)**: herramienta en Rust utilizada para el cifrado, la deduplicación y la recuperación de las copias del catálogo autorizado. Su transporte a Google Drive está incorporado a la custodia automática del SV, con restitución e integridad comprobadas para esos recursos; no acredita por sí solo la copia o recuperación funcional de las bases.
 - **[rustix](https://github.com/bytecodealliance/rustix)**: acceso desde Rust a funciones del sistema operativo utilizadas por los controles de procesos.
 - **[Rustls](https://github.com/rustls/rustls)**: protección TLS de comunicaciones, con las bibliotecas criptográficas y de comprobación de certificados que incorpora la configuración utilizada.
 - **[rustup](https://rust-lang.github.io/rustup/)**: gestión de las versiones de Rust y de sus componentes de desarrollo.
@@ -69,15 +70,11 @@ Cada aportación se reconoce en su ámbito. La relación no sustituye el inventa
 
 La relación se revisará cuando cambien las herramientas utilizadas, conforme a la [política de mantenimiento de dependencias y publicación de versiones](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/calidad/POLITICA-DEPENDENCIAS-Y-VERSIONES.md). La [relación de referencia en GitHub](https://github.com/juantoniolloretegea/SV-lenguaje-de-computacion/blob/main/docs/AGRADECIMIENTOS.md) mantiene el mismo contenido y orden.
 
-## Servicios en evaluación
-
-[Google Drive](https://workspace.google.com/products/drive/) se evalúa como destino de copias cifradas y secuenciales, con política de conservación y recuperación. La cuenta disponible y el transporte compatible no equivalen a una copia remota comprobada. Esta mención identifica el servicio estudiado; no declara su incorporación operativa a la custodia del SV.
-
 ## Identificación y alcance del reconocimiento
 
 Esta página ofrece metadatos públicos que describen la misma relación de proyectos y sus enlaces oficiales. Facilitan su identificación por buscadores; no garantizan su indexación ni notifican automáticamente a los responsables de los proyectos. El reconocimiento no establece patrocinio, colaboración contractual ni aval de sus titulares.
 
-Revisión: 26 de octubre de 2026.
+Revisión: 27 de octubre de 2026.
 
 ---
 
