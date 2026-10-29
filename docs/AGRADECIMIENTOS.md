@@ -27,8 +27,10 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[html-to-markdown](https://github.com/xberg-io/html-to-markdown)**: conversión de contenido HTML a Markdown en el tratamiento documental.
 - **[hyper y hyper-util](https://github.com/hyperium/hyper)**: transporte HTTP del servicio, junto con los componentes del mismo ecosistema para cuerpos de mensajes y fechas HTTP.
 - **[image](https://github.com/image-rs/image)**: lectura y tratamiento de imágenes en los componentes documentales y visuales.
+- **[Intel VTune Profiler](https://www.intel.com/content/www/us/en/developer/tools/oneapi/vtune-profiler.html)**: análisis instrumental del soporte del ensayo; las capturas recibidas conservan sus límites y no acreditan por sí solas la observación continua de todos los contadores.
 - **[Jiff](https://github.com/BurntSushi/jiff)**: tratamiento de fechas, horas y zonas horarias en el Gestor; su uso instrumental no modifica las primitivas del SV.
 - **[jsonwebtoken](https://github.com/Keats/jsonwebtoken)**: interpretación y verificación de credenciales estructuradas JWT en los recorridos de autenticación que las utilizan.
+- **[Libre Hardware Monitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor)**: lectura de sensores del equipo de ensayo; cada señal se interpreta según su disponibilidad y procedencia comprobadas.
 - **[Linux](https://www.kernel.org/)**: núcleo del sistema operativo utilizado en entornos de construcción, comprobación y ejecución del lenguaje y de sus adaptadores.
 - **[lopdf](https://github.com/J-F-Liu/lopdf)**: lectura y análisis de la estructura de documentos PDF.
 - **[mdBook](https://rust-lang.github.io/mdBook/)**: construcción y navegación de los libros de documentación.
@@ -38,9 +40,11 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[netstat2](https://github.com/ohadravid/netstat2-rs)**: observación de conexiones TCP y UDP asociadas al proceso en la instrumentación de pruebas.
 - **[OpenAI](https://openai.com/)**: tecnología de inteligencia artificial utilizada como apoyo al análisis, la programación y la revisión documental; también modelos abiertos empleados en pruebas de integración.
 - **[OpenTelemetry Rust](https://github.com/open-telemetry/opentelemetry-rust)**: instrumentación y correlación de operaciones en los ensayos de inferencia y en el acceso documental.
+- **[PawnIO](https://github.com/namazso/PawnIO)**: controlador utilizado por la lectura de sensores del soporte Windows; su reconocimiento no atribuye autoridad decisoria sobre el SV.
 - **[pdf-extract](https://github.com/jrmuizel/pdf-extract)**: extracción de texto de documentos PDF, base de la adaptación documental utilizada por el SV.
 - **[pulldown-cmark](https://github.com/pulldown-cmark/pulldown-cmark)**: interpretación de Markdown para su presentación documental.
 - **[rand](https://github.com/rust-random/rand)**: generación de valores aleatorios en los mecanismos que la requieren.
+- **[raw-cpuid](https://github.com/gz/rust-cpuid)**: consulta desde Rust de la identificación, topología y geometría de caché declaradas por la unidad central de procesamiento. No equivale a medir su actividad ni su tiempo efectivo de habilitación.
 - **[redb](https://github.com/cberner/redb)**: base de datos integrada en Rust utilizada para los registros persistentes del Gestor y componentes asociados.
 - **[Reqwest](https://github.com/seanmonstar/reqwest)**: cliente HTTP para las comunicaciones expresamente habilitadas por la aplicación.
 - **[Rust](https://rust-lang.org/)**: lenguaje, compilador y biblioteca estándar sobre los que se realiza el Lenguaje de Computación SV.
@@ -65,6 +69,7 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[wasm-bindgen](https://wasm-bindgen.github.io/wasm-bindgen/)**: comunicación entre WebAssembly y JavaScript en los visualizadores web asociados.
 - **[Wasmtime](https://github.com/bytecodealliance/wasmtime)**: entorno de ejecución utilizado para comprobar componentes WebAssembly con WASI. Puede emplearse en equipos locales y servidores.
 - **[WebAssembly](https://webassembly.org/)**: formato de ejecución que permite distribuir componentes Rust del lenguaje en el navegador y en otros entornos compatibles.
+- **[Windows Performance Recorder](https://learn.microsoft.com/en-us/windows-hardware/test/wpt/windows-performance-recorder)**: captura de sucesos del sistema y las aplicaciones mediante el seguimiento de eventos de Windows (ETW), utilizada como evidencia instrumental del soporte.
 - **[zip](https://github.com/zip-rs/zip2)**: lectura y preparación de archivos ZIP, incluidas las copias descargables previstas por el Gestor.
 
 Cada aportación se reconoce en su ámbito. La relación no sustituye el inventario de dependencias y versiones de cada distribución, ni atribuye a sus responsables participación en las decisiones, certificación o aval del SV. Se reconoce asimismo el trabajo de quienes mantienen las dependencias indirectas de estos proyectos. Sus licencias y atribuciones se conservan en las fuentes y distribuciones correspondientes; la licencia de este documento no las modifica.
@@ -82,3 +87,4 @@ Revisión: 29 de octubre de 2026.
 ---
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
