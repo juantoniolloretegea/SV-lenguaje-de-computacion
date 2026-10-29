@@ -11,6 +11,7 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[Candle](https://github.com/huggingface/candle)**: bibliotecas de Hugging Face para cálculo tensorial y ejecución de modelos en Rust, utilizadas por la traducción auxiliar local y por motores de inferencia empleados en ensayos.
 - **[Cargo](https://doc.rust-lang.org/cargo/)**: organización de los componentes Rust, sus dependencias, construcción y pruebas.
 - **[cargo-audit y RustSec](https://rustsec.org/)**: contraste de dependencias con avisos públicos de seguridad y conservación del resultado de la revisión.
+- **[Chrono](https://github.com/chronotope/chrono)**: fechas y marcas temporales en la instrumentación auxiliar de ensayos; su uso no sustituye el reloj monotónico que mide duraciones.
 - **[Clippy](https://doc.rust-lang.org/clippy/)**: análisis estático y ayuda para revisar la claridad y calidad del código Rust.
 - **[Cloudflare](https://developers.cloudflare.com/)**: servicios de publicación y protección del alojamiento web institucional. Su uso corresponde a la instalación que los configure.
 - **[cookie](https://github.com/SergioBenitez/cookie-rs)**: construcción e interpretación de cookies HTTP en el servicio web.
@@ -54,7 +55,7 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[sysinfo](https://github.com/GuillaumeGomez/sysinfo)**: obtención de información del sistema y de sus recursos para la telemetría y las comprobaciones de hardware.
 - **[tar-rs](https://github.com/alexcrichton/tar-rs)**: lectura delimitada de archivos de recuperación y cotejo de los contenidos inventariados, sin ejecutar ni instalar sus entradas.
 - **[Tokenizers](https://github.com/huggingface/tokenizers)**: bibliotecas de Hugging Face para convertir texto y secuencias de tokens en las herramientas de traducción e integración de modelos.
-- **[Tokio](https://github.com/tokio-rs/tokio)**: ejecución de tareas asíncronas y coordinación de operaciones de entrada y salida en servicios y herramientas de inferencia.
+- **[Tokio](https://github.com/tokio-rs/tokio)**: ejecución de tareas asíncronas y coordinación de operaciones de entrada y salida en servicios, herramientas de inferencia y comprobaciones concurrentes de catálogos.
 - **[toml_edit](https://github.com/toml-rs/toml)**: actualización acotada de los manifiestos de dependencias conservando su estructura.
 - **[Tower](https://github.com/tower-rs/tower)**: utilidades para comprobar los servicios HTTP del Gestor.
 - **[ttf-parser](https://github.com/harfbuzz/ttf-parser)**: lectura de estructuras y métricas de fuentes tipográficas en el tratamiento documental.
@@ -74,7 +75,9 @@ La relación se revisará cuando cambien las herramientas utilizadas, conforme a
 
 Esta página ofrece metadatos públicos que describen la misma relación de proyectos y sus enlaces oficiales. Facilitan su identificación por buscadores; no garantizan su indexación ni notifican automáticamente a los responsables de los proyectos. El reconocimiento no establece patrocinio, colaboración contractual ni aval de sus titulares.
 
-Revisión: 27 de octubre de 2026.
+El [inventario acotado de la instrumentación del ensayo práctico](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/estandar-comparativo-o-benchmark/ediciones/ciberseguridad/eet-cyb16-practica-20261027/practicas/COMPONENTES-Y-AGRADECIMIENTOS.md) identifica versiones, licencias y funciones efectivamente utilizadas. Las referencias de arquitectura estudiadas y no incorporadas se indican por separado.
+
+Revisión: 29 de octubre de 2026.
 
 ---
 
