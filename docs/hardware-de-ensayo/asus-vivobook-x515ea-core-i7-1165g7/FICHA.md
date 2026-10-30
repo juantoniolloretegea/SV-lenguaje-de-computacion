@@ -1,10 +1,18 @@
 # ASUS VivoBook X515EA/F1500EA con Intel Core i7-1165G7
 
-27 de octubre de 2026 · Versión 1.1 · Identificador documental: `SV-PLATAFORMA-X515EA-I7-1165G7-20261027`.
+30 de octubre de 2026 · Versión 1.2 · Identificador documental: `SV-PLATAFORMA-X515EA-I7-1165G7-20261027`.
 
 **Estado: observación instrumental parcialmente recibida; plataforma no habilitada para el examen adversarial.** La instalación comparte funciones de puesto de trabajo y servidor del SV. Esta ficha no autoriza ataques contra el servicio en funcionamiento.
 
-Se aplica el [criterio de suficiencia del ensayo](../SUFICIENCIA-DEL-ENSAYO.md): una carencia necesaria debe resolverse o cubrirse con otro soporte competente. No se elimina del examen ni se considera superada por la intervención de una protección externa. Esta revisión recibe dos mejoras instrumentales concretas; no declara resueltas las demás condiciones.
+Se aplica el [criterio de suficiencia del ensayo](../SUFICIENCIA-DEL-ENSAYO.md): una carencia necesaria debe resolverse o cubrirse con otro soporte competente. No se elimina del examen ni se considera superada por la intervención de una protección externa. Las observaciones del 27/10/2026 se conservan abajo con su alcance. El estado posterior de recepción se delimita a continuación.
+
+## Estado de recepción y relación con HCC1
+
+El estudio instrumental de los niveles segundo (L2) y tercero (L3) de caché se ha cerrado con alcance limitado. No se acreditan una calibración integral favorable, el tiempo efectivo por contador ni la integridad continua de su programación. El [anexo técnico de Q19, en el libro de Ensayo y observabilidad](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/anexo-tecnico-q19.md) conserva las mediciones posteriores, sus diferencias y los límites de recepción; es la referencia común para esa evolución.
+
+El [Hackathon Combinado de Ciberseguridad · 1.ª edición. España (HCC1, España)](https://sv.itvia.online/benchmark?convocatoria=eet-cyb16-practica-20261027&vista=documentacion) conserva veinticinco parámetros críticos. Su escenario físico Q19 continúa pendiente de recepción. Las denominaciones C13–C17 de la tabla de familias prevista el 27/10/2026 son antecedentes de preparación: no constituyen la numeración vigente de los parámetros del examen. No se trasladan estas observaciones a otros procesadores o aceleradores sin comprobación propia.
+
+Las menciones posteriores a soportes remotos describen alternativas consideradas en esa fecha, no su disponibilidad actual ni una autorización de consumo. Esta actualización documental no modifica firmware, medidas de protección ni permisos sobre el servicio.
 
 ## Identidad y antecedente
 
@@ -68,3 +76,4 @@ La vigilancia descrita fue temporal. Las herramientas y controladores instalados
 [Volver al alcance de hardware de ensayo](../ALCANCE.md).
 
 © 2026 Juan Antonio Lloret Egea. Algunos derechos reservados. | ORCID: 0000-0002-6634-3351 | Instituto Tecnológico Virtual de la Inteligencia Artificial para el Español™ (ITVIA) | IA eñ™ – La Biblia de la IA™ | ISSN 2695-6411 | Licencia Creative Commons Atribución-NoComercial-SinDerivadas 4.0 Internacional (CC BY-NC-ND 4.0).
+
