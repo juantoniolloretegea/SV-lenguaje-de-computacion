@@ -4,10 +4,12 @@ El Lenguaje de Computación del Sistema Vectorial SV y sus herramientas asociada
 
 La relación se presenta en **orden alfabético**, sin clasificación de importancia. Cada entrada indica el ámbito de su aportación:
 
+- **[Alpine Linux](https://alpinelinux.org/)**: sistema invitado de las redes virtuales de ensayo. Se ha utilizado la edición 3.24.3; las licencias de sus componentes se conservan individualmente.
 - **[anyhow](https://github.com/dtolnay/anyhow)**: tratamiento y descripción de errores en herramientas auxiliares y adaptadores de inferencia en Rust.
 - **[Apache OpenDAL](https://opendal.apache.org/)**: abstracción de almacenamiento incorporada a Rustic para sus transportes. Su presencia no acredita que un destino remoto esté configurado o recibido para las copias del SV.
 - **[Axum](https://github.com/tokio-rs/axum)**: organización de las rutas y atención de las solicitudes del servicio web del Gestor.
 - **[base64](https://github.com/marshallpierce/rust-base64)**: codificación de datos binarios en los formatos de intercambio que la requieren.
+- **[BusyBox](https://busybox.net/)**: utilidades del sistema invitado para comprobar servicios y conectividad con datos sintéticos en las redes de ensayo; se conservan sus condiciones GNU GPL v2.
 - **[Candle](https://github.com/huggingface/candle)**: bibliotecas de Hugging Face para cálculo tensorial y ejecución de modelos en Rust, utilizadas por la traducción auxiliar local y por motores de inferencia empleados en ensayos.
 - **[Cargo](https://doc.rust-lang.org/cargo/)**: organización de los componentes Rust, sus dependencias, construcción y pruebas.
 - **[cargo-audit y RustSec](https://rustsec.org/)**: contraste de dependencias con avisos públicos de seguridad y conservación del resultado de la revisión.
@@ -43,6 +45,7 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[PawnIO](https://github.com/namazso/PawnIO)**: controlador utilizado por la lectura de sensores del soporte Windows; su reconocimiento no atribuye autoridad decisoria sobre el SV.
 - **[pdf-extract](https://github.com/jrmuizel/pdf-extract)**: extracción de texto de documentos PDF, base de la adaptación documental utilizada por el SV.
 - **[pulldown-cmark](https://github.com/pulldown-cmark/pulldown-cmark)**: interpretación de Markdown para su presentación documental.
+- **[QEMU](https://www.qemu.org/)**: emulación de equipos y enlaces virtuales aislados en las comprobaciones locales. Se ha utilizado la versión 10.2.1; su licencia principal es GNU GPL v2, con las excepciones y licencias de componentes recogidas por el proyecto.
 - **[rand](https://github.com/rust-random/rand)**: generación de valores aleatorios en los mecanismos que la requieren.
 - **[raw-cpuid](https://github.com/gz/rust-cpuid)**: consulta desde Rust de la identificación, topología y geometría de caché declaradas por la unidad central de procesamiento. No equivale a medir su actividad ni su tiempo efectivo de habilitación.
 - **[redb](https://github.com/cberner/redb)**: base de datos integrada en Rust utilizada para los registros persistentes del Gestor y componentes asociados.
@@ -63,8 +66,10 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[toml_edit](https://github.com/toml-rs/toml)**: actualización acotada de los manifiestos de dependencias conservando su estructura.
 - **[Tower](https://github.com/tower-rs/tower)**: utilidades para comprobar los servicios HTTP del Gestor.
 - **[ttf-parser](https://github.com/harfbuzz/ttf-parser)**: lectura de estructuras y métricas de fuentes tipográficas en el tratamiento documental.
+- **[Ubuntu](https://ubuntu.com/)**: entorno Linux de construcción y ejecución de instrumentos y máquinas virtuales. Sus paquetes y bibliotecas conservan sus licencias propias.
 - **[unicode-normalization](https://github.com/unicode-rs/unicode-normalization)**: normalización Unicode en la extracción y el tratamiento de texto documental.
 - **[UserWay](https://userway.org/)**: herramienta complementaria de accesibilidad incorporada a la web institucional; no sustituye la accesibilidad propia de la interfaz.
+- **[Vector](https://vector.dev/)**: adquisición local de métricas del anfitrión. La versión 0.61.0 se ha utilizado en una captura de procesador, memoria y estado del sistema en Windows; esta comprobación no acredita todavía supervisión permanente, red ni todos los sucesos de seguridad. Licencia Mozilla Public License 2.0.
 - **[WASI](https://wasi.dev/)**: interfaces del sistema para comprobar la ejecución WebAssembly fuera del navegador, dentro de las capacidades concedidas por el entorno.
 - **[wasm-bindgen](https://wasm-bindgen.github.io/wasm-bindgen/)**: comunicación entre WebAssembly y JavaScript en los visualizadores web asociados.
 - **[Wasmtime](https://github.com/bytecodealliance/wasmtime)**: entorno de ejecución utilizado para comprobar componentes WebAssembly con WASI. Puede emplearse en equipos locales y servidores.
@@ -82,7 +87,7 @@ Esta página ofrece metadatos públicos que describen la misma relación de proy
 
 El [inventario acotado de la instrumentación del ensayo práctico](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/estandar-comparativo-o-benchmark/ediciones/ciberseguridad/eet-cyb16-practica-20261027/practicas/COMPONENTES-Y-AGRADECIMIENTOS.md) identifica versiones, licencias y funciones efectivamente utilizadas. Las referencias de arquitectura estudiadas y no incorporadas se indican por separado.
 
-Revisión: 29 de octubre de 2026.
+Revisión: 2 de noviembre de 2026.
 
 ---
 
