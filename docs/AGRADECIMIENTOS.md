@@ -9,6 +9,7 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[Apache OpenDAL](https://opendal.apache.org/)**: abstracción de almacenamiento incorporada a Rustic para sus transportes. Su presencia no acredita que un destino remoto esté configurado o recibido para las copias del SV.
 - **[Axum](https://github.com/tokio-rs/axum)**: organización de las rutas y atención de las solicitudes del servicio web del Gestor.
 - **[base64](https://github.com/marshallpierce/rust-base64)**: codificación de datos binarios en los formatos de intercambio que la requieren.
+- **[bubblewrap](https://github.com/containers/bubblewrap)**: separación de archivos, procesos y redes mediante espacios de nombres Linux para comprobar recintos de ensayo. Se ha utilizado la versión 0.11.1; licencia GNU LGPL versión 2 o posterior. La cobertura se limita a la configuración y a las comprobaciones recibidas; no constituye una garantía universal de aislamiento.
 - **[BusyBox](https://busybox.net/)**: utilidades del sistema invitado para comprobar servicios y conectividad con datos sintéticos en las redes de ensayo; se conservan sus condiciones GNU GPL v2.
 - **[Candle](https://github.com/huggingface/candle)**: bibliotecas de Hugging Face para cálculo tensorial y ejecución de modelos en Rust, utilizadas por la traducción auxiliar local y por motores de inferencia empleados en ensayos.
 - **[Cargo](https://doc.rust-lang.org/cargo/)**: organización de los componentes Rust, sus dependencias, construcción y pruebas.
@@ -31,19 +32,23 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[image](https://github.com/image-rs/image)**: lectura y tratamiento de imágenes en los componentes documentales y visuales.
 - **[Intel VTune Profiler](https://www.intel.com/content/www/us/en/developer/tools/oneapi/vtune-profiler.html)**: análisis instrumental del soporte del ensayo; las capturas recibidas conservan sus límites y no acreditan por sí solas la observación continua de todos los contadores.
 - **[Jiff](https://github.com/BurntSushi/jiff)**: tratamiento de fechas, horas y zonas horarias en el Gestor; su uso instrumental no modifica las primitivas del SV.
+- **[jq](https://jqlang.org/)**: consulta y transformación auxiliar de registros en notación de objetos de JavaScript (JSON). Versión incorporada: 1.8.1; licencia MIT para el programa principal, con avisos específicos de documentación y componentes.
 - **[jsonwebtoken](https://github.com/Keats/jsonwebtoken)**: interpretación y verificación de credenciales estructuradas JWT en los recorridos de autenticación que las utilizan.
 - **[Libre Hardware Monitor](https://github.com/LibreHardwareMonitor/LibreHardwareMonitor)**: lectura de sensores del equipo de ensayo; cada señal se interpreta según su disponibilidad y procedencia comprobadas.
 - **[Linux](https://www.kernel.org/)**: núcleo del sistema operativo utilizado en entornos de construcción, comprobación y ejecución del lenguaje y de sus adaptadores.
 - **[lopdf](https://github.com/J-F-Liu/lopdf)**: lectura y análisis de la estructura de documentos PDF.
+- **[MariaDB (cliente)](https://mariadb.org/)**: cliente de acceso a bases de datos en entornos de ensayo autorizados. Versión incorporada: 11.8.6; licencia GNU GPL versión 2 y avisos de sus componentes. La disponibilidad del cliente no acredita instalación de un servidor.
 - **[mdBook](https://rust-lang.github.io/mdBook/)**: construcción y navegación de los libros de documentación.
 - **[Mermaid](https://github.com/mermaid-js/mermaid)**: descripción textual y representación de diagramas de arquitectura, organización y procesos en la documentación.
 - **[MiniJinja](https://github.com/mitsuhiko/minijinja)**: aplicación de plantillas de conversación en las pruebas de integración de motores de inferencia.
 - **[mistral.rs](https://github.com/EricLBuehler/mistral.rs)**: motor de inferencia en Rust utilizado en pruebas técnicas de integración y observabilidad. Esta mención corresponde al proyecto de software, no a una recomendación de modelos de Mistral AI.
 - **[netstat2](https://github.com/ohadravid/netstat2-rs)**: observación de conexiones TCP y UDP asociadas al proceso en la instrumentación de pruebas.
+- **[Nmap](https://nmap.org/)**: instrumento incorporado para descubrimiento de recursos y comprobación de servicios en ámbitos autorizados. Versión 7.98; sus condiciones de licencia incluyen aclaraciones, excepciones y límites específicos de integración y redistribución. No se describe como una licencia GPL sin matices ni se presume autorización para incorporarlo a una distribución del SV.
 - **[OpenAI](https://openai.com/)**: tecnología de inteligencia artificial utilizada como apoyo al análisis, la programación y la revisión documental; también modelos abiertos empleados en pruebas de integración.
 - **[OpenTelemetry Rust](https://github.com/open-telemetry/opentelemetry-rust)**: instrumentación y correlación de operaciones en los ensayos de inferencia y en el acceso documental.
 - **[PawnIO](https://github.com/namazso/PawnIO)**: controlador utilizado por la lectura de sensores del soporte Windows; su reconocimiento no atribuye autoridad decisoria sobre el SV.
 - **[pdf-extract](https://github.com/jrmuizel/pdf-extract)**: extracción de texto de documentos PDF, base de la adaptación documental utilizada por el SV.
+- **[PHP](https://www.php.net/)**: entorno de aplicaciones de prueba, separado del gobierno del SV realizado en Rust. Versión incorporada: 8.5.4; se conservan PHP License 3.01, Zend Engine License 2.00 y los avisos de sus componentes.
 - **[pulldown-cmark](https://github.com/pulldown-cmark/pulldown-cmark)**: interpretación de Markdown para su presentación documental.
 - **[QEMU](https://www.qemu.org/)**: emulación de equipos y enlaces virtuales aislados en las comprobaciones locales. Se ha utilizado la versión 10.2.1; su licencia principal es GNU GPL v2, con las excepciones y licencias de componentes recogidas por el proyecto.
 - **[rand](https://github.com/rust-random/rand)**: generación de valores aleatorios en los mecanismos que la requieren.
@@ -54,6 +59,7 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[RustCrypto](https://github.com/RustCrypto)**: bibliotecas de resumen criptográfico y autenticación de mensajes, como SHA-2 y HMAC, y utilidades como zeroize para el borrado de valores sensibles en memoria.
 - **[rustfmt](https://github.com/rust-lang/rustfmt)**: presentación uniforme de las fuentes Rust.
 - **[Rustic](https://github.com/rustic-rs/rustic)**: herramienta en Rust utilizada para el cifrado, la deduplicación y la recuperación de las copias del catálogo autorizado. Su transporte a Google Drive está incorporado a la custodia automática del SV, con restitución e integridad comprobadas para esos recursos; no acredita por sí solo la copia o recuperación funcional de las bases.
+- **[Rustinel](https://github.com/Karib0u/rustinel)**: recolector nativo de sucesos y salud de observación en Windows, utilizado en comprobaciones pasivas delimitadas. Versión 1.10.0; licencia Apache-2.0. La recepción de datos no equivale a prevención activa ni a observación completa del equipo.
 - **[rustix](https://github.com/bytecodealliance/rustix)**: acceso desde Rust a funciones del sistema operativo utilizadas por los controles de procesos.
 - **[Rustls](https://github.com/rustls/rustls)**: protección TLS de comunicaciones, con las bibliotecas criptográficas y de comprobación de certificados que incorpora la configuración utilizada.
 - **[rustup](https://rust-lang.github.io/rustup/)**: gestión de las versiones de Rust y de sus componentes de desarrollo.
@@ -61,10 +67,12 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[Serde y serde_json](https://serde.rs/)**: lectura y escritura de datos estructurados en componentes, herramientas documentales y visualizadores asociados.
 - **[sysinfo](https://github.com/GuillaumeGomez/sysinfo)**: obtención de información del sistema y de sus recursos para la telemetría y las comprobaciones de hardware.
 - **[tar-rs](https://github.com/alexcrichton/tar-rs)**: lectura delimitada de archivos de recuperación y cotejo de los contenidos inventariados, sin ejecutar ni instalar sus entradas.
+- **[tcpdump](https://www.tcpdump.org/)**: instrumento incorporado para captura e inspección de tráfico autorizado. Versión 4.99.6; licencia BSD de tres cláusulas como principal, conservando los avisos específicos de otros componentes.
 - **[Tokenizers](https://github.com/huggingface/tokenizers)**: bibliotecas de Hugging Face para convertir texto y secuencias de tokens en las herramientas de traducción e integración de modelos.
 - **[Tokio](https://github.com/tokio-rs/tokio)**: ejecución de tareas asíncronas y coordinación de operaciones de entrada y salida en servicios, herramientas de inferencia y comprobaciones concurrentes de catálogos.
 - **[toml_edit](https://github.com/toml-rs/toml)**: actualización acotada de los manifiestos de dependencias conservando su estructura.
 - **[Tower](https://github.com/tower-rs/tower)**: utilidades para comprobar los servicios HTTP del Gestor.
+- **[TShark](https://www.wireshark.org/)**: analizador de protocolos y capturas del proyecto Wireshark. Versión incorporada: 4.6.4; licencia GNU GPL versión 2 o posterior como principal, con avisos específicos de sus componentes.
 - **[ttf-parser](https://github.com/harfbuzz/ttf-parser)**: lectura de estructuras y métricas de fuentes tipográficas en el tratamiento documental.
 - **[Ubuntu](https://ubuntu.com/)**: entorno Linux de construcción y ejecución de instrumentos y máquinas virtuales. Sus paquetes y bibliotecas conservan sus licencias propias.
 - **[unicode-normalization](https://github.com/unicode-rs/unicode-normalization)**: normalización Unicode en la extracción y el tratamiento de texto documental.
