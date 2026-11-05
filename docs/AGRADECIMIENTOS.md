@@ -18,6 +18,7 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[Clippy](https://doc.rust-lang.org/clippy/)**: análisis estático y ayuda para revisar la claridad y calidad del código Rust.
 - **[Cloudflare](https://developers.cloudflare.com/)**: servicios de publicación y protección del alojamiento web institucional. Su uso corresponde a la instalación que los configure.
 - **[cookie](https://github.com/SergioBenitez/cookie-rs)**: construcción e interpretación de cookies HTTP en el servicio web.
+- **[dataview](https://github.com/CasualX/dataview)**: tipos y vistas binarias utilizados por pelite para interpretar los bytes del ejecutable adquirido. Versión 1.1.0; licencia MIT.
 - **[egui y eframe](https://github.com/emilk/egui)**: interfaces y visualizadores en Rust para presentar los resultados del SV.
 - **[flate2](https://github.com/rust-lang/flate2-rs)**: lectura en flujo de archivos comprimidos para comprobar la recuperación de las fuentes, sin extraer rutas al sistema.
 - **[Fontations y Skrifa](https://github.com/googlefonts/fontations)**: lectura de fuentes tipográficas y sus métricas en el tratamiento documental de PDF.
@@ -31,6 +32,7 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[hyper y hyper-util](https://github.com/hyperium/hyper)**: transporte HTTP del servicio, junto con los componentes del mismo ecosistema para cuerpos de mensajes y fechas HTTP.
 - **[image](https://github.com/image-rs/image)**: lectura y tratamiento de imágenes en los componentes documentales y visuales.
 - **[Intel VTune Profiler](https://www.intel.com/content/www/us/en/developer/tools/oneapi/vtune-profiler.html)**: análisis instrumental del soporte del ensayo; las capturas recibidas conservan sus límites y no acreditan por sí solas la observación continua de todos los contadores.
+- **[intptr](https://github.com/CasualX/intptr)**: representación de direcciones tipadas requerida por pelite. Versión 1.0.1; licencia MIT. Esta dependencia no concede acceso a la memoria de otros procesos.
 - **[Jiff](https://github.com/BurntSushi/jiff)**: tratamiento de fechas, horas y zonas horarias en el Gestor; su uso instrumental no modifica las primitivas del SV.
 - **[jq](https://jqlang.org/)**: consulta y transformación auxiliar de registros en notación de objetos de JavaScript (JSON). Versión incorporada: 1.8.1; licencia MIT para el programa principal, con avisos específicos de documentación y componentes.
 - **[jsonwebtoken](https://github.com/Keats/jsonwebtoken)**: interpretación y verificación de credenciales estructuradas JWT en los recorridos de autenticación que las utilizan.
@@ -48,6 +50,7 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[OpenTelemetry Rust](https://github.com/open-telemetry/opentelemetry-rust)**: instrumentación y correlación de operaciones en los ensayos de inferencia y en el acceso documental.
 - **[PawnIO](https://github.com/namazso/PawnIO)**: controlador utilizado por la lectura de sensores del soporte Windows; su reconocimiento no atribuye autoridad decisoria sobre el SV.
 - **[pdf-extract](https://github.com/jrmuizel/pdf-extract)**: extracción de texto de documentos PDF, base de la adaptación documental utilizada por el SV.
+- **[pelite](https://github.com/CasualX/pelite)**: lectura de cabeceras y recursos de versión del formato ejecutable portátil (PE), a partir de los bytes adquiridos del archivo. Se ha incorporado la revisión [798566be15b5f84bb10f0894a723dcb6b25fd24d](https://github.com/CasualX/pelite/tree/798566be15b5f84bb10f0894a723dcb6b25fd24d), correspondiente al manifiesto 0.10.0; licencia MIT. La lectura no ejecuta el archivo ni certifica su procedencia, integridad editorial o inocuidad.
 - **[PHP](https://www.php.net/)**: entorno de aplicaciones de prueba, separado del gobierno del SV realizado en Rust. Versión incorporada: 8.5.4; se conservan PHP License 3.01, Zend Engine License 2.00 y los avisos de sus componentes.
 - **[pulldown-cmark](https://github.com/pulldown-cmark/pulldown-cmark)**: interpretación de Markdown para su presentación documental.
 - **[QEMU](https://www.qemu.org/)**: emulación de equipos y enlaces virtuales aislados en las comprobaciones locales. Se ha utilizado la versión 10.2.1; su licencia principal es GNU GPL v2, con las excepciones y licencias de componentes recogidas por el proyecto.
@@ -77,7 +80,7 @@ La relación se presenta en **orden alfabético**, sin clasificación de importa
 - **[Ubuntu](https://ubuntu.com/)**: entorno Linux de construcción y ejecución de instrumentos y máquinas virtuales. Sus paquetes y bibliotecas conservan sus licencias propias.
 - **[unicode-normalization](https://github.com/unicode-rs/unicode-normalization)**: normalización Unicode en la extracción y el tratamiento de texto documental.
 - **[UserWay](https://userway.org/)**: herramienta complementaria de accesibilidad incorporada a la web institucional; no sustituye la accesibilidad propia de la interfaz.
-- **[Vector](https://vector.dev/)**: adquisición local de métricas del anfitrión. La versión 0.61.0 se ha utilizado en una captura de procesador, memoria y estado del sistema en Windows; esta comprobación no acredita todavía supervisión permanente, red ni todos los sucesos de seguridad. Licencia Mozilla Public License 2.0.
+- **[Vector](https://vector.dev/)**: adquisición de métricas de procesador, memoria y otros recursos del anfitrión, utilizada por el panel de supervisión y recibida en ciclos delimitados de observación en Windows. Versión 0.61.0; licencia Mozilla Public License 2.0. La cobertura corresponde a las fuentes y configuraciones comprobadas; no acredita por sí sola supervisión permanente, observación de otros equipos ni detección completa de incidentes.
 - **[WASI](https://wasi.dev/)**: interfaces del sistema para comprobar la ejecución WebAssembly fuera del navegador, dentro de las capacidades concedidas por el entorno.
 - **[wasm-bindgen](https://wasm-bindgen.github.io/wasm-bindgen/)**: comunicación entre WebAssembly y JavaScript en los visualizadores web asociados.
 - **[Wasmtime](https://github.com/bytecodealliance/wasmtime)**: entorno de ejecución utilizado para comprobar componentes WebAssembly con WASI. Puede emplearse en equipos locales y servidores.
@@ -95,7 +98,7 @@ Esta página ofrece metadatos públicos que describen la misma relación de proy
 
 El [inventario acotado de la instrumentación del ensayo práctico](https://github.com/juantoniolloretegea/SV-motor/blob/main/laboratorio/ensayo-ia-y-observabilidad/modelos-de-ia/estandar-comparativo-o-benchmark/ediciones/ciberseguridad/eet-cyb16-practica-20261027/practicas/COMPONENTES-Y-AGRADECIMIENTOS.md) identifica versiones, licencias y funciones efectivamente utilizadas. Las referencias de arquitectura estudiadas y no incorporadas se indican por separado.
 
-Revisión: 2 de noviembre de 2026.
+Revisión: 5 de noviembre de 2026.
 
 ---
 
